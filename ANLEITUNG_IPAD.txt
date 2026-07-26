@@ -1,0 +1,46 @@
+BG-RehaManager Südwest – Anleitung für iPad und Safari
+
+A. WEBSITE KOSTENLOS VERÖFFENTLICHEN
+
+1. Öffnen Sie auf dem iPad Safari.
+2. Rufen Sie github.com auf.
+3. Erstellen Sie ein kostenloses GitHub-Konto oder melden Sie sich an.
+4. Tippen Sie oben rechts auf das Pluszeichen.
+5. Wählen Sie „New repository“.
+6. Tragen Sie als Namen ein:
+   bg-rehamanager-suedwest
+7. Wählen Sie „Public“.
+8. Tippen Sie auf „Create repository“.
+9. Tippen Sie anschließend auf „uploading an existing file“.
+10. Entpacken Sie vorher die ZIP-Datei in der Apple-App „Dateien“.
+11. Laden Sie alle Dateien aus dem entpackten Ordner hoch.
+12. Tippen Sie unten auf „Commit changes“.
+13. Öffnen Sie im Repository „Settings“.
+14. Wählen Sie links „Pages“.
+15. Unter „Build and deployment“ wählen Sie:
+    Source: Deploy from a branch
+    Branch: main
+    Folder: /(root)
+16. Tippen Sie auf „Save“.
+
+Die spätere Internetadresse lautet typischerweise:
+https://IHR-BENUTZERNAME.github.io/bg-rehamanager-suedwest/
+
+B. AUF DEM IPAD WIE EINE APP INSTALLIEREN
+
+1. Öffnen Sie die veröffentlichte Adresse in Safari.
+2. Tippen Sie auf das Teilen-Symbol: Quadrat mit Pfeil nach oben.
+3. Scrollen Sie nach unten.
+4. Tippen Sie auf „Zum Home-Bildschirm“.
+5. Aktivieren Sie, falls angezeigt, „Als Web-App öffnen“.
+6. Tippen Sie rechts oben auf „Hinzufügen“.
+
+Danach erscheint das Symbol „BG-Reha Südwest“ auf dem Home-Bildschirm.
+
+WICHTIG
+
+- Die Anwendung selbst wird nach dem ersten Aufruf zwischengespeichert.
+- Die Hintergrundkarte von OpenStreetMap benötigt grundsätzlich Internet.
+- Favoriten und persönliche Notizen werden nur lokal auf dem jeweiligen Gerät gespeichert.
+- Die aktuelle Klinik- und Rehadatenbank ist ein Arbeitsbestand. Zulassungen, Anschriften und Leistungsprofile müssen vor dienstlicher Verwendung aktuell geprüft werden.
+- Ein öffentliches GitHub-Repository macht die hochgeladenen Anwendungsdateien öffentlich einsehbar. Persönliche Notizen werden nicht hochgeladen.

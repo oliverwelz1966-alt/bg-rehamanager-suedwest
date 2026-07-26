@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BG-RehaManager Südwest</title>
+<meta name="theme-color" content="#123247">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="BG-Reha Südwest">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --bg:#eef2f7;--panel:#fff;--ink:#172033;--muted:#617082;--line:#d8dee8;
+  --sav:#b91c1c;--vav:#1d4ed8;--eap:#15803d;--bgk:#7e22ce;--reha:#c2410c;
+  --accent:#0f5e78;--shadow:0 10px 28px rgba(22,35,50,.08)
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit}
+.app{min-height:100vh;display:grid;grid-template-columns:270px 1fr}
+.sidebar{background:#12202f;color:white;padding:22px 17px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{font-size:21px;font-weight:800;line-height:1.08;margin-bottom:8px}
+.version{font-size:12px;color:#b7c5d4;margin-bottom:22px}
+.nav button{width:100%;display:flex;gap:9px;align-items:center;text-align:left;color:#dce7f1;background:transparent;border:0;border-radius:9px;padding:11px 10px;margin:4px 0;cursor:pointer}
+.nav button.active,.nav button:hover{background:#24384c;color:#fff}
+.sidebar-note{font-size:11px;line-height:1.45;color:#b7c5d4;border-top:1px solid #304559;margin-top:22px;padding-top:14px}
+.content{padding:24px;min-width:0}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:18px}
+h1{font-size:27px;margin:0 0 4px}.subtitle{color:var(--muted);font-size:13px}
+.status{font-size:12px;background:#e9f6ee;color:#1b6d3c;border:1px solid #bfe4cc;padding:7px 9px;border-radius:999px}
+.view{display:none}.view.active{display:block}
+.grid{display:grid;gap:16px}
+.kpis{grid-template-columns:repeat(5,minmax(130px,1fr));margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}
+.kpi{padding:16px}.kpi strong{font-size:27px;display:block}.kpi span{font-size:12px;color:var(--muted)}
+.panel{padding:16px}
+.panel h2{font-size:16px;margin:0 0 13px}
+.two-col{grid-template-columns:1.45fr 1fr}
+#dashboardMap,#mainMap{height:560px;border-radius:12px;overflow:hidden}
+.controls{display:grid;grid-template-columns:2fr 1fr;gap:9px;margin-bottom:10px}
+input[type=search],select,textarea,input[type=text]{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 12px}
+.chip{border:1px solid var(--line);background:#fff;padding:7px 9px;border-radius:999px;font-size:12px;cursor:pointer}
+.chip.on{color:#fff;border-color:transparent}
+.table-wrap{overflow:auto;max-height:590px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:10px 9px;border-bottom:1px solid #e7ebf0;vertical-align:top}
+th{position:sticky;top:0;background:#f7f9fc;z-index:1}
+.badge{display:inline-block;color:#fff;font-size:10px;font-weight:700;padding:3px 6px;border-radius:999px;margin:1px 3px 1px 0}
+.icon-btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 8px;cursor:pointer}
+.icon-btn.starred{background:#fff5cc;border-color:#e8ca52}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.primary{background:var(--accent);color:#fff;border:0;border-radius:9px;padding:10px 12px;cursor:pointer}
+.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
+.navigator{grid-template-columns:330px 1fr}
+.result-card{padding:13px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+.result-card h3{font-size:14px;margin:0 0 5px}
+.muted{color:var(--muted);font-size:12px}
+.note-box{margin-top:8px;background:#f7f9fc;border:1px solid #e1e6ed;border-radius:8px;padding:8px;font-size:12px}
+.warning{background:#fff8e6;border:1px solid #efd38a;color:#755300;padding:11px;border-radius:10px;font-size:12px;line-height:1.45}
+.stat-bars{display:grid;gap:10px}.bar-row{display:grid;grid-template-columns:180px 1fr 38px;gap:9px;align-items:center;font-size:12px}
+.bar{height:10px;background:#e8edf3;border-radius:999px;overflow:hidden}.bar>i{display:block;height:100%;background:#557b8d}
+.modal{position:fixed;inset:0;background:rgba(5,15,25,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+.modal.open{display:flex}.modal-card{background:#fff;width:min(680px,100%);max-height:90vh;overflow:auto;border-radius:14px;padding:18px}
+.modal-head{display:flex;justify-content:space-between;gap:10px}.modal-head h2{margin:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{grid-column:1/-1}
+.legend{background:white;padding:10px;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,.2);font-size:12px;line-height:1.8}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+@media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis{grid-template-columns:repeat(2,1fr)}.two-col,.navigator{grid-template-columns:1fr}}
+@media(max-width:650px){.content{padding:14px}.kpis{grid-template-columns:1fr 1fr}.controls,.form-grid{grid-template-columns:1fr}.topbar{display:block}.status{display:inline-block;margin-top:8px}#dashboardMap,#mainMap{height:430px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand">BG-Reha-Manager<br>Einsatzatlas Südwest</div>
+ <div class="version">Webanwendung · Arbeitsversion 2.0</div>
+ <nav class="nav">
+  <button class="active" data-view="dashboard">▦ Dashboard</button>
+  <button data-view="mapView">⌖ Interaktive Karte</button>
+  <button data-view="directory">≡ Klinikverzeichnis</button>
+  <button data-view="navigator">◇ Reha-Navigator</button>
+  <button data-view="statistics">▥ Statistik</button>
+  <button data-view="administration">⚙ Datenpflege</button>
+ </nav>
+ <div class="sidebar-note">Persönliche Favoriten und Notizen werden ausschließlich im Browser dieses Geräts gespeichert.</div>
+</aside>
+
+<main class="content">
+ <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div class="status">47 Ausgangsdatensätze</div></div>
+
+ <section id="dashboard" class="view active">
+  <div id="kpis" class="grid kpis"></div>
+  <div class="grid two-col">
+   <div class="card panel"><h2>Gesamtübersicht</h2><div id="dashboardMap"></div></div>
+   <div class="grid">
+    <div class="card panel"><h2>Einrichtungen nach Region</h2><div id="regionBars" class="stat-bars"></div></div>
+    <div class="card panel"><h2>Meine Favoriten</h2><div id="favList"></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="mapView" class="view">
+  <div class="card panel">
+   <div class="controls"><input id="search" type="search" placeholder="Einrichtung, Ort, Region oder Schwerpunkt suchen"><select id="region"></select></div>
+   <div id="catFilters" class="filters"></div>
+   <div class="toolbar"><button id="fitMap" class="secondary">Alle Treffer anzeigen</button><button id="exportCsv" class="secondary">Treffer als CSV exportieren</button><span id="resultCount" class="muted"></span></div>
+   <div id="mainMap"></div>
+  </div>
+ </section>
+
+ <section id="directory" class="view">
+  <div class="card panel">
+   <h2>Klinik- und Rehaverzeichnis</h2>
+   <div class="warning">Die Angaben bilden zunächst den gemeinsam erstellten Arbeitsbestand ab. Zulassungen, Anschriften und Leistungsprofile müssen vor verbindlicher dienstlicher Nutzung mit aktuellen DGUV- beziehungsweise Einrichtungsdaten abgeglichen werden.</div>
+   <div class="table-wrap"><table><thead><tr><th></th><th>Einrichtung</th><th>Region</th><th>Kategorie</th><th>Arbeits-Schwerpunkte</th></tr></thead><tbody id="clinicTableBody"></tbody></table></div>
+  </div>
+ </section>
+
+ <section id="navigator" class="view">
+  <div class="grid navigator">
+   <div class="card panel">
+    <h2>Versorgung eingrenzen</h2>
+    <label>Verletzung / Leistungsschwerpunkt</label><select id="navFocus"></select>
+    <label>Versorgungsart</label><select id="navCategory"></select>
+    <label>Region</label><select id="navRegion"></select>
+    <div class="toolbar"><button id="runNavigator" class="primary">Einrichtungen suchen</button></div>
+    <div class="warning">Der Navigator ist eine Orientierungshilfe auf Basis einer vorläufigen Klassifikation und ersetzt keine medizinische Einzelfallprüfung oder Zulassungsprüfung.</div>
+   </div>
+   <div class="card panel"><div class="topbar"><h2>Ergebnisse</h2><span id="navCount" class="muted"></span></div><div id="navResults" class="muted">Bitte Suchkriterien auswählen.</div></div>
+  </div>
+ </section>
+
+ <section id="statistics" class="view">
+  <div class="grid two-col">
+   <div class="card panel"><h2>Regionale Verteilung</h2><div id="regionBarsStats" class="stat-bars"></div></div>
+   <div class="card panel"><h2>Hinweise zur Aussagekraft</h2><div class="warning">Die Statistik zählt Einrichtungsdatensätze und Mehrfachzuordnungen. Sie stellt weder Kapazitäten noch Qualität, Erreichbarkeit oder tatsächliche Behandlungsbereitschaft dar.</div></div>
+  </div>
+ </section>
+
+ <section id="administration" class="view">
+  <div class="grid two-col">
+   <div class="card panel"><h2>Daten exportieren</h2><p class="muted">Die derzeit geladenen Daten können als JSON gesichert und später weiterbearbeitet werden.</p><button id="downloadJson" class="primary">data.json herunterladen</button></div>
+   <div class="card panel"><h2>Daten für Sitzung importieren</h2><p class="muted">Eine kompatible JSON-Datei ersetzt die Daten nur für die aktuelle Browsersitzung. Die Originaldatei bleibt unverändert.</p><input id="importJson" type="file" accept=".json,application/json"></div>
+  </div>
+ </section>
+</main>
+</div>
+
+<div id="modal" class="modal"><div class="modal-card">
+ <div class="modal-head"><div><h2 id="detailTitle"></h2><div id="detailMeta" class="muted"></div></div><button id="modalClose" class="icon-btn">✕</button></div>
+ <p><b>Arbeits-Schwerpunkte:</b> <span id="detailFocus"></span></p>
+ <div id="detailNotice" class="warning"></div>
+ <label>Persönliche Notiz</label><textarea id="detailNote" rows="5" placeholder="z. B. Ansprechpartner, Erfahrungen, Besonderheiten"></textarea>
+ <div class="toolbar"><button id="saveNote" class="primary">Notiz speichern</button><button id="detailFavorite" class="secondary"></button><a id="mapSearchLink" class="secondary" target="_blank" rel="noopener">In externer Karte suchen</a></div>
+</div></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+window.__EMBEDDED_FACILITIES__ = [{"id": 1, "name": "Universitätsklinikum Heidelberg", "city": "Heidelberg", "region": "Rhein-Neckar", "categories": ["SAV"], "lat": 49.4143, "lon": 8.6736, "note": "Arbeitsdatensatz; Zulassungsstatus und Kontaktdaten bitte gegen DGUV-Datenbestand prüfen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 2, "name": "Universitätsklinikum Mannheim", "city": "Mannheim", "region": "Rhein-Neckar", "categories": ["SAV"], "lat": 49.4912, "lon": 8.484, "note": "Arbeitsdatensatz; Zulassungsstatus und Kontaktdaten bitte gegen DGUV-Datenbestand prüfen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 3, "name": "BG Klinik Ludwigshafen", "city": "Ludwigshafen am Rhein", "region": "Vorderpfalz", "categories": ["SAV", "BG-Klinik", "Reha"], "lat": 49.4868, "lon": 8.4034, "note": "Überregionales BG-Zentrum; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Stationäre Rehabilitation", "Komplexe Rehabilitation", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 4, "name": "SLK-Klinikum Heilbronn – Klinikum am Gesundbrunnen", "city": "Heilbronn", "region": "Heilbronn-Franken", "categories": ["SAV", "VAV"], "lat": 49.1583, "lon": 9.22, "note": "Mehrfachnennung im Arbeitsbestand; endgültige Verfahrenszuordnung prüfen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 5, "name": "Städtisches Klinikum Karlsruhe", "city": "Karlsruhe", "region": "Karlsruhe", "categories": ["SAV"], "lat": 49.0186, "lon": 8.3762, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 6, "name": "Klinikum Darmstadt – Orthopädie, Unfall- und Handchirurgie", "city": "Darmstadt", "region": "Rhein-Main", "categories": ["SAV"], "lat": 49.8728, "lon": 8.6512, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 7, "name": "Klinikum Aschaffenburg-Alzenau", "city": "Aschaffenburg", "region": "Unterfranken / Bayerischer Untermain", "categories": ["SAV"], "lat": 49.9825, "lon": 9.1476, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 8, "name": "Universitätsklinikum Würzburg", "city": "Würzburg", "region": "Unterfranken", "categories": ["SAV"], "lat": 49.8007, "lon": 9.9553, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 9, "name": "Universitätsklinikum Frankfurt", "city": "Frankfurt am Main", "region": "Rhein-Main", "categories": ["SAV"], "lat": 50.0946, "lon": 8.6592, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 10, "name": "BG Unfallklinik Frankfurt am Main", "city": "Frankfurt am Main", "region": "Rhein-Main", "categories": ["SAV", "BG-Klinik", "Reha"], "lat": 50.1459, "lon": 8.7034, "note": "Überregionales BG-Zentrum; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Stationäre Rehabilitation", "Komplexe Rehabilitation", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 11, "name": "St. Vincentius-Krankenhaus Speyer", "city": "Speyer", "region": "Vorderpfalz", "categories": ["VAV"], "lat": 49.3159, "lon": 8.4308, "note": "Arbeitsdatensatz; aktuelle Bezeichnung/Zulassung prüfen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 12, "name": "RKH Fürst-Stirum-Klinik Bruchsal", "city": "Bruchsal", "region": "Kraichgau / Karlsruhe", "categories": ["VAV"], "lat": 49.1247, "lon": 8.5982, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 13, "name": "Neckar-Odenwald-Kliniken – Standort Mosbach", "city": "Mosbach", "region": "Neckar-Odenwald", "categories": ["VAV"], "lat": 49.3538, "lon": 9.1469, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 14, "name": "Gesundheitszentrum Odenwaldkreis", "city": "Erbach", "region": "Odenwald", "categories": ["VAV"], "lat": 49.6586, "lon": 8.9907, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 15, "name": "Klinikum Worms", "city": "Worms", "region": "Rheinhessen / Vorderpfalz", "categories": ["VAV"], "lat": 49.6359, "lon": 8.3594, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Hand", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 16, "name": "ViDia Christliche Kliniken Karlsruhe", "city": "Karlsruhe", "region": "Karlsruhe", "categories": ["VAV"], "lat": 49.0069, "lon": 8.4037, "note": "Arbeitsdatensatz; Detaildaten noch zu ergänzen.", "focus": ["Akutversorgung", "Schwere Verletzungen", "Frakturen", "Polytrauma", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 17, "name": "RehaMed Heidelberg", "city": "Heidelberg", "region": "Rhein-Neckar", "categories": ["EAP"], "lat": 49.404, "lon": 8.681, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 18, "name": "Reha in der ATOS Klinik Heidelberg", "city": "Heidelberg", "region": "Rhein-Neckar", "categories": ["EAP"], "lat": 49.4105, "lon": 8.6905, "note": "Vom Nutzer als Artemis/ATOS bezeichnet; genaue Einrichtung prüfen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 19, "name": "Therapiezentrum Avenius", "city": "Hockenheim", "region": "Rhein-Neckar", "categories": ["EAP"], "lat": 49.3233, "lon": 8.5519, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 20, "name": "Sportomed Mannheim", "city": "Mannheim", "region": "Rhein-Neckar", "categories": ["EAP"], "lat": 49.4875, "lon": 8.466, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 21, "name": "TSG Reha Dietmar Hopp", "city": "Zuzenhausen", "region": "Kraichgau", "categories": ["EAP"], "lat": 49.2967, "lon": 8.823, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 22, "name": "ZAR Mannheim", "city": "Mannheim", "region": "Rhein-Neckar", "categories": ["EAP"], "lat": 49.5, "lon": 8.47, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 23, "name": "Sportec Therapie und Training", "city": "Weinheim", "region": "Bergstraße / Rhein-Neckar", "categories": ["EAP"], "lat": 49.5493, "lon": 8.6673, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 24, "name": "ZAR Therapiezentrum am St. Marienkrankenhaus", "city": "Ludwigshafen am Rhein", "region": "Vorderpfalz", "categories": ["EAP"], "lat": 49.4777, "lon": 8.4455, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 25, "name": "Rehazentrum Neckar-Odenwald", "city": "Eberbach", "region": "Neckar-Odenwald", "categories": ["EAP"], "lat": 49.4662, "lon": 8.9907, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 26, "name": "Therapiezentrum Janowitsch", "city": "Obertshausen", "region": "Rhein-Main", "categories": ["EAP"], "lat": 50.0719, "lon": 8.8512, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 27, "name": "Therapiezentrum am Schloss", "city": "Bruchsal", "region": "Kraichgau / Karlsruhe", "categories": ["EAP"], "lat": 49.1255, "lon": 8.5988, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 28, "name": "Physio3 PartG", "city": "Bensheim", "region": "Bergstraße", "categories": ["EAP"], "lat": 49.6819, "lon": 8.622, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 29, "name": "TriaMedica", "city": "Mosbach", "region": "Neckar-Odenwald", "categories": ["EAP"], "lat": 49.3519, "lon": 9.1456, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 30, "name": "Rehazentrum GmbH Worms", "city": "Worms", "region": "Rheinhessen / Vorderpfalz", "categories": ["EAP"], "lat": 49.6325, "lon": 8.3605, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 31, "name": "Westend Bad Fries", "city": "Worms", "region": "Rheinhessen / Vorderpfalz", "categories": ["EAP"], "lat": 49.6352, "lon": 8.354, "note": "Bezeichnung möglicherweise abweichend; bitte prüfen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 32, "name": "Physiozentrum Odenwald GmbH", "city": "Erbach", "region": "Odenwald", "categories": ["EAP"], "lat": 49.657, "lon": 8.9919, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 33, "name": "The ReSport GmbH", "city": "Bickenbach", "region": "Bergstraße / Rhein-Main", "categories": ["EAP"], "lat": 49.7595, "lon": 8.6173, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 34, "name": "RehaMed Gesundheitspark GmbH", "city": "Herxheim", "region": "Südpfalz", "categories": ["EAP"], "lat": 49.1466, "lon": 8.214, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 35, "name": "MS SportReha", "city": "Landau in der Pfalz", "region": "Südpfalz", "categories": ["EAP"], "lat": 49.1989, "lon": 8.1186, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 36, "name": "TriaMedic Karlsruhe", "city": "Karlsruhe", "region": "Karlsruhe", "categories": ["EAP"], "lat": 49.0105, "lon": 8.4045, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 37, "name": "Reha am Bahnhof", "city": "Neckarsulm", "region": "Heilbronn-Franken", "categories": ["EAP"], "lat": 49.1912, "lon": 9.2254, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 38, "name": "Reha Rondell", "city": "Brackenheim", "region": "Heilbronn-Franken", "categories": ["EAP"], "lat": 49.0796, "lon": 9.0665, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 39, "name": "WARMIT Rehazentrum Karlsruhe", "city": "Karlsruhe", "region": "Karlsruhe", "categories": ["EAP"], "lat": 49.0005, "lon": 8.41, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 40, "name": "ZAR Heilbronn / Nanz medico", "city": "Heilbronn", "region": "Heilbronn-Franken", "categories": ["EAP"], "lat": 49.1427, "lon": 9.2189, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 41, "name": "The ReSport GmbH", "city": "Darmstadt", "region": "Rhein-Main", "categories": ["EAP"], "lat": 49.8722, "lon": 8.6566, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 42, "name": "Balance Aschaffenburg GmbH", "city": "Aschaffenburg", "region": "Unterfranken / Bayerischer Untermain", "categories": ["EAP"], "lat": 49.9778, "lon": 9.1492, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 43, "name": "Vitalzentrum TBB", "city": "Tauberbischofsheim", "region": "Main-Tauber", "categories": ["EAP"], "lat": 49.6244, "lon": 9.6628, "note": "Koordinate auf Stadtebene; genaue Anschrift ergänzen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 44, "name": "MEDIAN Vesalius-Klinik Bad Rappenau", "city": "Bad Rappenau", "region": "Heilbronn-Franken", "categories": ["Stationäre Reha"], "lat": 49.2402, "lon": 9.1021, "note": "Arbeitsdatensatz; BG-Relevanz und Leistungsprofil prüfen.", "focus": ["Stationäre Rehabilitation", "Komplexe Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 45, "name": "Salinenklinik Bad Rappenau", "city": "Bad Rappenau", "region": "Heilbronn-Franken", "categories": ["EAP", "Stationäre Reha"], "lat": 49.2383, "lon": 9.1005, "note": "Mehrfachrolle nach Nutzerangabe; Details prüfen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Stationäre Rehabilitation", "Komplexe Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 46, "name": "SRH Gesundheitszentrum Bad Wimpfen", "city": "Bad Wimpfen", "region": "Heilbronn-Franken", "categories": ["EAP", "Stationäre Reha"], "lat": 49.2297, "lon": 9.163, "note": "Mehrfachrolle nach Nutzerangabe; Details prüfen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Stationäre Rehabilitation", "Komplexe Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}, {"id": 47, "name": "SRH Gesundheitszentrum Bad Herrenalb", "city": "Bad Herrenalb", "region": "Nordschwarzwald", "categories": ["EAP", "Stationäre Reha"], "lat": 48.7978, "lon": 8.44, "note": "Mehrfachrolle nach Nutzerangabe; Details prüfen.", "focus": ["Ambulante Rehabilitation", "Belastungsaufbau", "Physiotherapie", "Arbeitsplatzbezogene Rehabilitation", "Stationäre Rehabilitation", "Komplexe Rehabilitation", "Schulter", "Ellenbogen", "Knie", "Wirbelsäule"], "phone": "", "email": "", "website": "", "address": ""}];
+
+const COLORS={"SAV":"#b91c1c","VAV":"#1d4ed8","EAP":"#15803d","BG-Klinik":"#7e22ce","Stationäre Reha":"#c2410c"};
+let facilities=[], activeCats=new Set(Object.keys(COLORS)), map, dashMap, markerLayer, dashLayer;
+const notes=JSON.parse(localStorage.getItem("bgAtlasNotes")||"{}");
+const favorites=new Set(JSON.parse(localStorage.getItem("bgAtlasFavorites")||"[]"));
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const badge=c=>`<span class="badge" style="background:${COLORS[c]}">${c}</span>`;
+function saveLocal(){localStorage.setItem("bgAtlasNotes",JSON.stringify(notes));localStorage.setItem("bgAtlasFavorites",JSON.stringify([...favorites]));}
+function primaryColor(f){for(const c of ["BG-Klinik","SAV","VAV","EAP","Stationäre Reha"])if(f.categories.includes(c))return COLORS[c];return "#64748b";}
+function filtered(){
+ const q=($("#search")?.value||"").trim().toLowerCase(), r=$("#region")?.value||"";
+ return facilities.filter(f=>{
+   const text=[f.name,f.city,f.region,...f.categories,...f.focus].join(" ").toLowerCase();
+   return f.categories.some(c=>activeCats.has(c)) && (!q||text.includes(q)) && (!r||f.region===r);
+ });
+}
+function mapPopup(f){return `<b>${f.name}</b><br>${f.city} · ${f.region}<br>${f.categories.map(badge).join("")}<br><small>${f.note}</small>`;}
+function addMarkers(targetMap,layer,items){
+ layer.clearLayers();
+ items.forEach(f=>L.circleMarker([f.lat,f.lon],{radius:8,color:"#fff",weight:2,fillColor:primaryColor(f),fillOpacity:.94}).bindPopup(mapPopup(f)).addTo(layer));
+}
+function fit(targetMap,items){if(items.length)targetMap.fitBounds(items.map(f=>[f.lat,f.lon]),{padding:[28,28]});}
+function renderKPIs(){
+ const cats=["SAV","VAV","EAP","BG-Klinik","Stationäre Reha"];
+ $("#kpis").innerHTML=cats.map(c=>`<div class="card kpi"><strong>${facilities.filter(f=>f.categories.includes(c)).length}</strong><span>${c}</span></div>`).join("");
+}
+function renderDashboard(){
+ renderKPIs(); addMarkers(dashMap,dashLayer,facilities);
+ const regions={}; facilities.forEach(f=>regions[f.region]=(regions[f.region]||0)+1);
+ const max=Math.max(...Object.values(regions));
+ const bars=Object.entries(regions).sort((a,b)=>b[1]-a[1]).map(([r,n])=>`<div class="bar-row"><span>${r}</span><div class="bar"><i style="width:${n/max*100}%"></i></div><b>${n}</b></div>`).join(""); $("#regionBars").innerHTML=bars; const stats=document.querySelector("#regionBarsStats"); if(stats) stats.innerHTML=bars;
+ $("#favList").innerHTML=[...favorites].map(id=>facilities.find(f=>f.id===id)).filter(Boolean).map(f=>resultCard(f)).join("")||'<div class="muted">Noch keine Favoriten gespeichert.</div>';
+}
+function renderFilters(){
+ $("#catFilters").innerHTML=Object.keys(COLORS).map(c=>`<button class="chip on" data-cat="${c}" style="background:${COLORS[c]}">${c}</button>`).join("");
+ $$("#catFilters .chip").forEach(b=>b.onclick=()=>{const c=b.dataset.cat;if(activeCats.has(c)){activeCats.delete(c);b.classList.remove("on");b.style.background="#fff";b.style.color="#172033"}else{activeCats.add(c);b.classList.add("on");b.style.background=COLORS[c];b.style.color="#fff"}refreshMapAndTable();});
+ const regions=[...new Set(facilities.map(f=>f.region))].sort();
+ $("#region").innerHTML='<option value="">Alle Regionen</option>'+regions.map(r=>`<option>${r}</option>`).join("");
+}
+function renderTable(items){
+ $("#clinicTableBody").innerHTML=items.map(f=>`<tr>
+  <td><button class="icon-btn ${favorites.has(f.id)?"starred":""}" data-star="${f.id}">★</button></td>
+  <td><a href="#" data-open="${f.id}"><b>${f.name}</b></a><div class="muted">${f.city}</div></td>
+  <td>${f.region}</td><td>${f.categories.map(badge).join("")}</td>
+  <td>${f.focus.slice(0,4).join(", ")}</td></tr>`).join("");
+ $$("[data-open]").forEach(a=>a.onclick=e=>{e.preventDefault();openDetail(Number(a.dataset.open));});
+ $$("[data-star]").forEach(b=>b.onclick=()=>toggleFavorite(Number(b.dataset.star)));
+ $("#resultCount").textContent=`${items.length} Einrichtungen`;
+}
+function refreshMapAndTable(){const items=filtered();addMarkers(map,markerLayer,items);renderTable(items);}
+function resultCard(f){return `<div class="result-card"><h3><a href="#" data-open="${f.id}">${f.name}</a></h3><div class="muted">${f.city} · ${f.region}</div><div>${f.categories.map(badge).join("")}</div></div>`;}
+function toggleFavorite(id){favorites.has(id)?favorites.delete(id):favorites.add(id);saveLocal();refreshMapAndTable();renderDashboard();}
+function openDetail(id){
+ const f=facilities.find(x=>x.id===id); if(!f)return;
+ $("#detailTitle").textContent=f.name;
+ $("#detailMeta").innerHTML=`${f.city} · ${f.region}<br>${f.categories.map(badge).join("")}`;
+ $("#detailFocus").textContent=f.focus.join(", ");
+ $("#detailNotice").textContent=f.note;
+ $("#detailNote").value=notes[id]||"";
+ $("#detailFavorite").textContent=favorites.has(id)?"Favorit entfernen":"Als Favorit speichern";
+ $("#detailFavorite").onclick=()=>{toggleFavorite(id);openDetail(id)};
+ $("#saveNote").onclick=()=>{notes[id]=$("#detailNote").value;saveLocal();$("#modal").classList.remove("open");};
+ $("#mapSearchLink").href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(f.name+" "+f.city)}`;
+ $("#modal").classList.add("open");
+}
+function renderNavigator(){
+ const focus=[...new Set(facilities.flatMap(f=>f.focus))].sort();
+ $("#navFocus").innerHTML='<option value="">Bitte auswählen</option>'+focus.map(x=>`<option>${x}</option>`).join("");
+ $("#navCategory").innerHTML='<option value="">Alle Versorgungsarten</option>'+Object.keys(COLORS).map(x=>`<option>${x}</option>`).join("");
+}
+function runNavigator(){
+ const focus=$("#navFocus").value, cat=$("#navCategory").value, reg=$("#navRegion").value;
+ const items=facilities.filter(f=>(!focus||f.focus.includes(focus))&&(!cat||f.categories.includes(cat))&&(!reg||f.region===reg));
+ $("#navResults").innerHTML=items.map(resultCard).join("")||'<div class="warning">Keine passende Einrichtung im aktuellen Arbeitsdatensatz gefunden.</div>';
+ $$("[data-open]").forEach(a=>a.onclick=e=>{e.preventDefault();openDetail(Number(a.dataset.open));});
+ $("#navCount").textContent=`${items.length} Treffer`;
+}
+function exportCSV(items=filtered()){
+ const rows=[["Name","Ort","Region","Kategorien","Schwerpunkte","Hinweis"]];
+ items.forEach(f=>rows.push([f.name,f.city,f.region,f.categories.join("|"),f.focus.join("|"),f.note]));
+ const csv=rows.map(r=>r.map(v=>`"${String(v).replaceAll('"','""')}"`).join(";")).join("\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="BG_Reha_Manager_Export.csv";a.click();URL.revokeObjectURL(a.href);
+}
+async function importJSON(file){
+ try{
+   const data=JSON.parse(await file.text());
+   if(!Array.isArray(data))throw new Error("Keine Liste");
+   facilities=data; initializeDataViews(); alert("JSON-Daten wurden für diese Sitzung geladen.");
+ }catch(e){alert("Import fehlgeschlagen: "+e.message);}
+}
+function initializeDataViews(){
+ renderFilters();renderDashboard();renderNavigator();
+ $("#navRegion").innerHTML='<option value="">Alle Regionen</option>'+[...new Set(facilities.map(f=>f.region))].sort().map(r=>`<option>${r}</option>`).join("");
+ refreshMapAndTable();fit(map,facilities);fit(dashMap,facilities);
+}
+function setupMaps(){
+ const tiles='https://tile.openstreetmap.org/{z}/{x}/{y}.png', attr='&copy; OpenStreetMap-Mitwirkende';
+ dashMap=L.map("dashboardMap").setView([49.35,8.85],8);L.tileLayer(tiles,{maxZoom:19,attribution:attr}).addTo(dashMap);dashLayer=L.layerGroup().addTo(dashMap);
+ map=L.map("mainMap").setView([49.35,8.85],8);L.tileLayer(tiles,{maxZoom:19,attribution:attr}).addTo(map);markerLayer=L.layerGroup().addTo(map);
+ const legend=L.control({position:"bottomright"});legend.onAdd=()=>{const d=L.DomUtil.create("div","legend");d.innerHTML="<b>Legende</b><br>"+Object.entries(COLORS).map(([c,col])=>`<span class=dot style="background:${col}"></span>${c}`).join("<br>");return d};legend.addTo(map);
+}
+function setupNavigation(){
+ $$(".nav button").forEach(b=>b.onclick=()=>{
+   $$(".nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");
+   $$(".view").forEach(v=>v.classList.remove("active"));$("#"+b.dataset.view).classList.add("active");
+   $("#pageTitle").textContent=b.textContent.trim();
+   setTimeout(()=>{if(b.dataset.view==="mapView")map.invalidateSize();if(b.dataset.view==="dashboard")dashMap.invalidateSize();},100);
+ });
+}
+document.addEventListener("DOMContentLoaded",async()=>{
+ facilities=window.__EMBEDDED_FACILITIES__;
+ setupMaps();setupNavigation();initializeDataViews();
+ $("#search").oninput=refreshMapAndTable;$("#region").onchange=refreshMapAndTable;
+ $("#fitMap").onclick=()=>fit(map,filtered());$("#exportCsv").onclick=()=>exportCSV();
+ $("#runNavigator").onclick=runNavigator;
+ $("#modalClose").onclick=()=>$("#modal").classList.remove("open");
+ $("#modal").onclick=e=>{if(e.target.id==="modal")$("#modal").classList.remove("open")};
+ $("#importJson").onchange=e=>{if(e.target.files[0])importJSON(e.target.files[0])};
+ $("#downloadJson").onclick=()=>{
+   const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(facilities,null,2)],{type:"application/json"}));a.download="data.json";a.click();URL.revokeObjectURL(a.href);
+ };
+});
+
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(console.error);
+  });
+}
+</script>
+</body></html>
