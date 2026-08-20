@@ -603,9 +603,9 @@
       "SAV",
       "Schmerztherapie"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Zentrales Patientenmanagement verifiziert; Notfälle 0931 201-37501; Klinikdirektion 0931 201-37001 / unfallchirurgie@ukw.de. SAV-Zuordnung aus Arbeitsbestand gegen DGUV-Liste prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Zentrales Patientenmanagement verifiziert; Notfälle 0931 201-37501; Klinikdirektion 0931 201-37001 / unfallchirurgie@ukw.de. SAV-Zuordnung aus Arbeitsbestand gegen DGUV-Liste prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Orthopädie",
@@ -890,9 +890,9 @@
     "categories": [
       "VAV"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "Klinik gibt ausdrücklich Zulassung zum Verletztenartenverfahren an. ZNA 24h: 06232 133-369; EBZ: 06232 133-360.",
+    "lat": null,
+    "lon": null,
+    "note": "Klinik gibt ausdrücklich Zulassung zum Verletztenartenverfahren an. ZNA 24h: 06232 133-369; EBZ: 06232 133-360. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädie",
       "Handchirurgie",
@@ -1453,9 +1453,9 @@
     "categories": [
       "EAP"
     ],
-    "lat": 49.5,
-    "lon": 8.47,
-    "note": "ZAR Mannheim GmbH; EAP wird im aktuellen Branchen-/Leistungsprofil ausgewiesen; Kontaktdaten aus ZAR-Unternehmensangaben.",
+    "lat": 49.5151,
+    "lon": 8.508059,
+    "note": "ZAR Mannheim GmbH; EAP wird im aktuellen Branchen-/Leistungsprofil ausgewiesen; Kontaktdaten aus ZAR-Unternehmensangaben. Geoposition Auf dem Sand 75–77 am 20.08.2026 korrigiert. Geodaten-Fix V4 20.08.2026: Marker Auf dem Sand 75-77 adressbezogen korrigiert.",
     "focus": [
       "EAP"
     ],
@@ -1498,9 +1498,9 @@
     "categories": [
       "EAP"
     ],
-    "lat": 49.5493,
-    "lon": 8.6673,
-    "note": "EAP auf offizieller Website ausdrücklich ausgewiesen.",
+    "lat": null,
+    "lon": null,
+    "note": "EAP auf offizieller Website ausdrücklich ausgewiesen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EAP"
     ],
@@ -1731,9 +1731,9 @@
     "categories": [
       "EAP"
     ],
-    "lat": 49.6819,
-    "lon": 8.622,
-    "note": "Kontaktdaten über offizielle Website verifiziert.",
+    "lat": null,
+    "lon": null,
+    "note": "Kontaktdaten über offizielle Website verifiziert. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EAP"
     ],
@@ -2056,9 +2056,9 @@
     "categories": [
       "EAP"
     ],
-    "lat": 49.1989,
-    "lon": 8.1186,
-    "note": "EAP für BG-Versicherte auf offizieller Website ausdrücklich ausgewiesen.",
+    "lat": null,
+    "lon": null,
+    "note": "EAP für BG-Versicherte auf offizieller Website ausdrücklich ausgewiesen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EAP"
     ],
@@ -2424,9 +2424,9 @@
     "categories": [
       "EAP"
     ],
-    "lat": 49.6244,
-    "lon": 9.6628,
-    "note": "EAP auf offizieller Website ausdrücklich ausgewiesen; vollständige Kontaktdaten und Geschäftsführung verifiziert.",
+    "lat": null,
+    "lon": null,
+    "note": "EAP auf offizieller Website ausdrücklich ausgewiesen; vollständige Kontaktdaten und Geschäftsführung verifiziert. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EAP"
     ],
@@ -2741,9 +2741,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Standort Heidelberg.",
+    "lat": null,
+    "lon": null,
+    "note": "Standort Heidelberg. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik",
@@ -2927,9 +2927,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Nutzerangabe: Ansprechpartner Florian Bangert; kein eigener Web-Auftritt / keine Homepage.",
+    "lat": null,
+    "lon": null,
+    "note": "Nutzerangabe: Ansprechpartner Florian Bangert; kein eigener Web-Auftritt / keine Homepage. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe"
@@ -3019,9 +3019,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3065,9 +3065,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3111,9 +3111,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe",
@@ -3209,9 +3209,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3255,9 +3255,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3301,9 +3301,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3347,9 +3347,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe"
@@ -3439,9 +3439,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3485,9 +3485,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe"
@@ -3531,9 +3531,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe"
@@ -3577,9 +3577,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8725,
-    "lon": 8.6539,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädische Schuhe"
@@ -3715,9 +3715,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Eigene orthopädische Werkstatt.",
+    "lat": null,
+    "lon": null,
+    "note": "Eigene orthopädische Werkstatt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Maßschuhe",
@@ -3767,9 +3767,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3813,9 +3813,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Orthopädieschuhmacher-Meisterbetrieb.",
+    "lat": null,
+    "lon": null,
+    "note": "Orthopädieschuhmacher-Meisterbetrieb. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3911,9 +3911,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -3957,9 +3957,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -4003,9 +4003,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -4049,9 +4049,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik",
@@ -4097,9 +4097,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik",
@@ -4145,9 +4145,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -4191,9 +4191,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik",
@@ -4241,9 +4241,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -4287,9 +4287,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "",
+    "lat": null,
+    "lon": null,
+    "note": "Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik"
@@ -4333,9 +4333,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Ambulante spezialisierte Schmerzpraxis.",
+    "lat": null,
+    "lon": null,
+    "note": "Ambulante spezialisierte Schmerzpraxis. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4384,9 +4384,9 @@
       "CRPS",
       "Schmerztherapie"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Universitäres Schmerzzentrum; Termin nach Vorprüfung der Unterlagen.",
+    "lat": null,
+    "lon": null,
+    "note": "Universitäres Schmerzzentrum; Termin nach Vorprüfung der Unterlagen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Schmerzambulanz",
@@ -4436,9 +4436,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Interdisziplinäres universitäres Schmerzzentrum.",
+    "lat": null,
+    "lon": null,
+    "note": "Interdisziplinäres universitäres Schmerzzentrum. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4486,9 +4486,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Privatpraxis; Kontaktdaten vor Zuweisung nochmals prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Privatpraxis; Kontaktdaten vor Zuweisung nochmals prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie"
     ],
@@ -4531,9 +4531,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Praxisangaben aus Arztsuche; Kontaktdaten ergänzen.",
+    "lat": null,
+    "lon": null,
+    "note": "Praxisangaben aus Arztsuche; Kontaktdaten ergänzen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Anästhesiologie"
@@ -4578,9 +4578,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Schmerztherapeutischer Treffer; Details vor Zuweisung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Schmerztherapeutischer Treffer; Details vor Zuweisung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Anästhesiologie"
@@ -4625,9 +4625,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.352850000000004,
-    "lon": 9.14625,
-    "note": "Spezielle Schmerztherapie laut Arztsuche.",
+    "lat": null,
+    "lon": null,
+    "note": "Spezielle Schmerztherapie laut Arztsuche. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Neurochirurgie",
@@ -4724,9 +4724,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "Ambulante Schmerzpraxis; Videosprechstunde möglich.",
+    "lat": null,
+    "lon": null,
+    "note": "Ambulante Schmerzpraxis; Videosprechstunde möglich. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4774,9 +4774,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "Kassen-, Privat- und Selbstzahlerbehandlung laut Arzt-Auskunft.",
+    "lat": null,
+    "lon": null,
+    "note": "Kassen-, Privat- und Selbstzahlerbehandlung laut Arzt-Auskunft. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4826,9 +4826,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.6352,
-    "lon": 8.3594,
-    "note": "Praxis für Allgemeinmedizin und spezielle Schmerztherapie; Anschrift/Kontakt aus Website noch ergänzen.",
+    "lat": null,
+    "lon": null,
+    "note": "Praxis für Allgemeinmedizin und spezielle Schmerztherapie; Anschrift/Kontakt aus Website noch ergänzen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich. Adresse Zeile 96 am 20.08.2026 ergänzt: Siegfriedstraße 18, 67547 Worms.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4840,7 +4840,7 @@
     "fax": "",
     "email": "",
     "website": "https://dorothea-ebeling.de/",
-    "address": "Worms",
+    "address": "Siegfriedstraße 18 67547 Worms",
     "contact": "Dr. med. Dorothea Ebeling",
     "department": "Fachärztin für Allgemeinmedizin und Anästhesie; Spezielle Schmerztherapie",
     "source": "https://dorothea-ebeling.de/",
@@ -4878,9 +4878,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Privatpraxis; Website meldet aktuell keine Aufnahme neuer Patienten.",
+    "lat": null,
+    "lon": null,
+    "note": "Privatpraxis; Website meldet aktuell keine Aufnahme neuer Patienten. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Spezielle Schmerztherapie",
@@ -4926,9 +4926,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Ambulante, tagesklinische und stationäre multimodale Schmerztherapie.",
+    "lat": null,
+    "lon": null,
+    "note": "Ambulante, tagesklinische und stationäre multimodale Schmerztherapie. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Interdisziplinäre Schmerzmedizin",
@@ -4978,9 +4978,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Schmerztherapeutische Tagesklinik; Kontaktdaten noch gegen Primärquelle prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Schmerztherapeutische Tagesklinik; Kontaktdaten noch gegen Primärquelle prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Tagesklinik"
@@ -5025,9 +5025,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Klinische Schmerztherapie; Detailkontakt noch ergänzen.",
+    "lat": null,
+    "lon": null,
+    "note": "Klinische Schmerztherapie; Detailkontakt noch ergänzen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Anästhesiologie",
@@ -5075,9 +5075,9 @@
       "Schmerztherapie",
       "BG-Klinik"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Schmerzambulanz der BG Klinik Ludwigshafen; Anmeldung per E-Mail möglich. Direkte Ansprechpartnerinnen: Frau Seum 0621 6810-2329, Frau Eckard 0621 6810-2359. Angaben aus interner Übersicht Stand April 2026.",
+    "lat": null,
+    "lon": null,
+    "note": "Schmerzambulanz der BG Klinik Ludwigshafen; Anmeldung per E-Mail möglich. Direkte Ansprechpartnerinnen: Frau Seum 0621 6810-2329, Frau Eckard 0621 6810-2359. Angaben aus interner Übersicht Stand April 2026. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Schmerztherapie",
       "Anästhesiologie",
@@ -5087,7 +5087,7 @@
     "fax": "",
     "email": "schmerzmedizin@bgu-ludwigshafen.de",
     "website": "",
-    "address": "Ludwig-Guttmann-Str. 13 Ludwigshafen am Rhein",
+    "address": "Ludwig-Guttmann-Str. 13 67071 Ludwigshafen am Rhein",
     "contact": "Dr. med. Matthias Bussmann; Frau Seum; Frau Eckard",
     "department": "Leitender Arzt Schmerzmedizin; Ansprechpartnerinnen Schmerzambulanz",
     "source": "https://www.bg-kliniken.de/klinik-ludwigshafen/",
@@ -5128,7 +5128,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "Überregionales Schmerzzentrum; ambulante und stationäre Behandlung chronischer Schmerzen.",
+    "note": "Überregionales Schmerzzentrum; ambulante und stationäre Behandlung chronischer Schmerzen. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Schmerztherapie",
       "Schmerzambulanz",
@@ -5140,7 +5140,7 @@
     "fax": "07130 15-4186",
     "email": "schmerztherapie.kloe@slk-kliniken.de",
     "website": "https://www.slk-kliniken.de/schmerztherapie-kloe",
-    "address": "Löwenstein",
+    "address": "Geißhölzle 62 74245 Löwenstein",
     "contact": "Dr. Michael Kugler",
     "department": "Klinikdirektor; Leiter Regionales Schmerzzentrum DGS Region Heilbronn",
     "source": "https://www.slk-kliniken.de/schmerztherapie-kloe",
@@ -5230,9 +5230,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Ambulante Behandlung chronischer Schmerzen; Kassen- und Privatpatienten.",
+    "lat": null,
+    "lon": null,
+    "note": "Ambulante Behandlung chronischer Schmerzen; Kassen- und Privatpatienten. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Ambulante Schmerzpraxis",
@@ -5280,9 +5280,9 @@
     "categories": [
       "Schmerztherapie"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Stationäre multimodale Schmerztherapie mit Physio-, Ergo- und psychotherapeutischen Anteilen.",
+    "lat": null,
+    "lon": null,
+    "note": "Stationäre multimodale Schmerztherapie mit Physio-, Ergo- und psychotherapeutischen Anteilen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Schmerztherapie",
       "Stationär",
@@ -5330,9 +5330,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "GNP-Zertifizierung seit 2000; Erwachsene; Hausbesuche und mobile Rehabilitation möglich.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2000; Erwachsene; Hausbesuche und mobile Rehabilitation möglich. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5394,9 +5394,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "GNP-Zertifizierung seit 2001; Erwachsene; Hausbesuche und mobile Rehabilitation möglich.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2001; Erwachsene; Hausbesuche und mobile Rehabilitation möglich. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5454,9 +5454,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "GNP-Zertifizierung seit 2013; Schwerpunkt Kinder/Jugendliche; neuropsychologische Diagnostik/Therapie u.a. nach SHT.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2013; Schwerpunkt Kinder/Jugendliche; neuropsychologische Diagnostik/Therapie u.a. nach SHT. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5574,9 +5574,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "GNP-Zertifizierung seit 2000; Erwachsene sowie Kinder/Jugendliche.; GNP-Zertifizierung seit 2001; Erwachsene; Hausbesuche und mobile Rehabilitation möglich.; Konsolidiert aus Standort-Datensätzen: Andrea Dempfle – Praxengemeinschaft Neuropsychologie/Psychotherapie",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2000; Erwachsene sowie Kinder/Jugendliche.; GNP-Zertifizierung seit 2001; Erwachsene; Hausbesuche und mobile Rehabilitation möglich.; Konsolidiert aus Standort-Datensätzen: Andrea Dempfle – Praxengemeinschaft Neuropsychologie/Psychotherapie Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5638,9 +5638,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "GNP-Zertifizierung seit 2020; Praxisangebot laut GNP-Verzeichnis.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2020; Praxisangebot laut GNP-Verzeichnis. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5692,9 +5692,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "GNP-Zertifizierung seit 1998; Erwachsene.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 1998; Erwachsene. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5752,9 +5752,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Von der GNP als Klinische Neuropsychologin (GNP) und Sprecherin der Regionalgruppe Hessen ausgewiesen.",
+    "lat": null,
+    "lon": null,
+    "note": "Von der GNP als Klinische Neuropsychologin (GNP) und Sprecherin der Regionalgruppe Hessen ausgewiesen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5804,9 +5804,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "GNP-Zertifizierung seit 1997; Praxisinhaber. Die Praxis verfügt seit 2025 über einen eigenen Bereich Berufsgenossenschaften unter Leitung von Dr. Andreas Eidenmüller und Nicola Ullmann.; Bereichsleitung Berufsgenossenschaften gemeinsam mit Nicola Ullmann. GNP-Behandlersuche weist medizinisch-berufliche und berufliche Rehabilitation sowie Behandlung am Arbeitsplatz/Lebensumfeld aus.; GNP-Zertifizierung seit 2012. Bereichsleitung Berufsgenossenschaften gemeinsam mit Dr. Andreas Eidenmüller; medizinisch-berufliche und berufliche Rehabilitation sowie mobile Behandlung laut GNP.; Konsolidiert aus Standort-Datensätzen: Dr. Andreas Max Eidenmüller – Praxis für Klinische Neuropsychologie Gerhard Müller; Nicola Ullmann – Praxis für Klinische Neuropsychologie Gerhard Müller",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 1997; Praxisinhaber. Die Praxis verfügt seit 2025 über einen eigenen Bereich Berufsgenossenschaften unter Leitung von Dr. Andreas Eidenmüller und Nicola Ullmann.; Bereichsleitung Berufsgenossenschaften gemeinsam mit Nicola Ullmann. GNP-Behandlersuche weist medizinisch-berufliche und berufliche Rehabilitation sowie Behandlung am Arbeitsplatz/Lebensumfeld aus.; GNP-Zertifizierung seit 2012. Bereichsleitung Berufsgenossenschaften gemeinsam mit Dr. Andreas Eidenmüller; medizinisch-berufliche und berufliche Rehabilitation sowie mobile Behandlung laut GNP.; Konsolidiert aus Standort-Datensätzen: Dr. Andreas Max Eidenmüller – Praxis für Klinische Neuropsychologie Gerhard Müller; Nicola Ullmann – Praxis für Klinische Neuropsychologie Gerhard Müller Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5882,7 +5882,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "Die GNP führt das SRH Gesundheitszentrum Waldbronn als akkreditierte Weiterbildungsinstitution. Aktuelle GNP-Stelleninformation nennt Dr. Britta Setzer als Leitung Klinische Psychologie, Tel. 07243 603-2720.",
+    "note": "Die GNP führt das SRH Gesundheitszentrum Waldbronn als akkreditierte Weiterbildungsinstitution. Aktuelle GNP-Stelleninformation nennt Dr. Britta Setzer als Leitung Klinische Psychologie, Tel. 07243 603-2720. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Neuropsychologie",
       "GNP-akkreditierte Institution",
@@ -5893,7 +5893,7 @@
     "fax": "",
     "email": "",
     "website": "https://www.srh-gesundheit.de/",
-    "address": "76337 Waldbronn",
+    "address": "Gisela-und-Hans-Ruland-Straße 1 76337 Waldbronn",
     "contact": "",
     "department": "Neuropsychologie / Klinische Psychologie",
     "source": "https://www.gnp.de/akkreditierte-institutionen",
@@ -5932,9 +5932,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "GNP-Zertifizierung seit 2004; Erwachsene; medizinisch-berufliche Rehabilitation; mobile Behandlung im Lebensumfeld laut GNP.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2004; Erwachsene; medizinisch-berufliche Rehabilitation; mobile Behandlung im Lebensumfeld laut GNP. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -5998,9 +5998,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "GNP-Zertifizierung seit 2001; Erwachsene; medizinisch-berufliche und berufliche Rehabilitation.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2001; Erwachsene; medizinisch-berufliche und berufliche Rehabilitation. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -6118,9 +6118,9 @@
     "categories": [
       "Ambulante Reha"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "GNP-Zertifizierung seit 2008; neuropsychologische Praxis im ZAR am Klinikum Ludwigshafen; Erwachsene.",
+    "lat": null,
+    "lon": null,
+    "note": "GNP-Zertifizierung seit 2008; neuropsychologische Praxis im ZAR am Klinikum Ludwigshafen; Erwachsene. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neuropsychologie",
       "GNP-zertifiziert",
@@ -6232,9 +6232,9 @@
     "categories": [
       "Akutklinik"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Von der GNP als akkreditierte Weiterbildungsinstitution in Bayern geführt. Kein individueller Behandler-Zertifizierungsstatus behauptet.",
+    "lat": null,
+    "lon": null,
+    "note": "Von der GNP als akkreditierte Weiterbildungsinstitution in Bayern geführt. Kein individueller Behandler-Zertifizierungsstatus behauptet. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Neuropsychologie",
       "GNP-akkreditierte Institution",
@@ -6244,7 +6244,7 @@
     "fax": "",
     "email": "",
     "website": "https://www.kwm-klinikum.de/",
-    "address": "97070 Würzburg",
+    "address": "Juliuspromenade 19 97070 Würzburg",
     "contact": "",
     "department": "Neuropsychologie / Klinische Weiterbildung",
     "source": "https://www.gnp.de/akkreditierte-institutionen",
@@ -6499,9 +6499,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "Arbeitsmedizinische Betreuung gemäß DGUV Vorschrift 2; Kontaktdaten auf Website über Kontaktfunktion, vor konkreter Zuweisung ergänzend prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Arbeitsmedizinische Betreuung gemäß DGUV Vorschrift 2; Kontaktdaten auf Website über Kontaktfunktion, vor konkreter Zuweisung ergänzend prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "DGUV Vorschrift 2",
@@ -6553,9 +6553,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "BEM und betriebliche Gesundheitsförderung ausdrücklich im Leistungsangebot.",
+    "lat": null,
+    "lon": null,
+    "note": "BEM und betriebliche Gesundheitsförderung ausdrücklich im Leistungsangebot. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Arbeitssicherheit",
@@ -6606,9 +6606,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Arbeitsmedizinischer Dienst mit Facharztweiterbildung; Eignungsuntersuchungen und arbeitsplatzbezogene Beratung.",
+    "lat": null,
+    "lon": null,
+    "note": "Arbeitsmedizinischer Dienst mit Facharztweiterbildung; Eignungsuntersuchungen und arbeitsplatzbezogene Beratung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Fachärzte Arbeitsmedizin",
@@ -6660,9 +6660,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Für Reha-Management besonders relevant: Beurteilung von Arbeits-, Berufs- und Erwerbsfähigkeit, arbeitsbedingten Erkrankungen/BK sowie Begleitung von Wiedereingliederungsmaßnahmen.",
+    "lat": null,
+    "lon": null,
+    "note": "Für Reha-Management besonders relevant: Beurteilung von Arbeits-, Berufs- und Erwerbsfähigkeit, arbeitsbedingten Erkrankungen/BK sowie Begleitung von Wiedereingliederungsmaßnahmen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Arbeitsfähigkeit",
@@ -6718,9 +6718,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Überbetrieblicher Dienst mit Arbeitsmedizin, Arbeitsschutz und Arbeitspsychologie.",
+    "lat": null,
+    "lon": null,
+    "note": "Überbetrieblicher Dienst mit Arbeitsmedizin, Arbeitsschutz und Arbeitspsychologie. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Arbeitsschutz",
@@ -6769,9 +6769,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "BEM ausdrücklich im Leistungsangebot; überbetrieblicher Dienst.",
+    "lat": null,
+    "lon": null,
+    "note": "BEM ausdrücklich im Leistungsangebot; überbetrieblicher Dienst. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Arbeitssicherheit",
@@ -6822,9 +6822,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Betriebsmedizinische Betreuung und arbeitsmedizinische Untersuchungen.",
+    "lat": null,
+    "lon": null,
+    "note": "Betriebsmedizinische Betreuung und arbeitsmedizinische Untersuchungen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Betriebsmedizin",
@@ -6872,9 +6872,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Für Reha-Steuerung besonders geeignet: Eignungsuntersuchungen und BEM ausdrücklich im Leistungsangebot.",
+    "lat": null,
+    "lon": null,
+    "note": "Für Reha-Steuerung besonders geeignet: Eignungsuntersuchungen und BEM ausdrücklich im Leistungsangebot. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Fachärztin Arbeitsmedizin",
@@ -6930,9 +6930,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "BEM/Wiedereingliederung sowie arbeitsmedizinische Gutachten ausdrücklich angeboten; Gesundheitsmobil für betriebliche Vor-Ort-Untersuchungen.",
+    "lat": null,
+    "lon": null,
+    "note": "BEM/Wiedereingliederung sowie arbeitsmedizinische Gutachten ausdrücklich angeboten; Gesundheitsmobil für betriebliche Vor-Ort-Untersuchungen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Facharzt Arbeitsmedizin",
@@ -6988,9 +6988,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Eignungsuntersuchungen werden ausdrücklich auch als Einzelleistung angeboten; Praxis verweist auf Empfehlungen der Berufsgenossenschaften und Untersuchungen analog BG-Grundsätzen.",
+    "lat": null,
+    "lon": null,
+    "note": "Eignungsuntersuchungen werden ausdrücklich auch als Einzelleistung angeboten; Praxis verweist auf Empfehlungen der Berufsgenossenschaften und Untersuchungen analog BG-Grundsätzen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Betriebsmedizin",
@@ -7046,9 +7046,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Akademisches Institut für Arbeits-, Sozial- und Umweltmedizin; insbesondere für komplexe arbeits-/sozialmedizinische Fragestellungen als Referenzadresse interessant.",
+    "lat": null,
+    "lon": null,
+    "note": "Akademisches Institut für Arbeits-, Sozial- und Umweltmedizin; insbesondere für komplexe arbeits-/sozialmedizinische Fragestellungen als Referenzadresse interessant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Universitätsmedizin",
@@ -7099,9 +7099,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Aktueller lokaler Arbeitsmedizin-Treffer; Leistungsprofil vor fallbezogener Beauftragung zusätzlich prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Aktueller lokaler Arbeitsmedizin-Treffer; Leistungsprofil vor fallbezogener Beauftragung zusätzlich prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Betriebsmedizin"
@@ -7146,9 +7146,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Aktueller lokaler Arbeitsmedizin-Treffer; konkrete Reha-/BEM-Leistungen vor Beauftragung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Aktueller lokaler Arbeitsmedizin-Treffer; konkrete Reha-/BEM-Leistungen vor Beauftragung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "betrieblicher Gesundheitsschutz"
@@ -7193,9 +7193,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.6244,
-    "lon": 9.6628,
-    "note": "Vom Krankenhaus Tauberbischofsheim als Betriebsärztin ausgewiesen; Kontakt über Krankenhaus Tauberbischofsheim: Zentrale 09341 800-0, info.TBB@bbtgruppe.de, www.khtbb.de. Für externe Reha-Aufträge Verfügbarkeit vorab klären.",
+    "lat": null,
+    "lon": null,
+    "note": "Vom Krankenhaus Tauberbischofsheim als Betriebsärztin ausgewiesen; Kontakt über Krankenhaus Tauberbischofsheim: Zentrale 09341 800-0, info.TBB@bbtgruppe.de, www.khtbb.de. Für externe Reha-Aufträge Verfügbarkeit vorab klären. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Betriebsmedizin",
@@ -7245,9 +7245,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Eignungsuntersuchungen und arbeitsmedizinische Betreuung ausdrücklich angeboten; genaue Standortkontaktdaten bei konkreter Nutzung über DEKRA prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Eignungsuntersuchungen und arbeitsmedizinische Betreuung ausdrücklich angeboten; genaue Standortkontaktdaten bei konkreter Nutzung über DEKRA prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsmedizin",
       "Eignungsuntersuchungen",
@@ -7296,9 +7296,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Breites neurologisches Spektrum; klinisch-neurophysiologische Untersuchungsmethoden werden angeboten.",
+    "lat": null,
+    "lon": null,
+    "note": "Breites neurologisches Spektrum; klinisch-neurophysiologische Untersuchungsmethoden werden angeboten. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "Klinische Neurophysiologie",
@@ -7346,9 +7346,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Niedergelassene neurologische Praxis; Mitgliedschaften DGKN/DGN/DEGUM, Parkinsonnetz Rhein-Neckar.",
+    "lat": null,
+    "lon": null,
+    "note": "Niedergelassene neurologische Praxis; Mitgliedschaften DGKN/DGN/DEGUM, Parkinsonnetz Rhein-Neckar. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "DGKN",
@@ -7448,9 +7448,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.352850000000004,
-    "lon": 9.14625,
-    "note": "Für BG-Fälle besonders interessant wegen Neurographie, Myographie und Begutachtung bei peripheren Nerven-/Muskelschäden.",
+    "lat": null,
+    "lon": null,
+    "note": "Für BG-Fälle besonders interessant wegen Neurographie, Myographie und Begutachtung bei peripheren Nerven-/Muskelschäden. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "Neurographie/NLG",
@@ -7506,9 +7506,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "Gesamtes Spektrum neurologischer Erkrankungen; neurologischer Konsildienst am Diakonissenkrankenhaus Speyer.",
+    "lat": null,
+    "lon": null,
+    "note": "Gesamtes Spektrum neurologischer Erkrankungen; neurologischer Konsildienst am Diakonissenkrankenhaus Speyer. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "periphere Nerven",
@@ -7557,9 +7557,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "Akute Notfälle können nach telefonischer Anmeldung durch den überweisenden Arzt kurzfristig angenommen werden.",
+    "lat": null,
+    "lon": null,
+    "note": "Akute Notfälle können nach telefonischer Anmeldung durch den überweisenden Arzt kurzfristig angenommen werden. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "Geriatrie",
@@ -7616,9 +7616,9 @@
     "categories": [
       "Akutklinik"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Neurologische Klinik mit Klinischer Neurophysiologie; für komplexe neurologische Diagnostik und Akutfälle relevant.",
+    "lat": null,
+    "lon": null,
+    "note": "Neurologische Klinik mit Klinischer Neurophysiologie; für komplexe neurologische Diagnostik und Akutfälle relevant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Neurologie",
       "Klinische Neurophysiologie",
@@ -7629,7 +7629,7 @@
     "fax": "0621 503-4202",
     "email": "neurologie@klilu.de",
     "website": "https://www.klilu.de/",
-    "address": "67063 Ludwigshafen am Rhein",
+    "address": "Bremserstraße 79 67063 Ludwigshafen am Rhein",
     "contact": "Prof. Dr. Simon Nagel; Bettina Bauer; Maike Elfner",
     "department": "Klinikdirektor; Sekretariat",
     "source": "https://www.klilu.de/medizin__pflege/kliniken_und_fachbereiche/kliniken_a_z/neurologie/team/index_ger.html",
@@ -7669,9 +7669,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.6819,
-    "lon": 8.622,
-    "note": "Barrierefreie neurologische Praxis mit Einzugsgebiet Bergstraße, Odenwald, Darmstadt und Frankfurt.",
+    "lat": null,
+    "lon": null,
+    "note": "Barrierefreie neurologische Praxis mit Einzugsgebiet Bergstraße, Odenwald, Darmstadt und Frankfurt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "Bergstraße",
@@ -7720,9 +7720,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Moderne neurologische Praxis für Erkrankungen von Gehirn, Nerven und Muskeln.",
+    "lat": null,
+    "lon": null,
+    "note": "Moderne neurologische Praxis für Erkrankungen von Gehirn, Nerven und Muskeln. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "Erkrankungen Gehirn, Nerven und Muskeln"
@@ -7767,9 +7767,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Für BG-Fälle besonders interessant wegen ENG/EMG, evozierten Potentialen und Gutachten zur Kraftfahreignung.",
+    "lat": null,
+    "lon": null,
+    "note": "Für BG-Fälle besonders interessant wegen ENG/EMG, evozierten Potentialen und Gutachten zur Kraftfahreignung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "ENG/Elektroneurographie",
@@ -7823,9 +7823,9 @@
     "categories": [
       "EFL / FCE"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Sehr breites klinisch-neurophysiologisches Spektrum; für periphere Nervenläsionen und neuromuskuläre Fragestellungen besonders geeignet.",
+    "lat": null,
+    "lon": null,
+    "note": "Sehr breites klinisch-neurophysiologisches Spektrum; für periphere Nervenläsionen und neuromuskuläre Fragestellungen besonders geeignet. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "EFL – WORKWELL/Isernhagen",
@@ -8050,9 +8050,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8725,
-    "lon": 8.6539,
-    "note": "Breite neurophysiologische Funktionsdiagnostik einschließlich EMG und NLG; genaue Standortkontaktdaten vor konkreter Zuweisung über Praxiswebsite prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Breite neurophysiologische Funktionsdiagnostik einschließlich EMG und NLG; genaue Standortkontaktdaten vor konkreter Zuweisung über Praxiswebsite prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "EMG",
@@ -8110,9 +8110,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8725,
-    "lon": 8.6539,
-    "note": "Zusätzliche neurologische Anlaufstelle in Darmstadt-Arheilgen; Leistungsprofil hinsichtlich EMG/NLG vor konkreter Zuweisung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Zusätzliche neurologische Anlaufstelle in Darmstadt-Arheilgen; Leistungsprofil hinsichtlich EMG/NLG vor konkreter Zuweisung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Neurologie",
       "ambulante Facharztpraxis"
@@ -8157,9 +8157,9 @@
     "categories": [
       "MVZ"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Für BG-Fälle sehr gut geeignetes neurophysiologisches Spektrum; ausdrücklich Engpasssyndrome, Nervenerkrankungen und Polyneuropathien.",
+    "lat": null,
+    "lon": null,
+    "note": "Für BG-Fälle sehr gut geeignetes neurophysiologisches Spektrum; ausdrücklich Engpasssyndrome, Nervenerkrankungen und Polyneuropathien. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Neurologie",
       "NLG",
@@ -8177,7 +8177,7 @@
     "fax": "06021 32-3256",
     "email": "neurologie@mvz-klinikum-ab.de",
     "website": "https://mvz-klinikum-ab.de/klinik/neurologie/",
-    "address": "63739 Aschaffenburg",
+    "address": "Am Hasenkopf 1 63739 Aschaffenburg",
     "contact": "Dr. med. Judith Stroh",
     "department": "Fachärztin für Neurologie",
     "source": "https://mvz-klinikum-ab.de/klinik/neurologie/",
@@ -8223,9 +8223,9 @@
     "categories": [
       "SAV"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "FESSH-zertifiziertes Hand-Trauma- und Replantations-Zentrum. BG-Fälle: 0931 201-37012 / -37190; Handchirurgie-Sekretariat 0931 201-37032.",
+    "lat": null,
+    "lon": null,
+    "note": "FESSH-zertifiziertes Hand-Trauma- und Replantations-Zentrum. BG-Fälle: 0931 201-37012 / -37190; Handchirurgie-Sekretariat 0931 201-37032. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Handchirurgie",
       "Mikrochirurgie",
@@ -8281,9 +8281,9 @@
     "categories": [
       "Ambulanz"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Spezialisierte Psychotraumatologie. SGB-XIV-Traumaambulanz ist leistungsrechtlich nicht mit BG-Heilverfahren gleichzusetzen; für fachliche Diagnostik/Traumafolgestörungen dennoch relevante Referenzadresse.",
+    "lat": null,
+    "lon": null,
+    "note": "Spezialisierte Psychotraumatologie. SGB-XIV-Traumaambulanz ist leistungsrechtlich nicht mit BG-Heilverfahren gleichzusetzen; für fachliche Diagnostik/Traumafolgestörungen dennoch relevante Referenzadresse. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotraumatologie / Psychiatrie",
       "PTBS",
@@ -8339,9 +8339,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Regionaler Orthopädietechnik-Anbieter; konkrete Prothetik-/Sonderversorgungsleistungen vor BG-Beauftragung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Regionaler Orthopädietechnik-Anbieter; konkrete Prothetik-/Sonderversorgungsleistungen vor BG-Beauftragung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädietechnik / Prothetik",
       "Orthopädietechnik",
@@ -8389,9 +8389,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Regionaler Orthopädietechnik-Anbieter; Spezialkompetenzen Prothetik/Orthetik vor fallbezogener Beauftragung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Regionaler Orthopädietechnik-Anbieter; Spezialkompetenzen Prothetik/Orthetik vor fallbezogener Beauftragung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädietechnik / Prothetik",
       "Orthopädietechnik",
@@ -8437,9 +8437,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Für neurologisch-orthopädische Hilfsmittelversorgung interessant; konkrete BG-/Prothetikleistungen vor Beauftragung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Für neurologisch-orthopädische Hilfsmittelversorgung interessant; konkrete BG-/Prothetikleistungen vor Beauftragung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädietechnik / Prothetik",
       "Orthopädietechnik",
@@ -8487,9 +8487,9 @@
     "categories": [
       "Ambulanz"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Zeitnahes diagnostisches Erstgespräch bei akutem Trauma; Beratung zu weiterführender traumaspezifischer Behandlung. Leistungsrechtliche Eignung für BG-Fälle jeweils klären.",
+    "lat": null,
+    "lon": null,
+    "note": "Zeitnahes diagnostisches Erstgespräch bei akutem Trauma; Beratung zu weiterführender traumaspezifischer Behandlung. Leistungsrechtliche Eignung für BG-Fälle jeweils klären. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotraumatologie / Psychiatrie",
       "Akuttrauma",
@@ -8548,9 +8548,9 @@
       "ABMR",
       "EFL / FCE"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Im Rahmen der ABMR wird laut Anbieter zu Beginn und gegen Ende jeweils eine EFL durchgeführt. Standort-/Direktkontaktdaten vor konkreter Zuweisung ergänzend prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Im Rahmen der ABMR wird laut Anbieter zu Beginn und gegen Ende jeweils eine EFL durchgeführt. Standort-/Direktkontaktdaten vor konkreter Zuweisung ergänzend prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EFL / FCE",
       "EFL – WORKWELL/Isernhagen",
@@ -8612,9 +8612,9 @@
     "categories": [
       "EFL / FCE"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Eigenständiges lizenziertes EFL-Testzentrum. Drei Fachärzte als EFL-Gutachter sowie vier Fachkräfte aus Physio-/Ergotherapie und Sportwissenschaft als EFL-Therapeuten qualifiziert. Angebot laut GbF für alle Interessenten geöffnet.",
+    "lat": null,
+    "lon": null,
+    "note": "Eigenständiges lizenziertes EFL-Testzentrum. Drei Fachärzte als EFL-Gutachter sowie vier Fachkräfte aus Physio-/Ergotherapie und Sportwissenschaft als EFL-Therapeuten qualifiziert. Angebot laut GbF für alle Interessenten geöffnet. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EFL / FCE",
       "EFL – WORKWELL/Isernhagen",
@@ -8673,9 +8673,9 @@
       "ABMR",
       "EFL / FCE"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Wichtig: kein klassisches EFL nach WORKWELL/ISERNHAGEN nachgewiesen. Das ZAR beschreibt das ALA-Verfahren ausdrücklich als analog zum EFL-Testverfahren. Deshalb separat als EFL-analog gekennzeichnet.",
+    "lat": null,
+    "lon": null,
+    "note": "Wichtig: kein klassisches EFL nach WORKWELL/ISERNHAGEN nachgewiesen. Das ZAR beschreibt das ALA-Verfahren ausdrücklich als analog zum EFL-Testverfahren. Deshalb separat als EFL-analog gekennzeichnet. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "EFL / FCE",
       "EFL – WORKWELL/Isernhagen",
@@ -8741,9 +8741,9 @@
       "Umschulung / Qualifizierung",
       "BFW"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Großer regionaler Kernanbieter der beruflichen Rehabilitation. Breites Ausbildungs-/Umschulungsportfolio, Reha-Assessment und wohnortnahe Integrationsangebote.",
+    "lat": null,
+    "lon": null,
+    "note": "Großer regionaler Kernanbieter der beruflichen Rehabilitation. Breites Ausbildungs-/Umschulungsportfolio, Reha-Assessment und wohnortnahe Integrationsangebote. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation",
       "Reha-Assessment",
@@ -8814,9 +8814,9 @@
       "Reha-Coaching / Neuorientierung",
       "Bildungsträger"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Kein klassisches Berufsförderungswerk im engeren Sinn; relevanter regionaler Bildungsträger mit Reha-Coaching und Umschulungen. Förderung u.a. über DRV möglich.",
+    "lat": null,
+    "lon": null,
+    "note": "Kein klassisches Berufsförderungswerk im engeren Sinn; relevanter regionaler Bildungsträger mit Reha-Coaching und Umschulungen. Förderung u.a. über DRV möglich. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation",
       "Umschulung",
@@ -8876,9 +8876,9 @@
     "categories": [
       "Berufliche Reha"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Regionaler SRH-Standort in Mannheim. Konkrete Maßnahme/Starttermine fallbezogen mit SRH BFW Heidelberg abgleichen.",
+    "lat": null,
+    "lon": null,
+    "note": "Regionaler SRH-Standort in Mannheim. Konkrete Maßnahme/Starttermine fallbezogen mit SRH BFW Heidelberg abgleichen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation",
       "Coaching",
@@ -9315,9 +9315,9 @@
       "Umschulung / Qualifizierung",
       "Bildungsträger"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Regionaler Bildungsträger; konkrete LTA-/BG-Eignung je Maßnahme prüfen. Für modulare Qualifizierung und Coaching relevant.",
+    "lat": null,
+    "lon": null,
+    "note": "Regionaler Bildungsträger; konkrete LTA-/BG-Eignung je Maßnahme prüfen. Für modulare Qualifizierung und Coaching relevant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Qualifizierung",
       "Ausbildung",
@@ -9375,9 +9375,9 @@
       "Umschulung / Qualifizierung",
       "Bildungsträger"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Besonders interessant: 2026 ausdrücklich RIA – Rehabilitation und Integration in den Arbeitsmarkt; daneben breites VIONA-Angebot inkl. CNC/Lagerlogistik/QM.; Kooperationsstandort IBB/Donner + Partner; nicht doppelt als eigenständiger Reha-Anbieter werten, aber für Kurszugang relevant.; Konsolidiert aus Standort-Datensätzen: IBB / Donner + Partner Heilbronn",
+    "lat": null,
+    "lon": null,
+    "note": "Besonders interessant: 2026 ausdrücklich RIA – Rehabilitation und Integration in den Arbeitsmarkt; daneben breites VIONA-Angebot inkl. CNC/Lagerlogistik/QM.; Kooperationsstandort IBB/Donner + Partner; nicht doppelt als eigenständiger Reha-Anbieter werten, aber für Kurszugang relevant.; Konsolidiert aus Standort-Datensätzen: IBB / Donner + Partner Heilbronn Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Integration",
       "Berufliche Rehabilitation / Qualifizierung",
@@ -9448,9 +9448,9 @@
       "Umschulung / Qualifizierung",
       "Bildungsträger"
     ],
-    "lat": 49.6244,
-    "lon": 9.6628,
-    "note": "Wichtiger wohnortnaher Anbieter für Main-Tauber; LTA-/BG-Eignung für konkrete Maßnahme jeweils vorab klären.",
+    "lat": null,
+    "lon": null,
+    "note": "Wichtiger wohnortnaher Anbieter für Main-Tauber; LTA-/BG-Eignung für konkrete Maßnahme jeweils vorab klären. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Qualifizierung",
       "Ausbildung",
@@ -9572,9 +9572,9 @@
       "Umschulung / Qualifizierung",
       "Bildungsträger"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Regionaler Bildungsträger in Würzburg; konkrete LTA-/BG-Eignung und aktuelle Umschulungsangebote fallbezogen prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Regionaler Bildungsträger in Würzburg; konkrete LTA-/BG-Eignung und aktuelle Umschulungsangebote fallbezogen prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Qualifizierung",
       "Ausbildung",
@@ -9630,9 +9630,9 @@
       "IHK",
       "Bildungsträger"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "DAA-Angebote in Mannheim nennen Berufsgenossenschaften und DRV ausdrücklich als Fördermöglichkeiten. 2026 u.a. IHK-Umschulungen und Umschulungsvorbereitung.",
+    "lat": null,
+    "lon": null,
+    "note": "DAA-Angebote in Mannheim nennen Berufsgenossenschaften und DRV ausdrücklich als Fördermöglichkeiten. 2026 u.a. IHK-Umschulungen und Umschulungsvorbereitung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Umschulung / Weiterbildung / LTA",
       "IHK-Umschulungen",
@@ -9694,9 +9694,9 @@
       "IHK",
       "Bildungsträger"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "2026 konkrete Umschulungsstarts nachgewiesen, z.B. Industriekaufmann ab 07.09.2026; breite modulare Weiterbildung.",
+    "lat": null,
+    "lon": null,
+    "note": "2026 konkrete Umschulungsstarts nachgewiesen, z.B. Industriekaufmann ab 07.09.2026; breite modulare Weiterbildung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Umschulung / Weiterbildung / LTA",
       "IHK-Umschulungen",
@@ -9758,9 +9758,9 @@
       "Umschulung / Qualifizierung",
       "IHK"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "COMCAVE weist Heidelberg als Standort in Baden-Württemberg aus. Regulärer Umschulungsträger; konkrete BG/LTA-Eignung fallbezogen prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "COMCAVE weist Heidelberg als Standort in Baden-Württemberg aus. Regulärer Umschulungsträger; konkrete BG/LTA-Eignung fallbezogen prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -9820,9 +9820,9 @@
       "Umschulung / Qualifizierung",
       "IHK"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "COMCAVE weist Mannheim als Standort aus. Für überbetriebliche Umschulung relevant; Reha-/BG-spezifische Betreuung gesondert prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "COMCAVE weist Mannheim als Standort aus. Für überbetriebliche Umschulung relevant; Reha-/BG-spezifische Betreuung gesondert prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -9882,9 +9882,9 @@
       "Umschulung / Qualifizierung",
       "IHK"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "COMCAVE weist Karlsruhe als Standort aus.",
+    "lat": null,
+    "lon": null,
+    "note": "COMCAVE weist Karlsruhe als Standort aus. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -9941,9 +9941,9 @@
       "Berufliche Reha",
       "Umschulung / Qualifizierung"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Konkreter Standort und Umschulungsangebot verifiziert.",
+    "lat": null,
+    "lon": null,
+    "note": "Konkreter Standort und Umschulungsangebot verifiziert. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -10004,9 +10004,9 @@
       "Berufliche Reha",
       "Umschulung / Qualifizierung"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Direkter IBB-Standort; breites zertifiziertes Umschulungs- und Weiterbildungsportfolio.",
+    "lat": null,
+    "lon": null,
+    "note": "Direkter IBB-Standort; breites zertifiziertes Umschulungs- und Weiterbildungsportfolio. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -10067,9 +10067,9 @@
       "Berufliche Reha",
       "Umschulung / Qualifizierung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "IBB-Partnerstandort mit explizitem Filter für Rehabilitations-Angebote und Umschulungen.",
+    "lat": null,
+    "lon": null,
+    "note": "IBB-Partnerstandort mit explizitem Filter für Rehabilitations-Angebote und Umschulungen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -10130,9 +10130,9 @@
       "Berufliche Reha",
       "Umschulung / Qualifizierung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Zusätzlicher IBB-Partnerstandort Mannheim; Umschulungen ausdrücklich angeboten.",
+    "lat": null,
+    "lon": null,
+    "note": "Zusätzlicher IBB-Partnerstandort Mannheim; Umschulungen ausdrücklich angeboten. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Umschulung",
@@ -10187,9 +10187,9 @@
       "Berufliche Reha",
       "BTZ"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "KURSNET führt den Standort als vergleichbare Rehabilitationseinrichtung. Kein klassischer Umschulungsträger, aber wichtige vorgeschaltete LTA-/Belastungserprobungsstruktur.",
+    "lat": null,
+    "lon": null,
+    "note": "KURSNET führt den Standort als vergleichbare Rehabilitationseinrichtung. Kein klassischer Umschulungsträger, aber wichtige vorgeschaltete LTA-/Belastungserprobungsstruktur. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation",
       "Berufliches Training",
@@ -10244,9 +10244,9 @@
       "Berufliche Reha",
       "BTZ"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "KURSNET führt den Frankfurter Standort als vergleichbare Rehabilitationseinrichtung für psychisch erkrankte Menschen.",
+    "lat": null,
+    "lon": null,
+    "note": "KURSNET führt den Frankfurter Standort als vergleichbare Rehabilitationseinrichtung für psychisch erkrankte Menschen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation",
       "Berufliches Training",
@@ -10299,9 +10299,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Kein Maßnahmeträger, aber zentrale Schnittstelle zur Suche/Prüfung betrieblicher Umschulungsplätze und Ausbildungsbetriebe im Rhein-Neckar-/Neckar-Odenwald-Gebiet.",
+    "lat": null,
+    "lon": null,
+    "note": "Kein Maßnahmeträger, aber zentrale Schnittstelle zur Suche/Prüfung betrieblicher Umschulungsplätze und Ausbildungsbetriebe im Rhein-Neckar-/Neckar-Odenwald-Gebiet. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung",
       "betriebliche Ausbildung/Umschulung",
@@ -10356,9 +10356,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Direkte Fachkontakte: Ivo Runge Metall/Elektro/Mechatronik 0721 174-216; Simone Leibel IT/Bau/Naturwissenschaft 0721 174-218; Christina Leistner Büro/Bank/Versicherung/Immobilien 0721 174-370; Christian Treiber Lagerlogistik 0721 174-406; Stephan Ruf Industrie/Großhandel/E-Commerce 0721 174-220.",
+    "lat": null,
+    "lon": null,
+    "note": "Direkte Fachkontakte: Ivo Runge Metall/Elektro/Mechatronik 0721 174-216; Simone Leibel IT/Bau/Naturwissenschaft 0721 174-218; Christina Leistner Büro/Bank/Versicherung/Immobilien 0721 174-370; Christian Treiber Lagerlogistik 0721 174-406; Stephan Ruf Industrie/Großhandel/E-Commerce 0721 174-220. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung",
       "Ausbildungs-/Umschulungsberatung",
@@ -10417,9 +10417,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "IHK nennt Umschulung ausdrücklich als Leistung. Teamkoordination Lisa Feuchtenbeiner 07131 9677-454; Ausbildungsberater u.a. Hachenberger -291, Hagen -455, Hilsmann -456, Schnabel -458, Schwarz -457, Schwiewager -207.",
+    "lat": null,
+    "lon": null,
+    "note": "IHK nennt Umschulung ausdrücklich als Leistung. Teamkoordination Lisa Feuchtenbeiner 07131 9677-454; Ausbildungsberater u.a. Hachenberger -291, Hagen -455, Hilsmann -456, Schnabel -458, Schwarz -457, Schwiewager -207. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung",
       "Umschulungsberatung",
@@ -10474,9 +10474,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.8725,
-    "lon": 8.6539,
-    "note": "Zuständig auch für Kreis Bergstraße. Ausbildungsberatung ist regional und nach Berufsgruppen organisiert; für betriebliche Umschulungsplatzprüfung als Kammer-Schnittstelle relevant.",
+    "lat": null,
+    "lon": null,
+    "note": "Zuständig auch für Kreis Bergstraße. Ausbildungsberatung ist regional und nach Berufsgruppen organisiert; für betriebliche Umschulungsplatzprüfung als Kammer-Schnittstelle relevant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.  Adresse Zeile 193 am 20.08.2026 ergänzt: Rheinstraße 89, 64295 Darmstadt.",
     "focus": [
       "Betriebliche Umschulung",
       "Ausbildungsberatung",
@@ -10491,7 +10491,7 @@
     "fax": "",
     "email": "",
     "website": "https://www.ihk.de/darmstadt/",
-    "address": "Darmstadt",
+    "address": "Rheinstraße 89 64295 Darmstadt",
     "contact": "Torsten Heinzmann",
     "department": "Teamleiter Ausbildungsberatung kaufmännische Berufe, 0171 5623324",
     "source": "https://www.ihk.de/darmstadt/produktmarken/aus-und-weiterbildung-channel/ausbildung-von-a-bis-z/team-bildungsberatung-2535796",
@@ -10535,9 +10535,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Ausbildungsberater prüfen u.a. Eignung der Ausbildungsstätten. Für individuelle betriebliche Umschulungen zentrale Kammer-Schnittstelle; zuständigen Berater nach Beruf/Betrieb über Teamseite auswählen.",
+    "lat": null,
+    "lon": null,
+    "note": "Ausbildungsberater prüfen u.a. Eignung der Ausbildungsstätten. Für individuelle betriebliche Umschulungen zentrale Kammer-Schnittstelle; zuständigen Berater nach Beruf/Betrieb über Teamseite auswählen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung",
       "Ausbildungsberatung",
@@ -10590,9 +10590,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Direktkontakte laut IHK: Golling 0631 41448-1717; Kepes 0621 5904-1718; Pagel 06341 971-1716; Schubing 0621 5904-1721; Stemmler 06331 523-1719; Butty 0621 5904-1712.",
+    "lat": null,
+    "lon": null,
+    "note": "Direktkontakte laut IHK: Golling 0631 41448-1717; Kepes 0621 5904-1718; Pagel 06341 971-1716; Schubing 0621 5904-1721; Stemmler 06331 523-1719; Butty 0621 5904-1712. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung",
       "Ausbildungsberatung",
@@ -10647,9 +10647,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Zentrale Kammer-Schnittstelle für betriebliche Umschulung in Handwerksberufen im Rhein-Neckar-/Neckar-Odenwald-Raum; Bildungsakademie Gutenbergstraße 49 ergänzend für überbetriebliche Qualifizierung.",
+    "lat": null,
+    "lon": null,
+    "note": "Zentrale Kammer-Schnittstelle für betriebliche Umschulung in Handwerksberufen im Rhein-Neckar-/Neckar-Odenwald-Raum; Bildungsakademie Gutenbergstraße 49 ergänzend für überbetriebliche Qualifizierung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung Handwerk",
       "Ausbildungsberatung",
@@ -10702,9 +10702,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Bildungsakademie: Hertzstraße 177, 76187 Karlsruhe, Tel. 0721 1600-400. Für handwerkliche betriebliche Umschulung und ergänzende überbetriebliche Lehrgänge relevant.",
+    "lat": null,
+    "lon": null,
+    "note": "Bildungsakademie: Hertzstraße 177, 76187 Karlsruhe, Tel. 0721 1600-400. Für handwerkliche betriebliche Umschulung und ergänzende überbetriebliche Lehrgänge relevant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung Handwerk",
       "Ausbildungsberatung",
@@ -10759,9 +10759,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Für betriebliche Umschulungen in Handwerksberufen im Raum Heilbronn-Franken; regionale Geschäftsstelle Schwäbisch Hall ebenfalls vorhanden.",
+    "lat": null,
+    "lon": null,
+    "note": "Für betriebliche Umschulungen in Handwerksberufen im Raum Heilbronn-Franken; regionale Geschäftsstelle Schwäbisch Hall ebenfalls vorhanden. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung Handwerk",
       "Ausbildungsberatung",
@@ -10814,9 +10814,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Direktkontakte: Anna Burger Würzburg/Main-Spessart 0931 30908-1252; Taoufik Hamid Aschaffenburg/Miltenberg 06021 4904-5138. Weitere regionale Berater vorhanden.",
+    "lat": null,
+    "lon": null,
+    "note": "Direktkontakte: Anna Burger Würzburg/Main-Spessart 0931 30908-1252; Taoufik Hamid Aschaffenburg/Miltenberg 06021 4904-5138. Weitere regionale Berater vorhanden. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung Handwerk",
       "Ausbildungsberatung",
@@ -10875,9 +10875,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Zentrale Kammer-Schnittstelle für Handwerksbetriebe im Rhein-Main-Gebiet; konkreten Ausbildungsberater nach Beruf/Ort auswählen.",
+    "lat": null,
+    "lon": null,
+    "note": "Zentrale Kammer-Schnittstelle für Handwerksbetriebe im Rhein-Main-Gebiet; konkreten Ausbildungsberater nach Beruf/Ort auswählen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche Umschulung Handwerk",
       "Ausbildungsberatung",
@@ -10930,9 +10930,9 @@
       "Umschulung / Qualifizierung",
       "Betriebliche Umschulung"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "BTZ Ludwigshafen als praktische Ergänzung zur Kammerberatung; für handwerkliche Qualifizierung und betriebliche Umschulung im Pfalzraum relevant.",
+    "lat": null,
+    "lon": null,
+    "note": "BTZ Ludwigshafen als praktische Ergänzung zur Kammerberatung; für handwerkliche Qualifizierung und betriebliche Umschulung im Pfalzraum relevant. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Betriebliche / überbetriebliche Umschulung Handwerk",
       "Berufsbildungs- und Technologiezentrum",
@@ -11097,9 +11097,9 @@
       "Arbeitsvermittlung",
       "IFD"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Kein privater Vermittler, sondern unabhängiger Fachdienst/Dienst Dritter nach SGB IX. Kann auch im Auftrag von Rehabilitationsträgern tätig werden und Arbeits-/Ausbildungsplätze erschließen.",
+    "lat": null,
+    "lon": null,
+    "note": "Kein privater Vermittler, sondern unabhängiger Fachdienst/Dienst Dritter nach SGB IX. Kann auch im Auftrag von Rehabilitationsträgern tätig werden und Arbeits-/Ausbildungsplätze erschließen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Arbeitsplatzakquise",
@@ -11157,9 +11157,9 @@
     "categories": [
       "Arbeitsvermittlung"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Nicht unabhängig, aber als Referenz-/Netzwerkpartner für Vermittlung aufgenommen. Spezialisierte Fachkräfte für Arbeitsvermittlung und berufliche Rehabilitation.",
+    "lat": null,
+    "lon": null,
+    "note": "Nicht unabhängig, aber als Referenz-/Netzwerkpartner für Vermittlung aufgenommen. Spezialisierte Fachkräfte für Arbeitsvermittlung und berufliche Rehabilitation. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Arbeitsvermittlung für behinderte und schwerbehinderte Menschen",
@@ -11213,7 +11213,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "Nicht unabhängig, aber wichtige regionale Referenz. Reha-Team und ganzheitliche Integrationsberatung unterstützen konkrete Stellensuche und Arbeitgeberkontakte.",
+    "note": "Nicht unabhängig, aber wichtige regionale Referenz. Reha-Team und ganzheitliche Integrationsberatung unterstützen konkrete Stellensuche und Arbeitgeberkontakte. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Arbeitsvermittlung Rehabilitanden",
@@ -11227,7 +11227,7 @@
     "fax": "",
     "email": "",
     "website": "https://www.arbeitsagentur.de/vor-ort/mainz/ihrejobsuche",
-    "address": "Unter den Eichen 5 55124 Mainz",
+    "address": "Zahlbacher Straße 27 55131 Mainz",
     "contact": "",
     "department": "Reha-Team / Integrationsberatung",
     "source": "https://www.arbeitsagentur.de/vor-ort/mainz/ihrejobsuche",
@@ -11269,9 +11269,9 @@
     "categories": [
       "Arbeitsvermittlung"
     ],
-    "lat": 49.8725,
-    "lon": 8.6539,
-    "note": "Netzwerkpartner für Südhessen/Bergstraße; regionale Vermittlungskontakte auch für Bensheim, Lampertheim, Michelstadt und Dieburg dokumentiert.",
+    "lat": null,
+    "lon": null,
+    "note": "Netzwerkpartner für Südhessen/Bergstraße; regionale Vermittlungskontakte auch für Bensheim, Lampertheim, Michelstadt und Dieburg dokumentiert. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Arbeits-/Ausbildungsstellensuche",
@@ -11326,9 +11326,9 @@
       "Arbeitsvermittlung",
       "Private Arbeitsvermittlung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Privater Arbeitsvermittler mit eigener Vermittlungsvereinbarung und Arbeitgeber-/Kooperationsnetzwerk. Für BG-Fälle vor Beauftragung AZAV-Status, Konditionen und Erfahrung mit gesundheitlichen Einschränkungen aktuell abfragen.",
+    "lat": null,
+    "lon": null,
+    "note": "Privater Arbeitsvermittler mit eigener Vermittlungsvereinbarung und Arbeitgeber-/Kooperationsnetzwerk. Für BG-Fälle vor Beauftragung AZAV-Status, Konditionen und Erfahrung mit gesundheitlichen Einschränkungen aktuell abfragen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Private Arbeitsvermittlung",
@@ -11383,9 +11383,9 @@
       "Arbeitsvermittlung",
       "Private Arbeitsvermittlung"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "AWO Mannheim bezeichnet sich ausdrücklich als zertifizierten privaten Arbeitsvermittler. Keine Zeitarbeit; Vermittlung in sozialversicherungspflichtige Beschäftigung. Reha-/BG-spezifische Erfahrung vor Einsatz abfragen.",
+    "lat": null,
+    "lon": null,
+    "note": "AWO Mannheim bezeichnet sich ausdrücklich als zertifizierten privaten Arbeitsvermittler. Keine Zeitarbeit; Vermittlung in sozialversicherungspflichtige Beschäftigung. Reha-/BG-spezifische Erfahrung vor Einsatz abfragen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Integration",
       "Zertifizierte private Arbeitsvermittlung",
@@ -11438,9 +11438,9 @@
       "Arbeitsvermittlung",
       "Reha-Coaching / Neuorientierung"
     ],
-    "lat": 50.12025,
-    "lon": 8.6813,
-    "note": "Unabhängige Karriere-/Outplacementberatung. Keine belastbare BG-/Reha- oder AVGS-MPAV-Spezialisierung nachgewiesen; deshalb als Ergänzungsanbieter für höherqualifizierte Neuorientierungsfälle, nicht als bevorzugte Reha-Arbeitsvermittlung.",
+    "lat": null,
+    "lon": null,
+    "note": "Unabhängige Karriere-/Outplacementberatung. Keine belastbare BG-/Reha- oder AVGS-MPAV-Spezialisierung nachgewiesen; deshalb als Ergänzungsanbieter für höherqualifizierte Neuorientierungsfälle, nicht als bevorzugte Reha-Arbeitsvermittlung. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Arbeitsvermittlung / berufliche Neuorientierung",
       "Berufliche Neuorientierung",
@@ -11498,9 +11498,9 @@
       "Umschulung / Qualifizierung",
       "bfz"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Hauptstandort Aschaffenburg; Anschrift und Kontaktdaten gemäß manueller Nutzerkorrektur 19.08.2026.",
+    "lat": null,
+    "lon": null,
+    "note": "Hauptstandort Aschaffenburg; Anschrift und Kontaktdaten gemäß manueller Nutzerkorrektur 19.08.2026. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Berufliche Rehabilitation & Inklusion",
@@ -11560,7 +11560,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "Außenstelle des bfz Aschaffenburg; seit 2000 zur wohnortnahen Bildungsversorgung im Landkreis Miltenberg. Konkrete Kursadresse/Angebot vor Zuweisung aktuell abgleichen.",
+    "note": "Außenstelle des bfz Aschaffenburg; seit 2000 zur wohnortnahen Bildungsversorgung im Landkreis Miltenberg. Konkrete Kursadresse/Angebot vor Zuweisung aktuell abgleichen. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Qualifizierung",
@@ -11574,7 +11574,7 @@
     "fax": "",
     "email": "hep-ab@bfz.de",
     "website": "https://www.bfz.de/aschaffenburg",
-    "address": "Miltenberg",
+    "address": "Junkerstraße 10 63897 Miltenberg",
     "contact": "",
     "department": "bfz Außenstelle Miltenberg",
     "source": "https://www.bfz.de/aschaffenburg/ueber-den-standort",
@@ -11619,9 +11619,9 @@
       "BTZ",
       "bfz"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Hauptstandort mit breitem LTA-/Umschulungsangebot. bfz Würzburg nennt berufliche Reha ausdrücklich und betreibt zahlreiche angrenzende Schulungsorte.; Einrichtung nach § 51 SGB IX. Multiprofessionelles berufliches Training für Menschen nach psychischer Erkrankung; Arbeitgebernetzwerk und individuelle Kompetenzwerkstätten.; Konsolidiert aus Standort-Datensätzen: BTZ Würzburg der bfz",
+    "lat": null,
+    "lon": null,
+    "note": "Hauptstandort mit breitem LTA-/Umschulungsangebot. bfz Würzburg nennt berufliche Reha ausdrücklich und betreibt zahlreiche angrenzende Schulungsorte.; Einrichtung nach § 51 SGB IX. Multiprofessionelles berufliches Training für Menschen nach psychischer Erkrankung; Arbeitgebernetzwerk und individuelle Kompetenzwerkstätten.; Konsolidiert aus Standort-Datensätzen: BTZ Würzburg der bfz Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Umschulung",
       "Berufliches Training / psychische Rehabilitation",
@@ -11704,9 +11704,9 @@
       "Umschulung / Qualifizierung",
       "bfz"
     ],
-    "lat": 49.6244,
-    "lon": 9.6628,
-    "note": "bfz Würzburg führt Tauberbischofsheim ausdrücklich als Außen-/Schulungsort. Konkrete Maßnahme und Adresse vor Zuweisung prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "bfz Würzburg führt Tauberbischofsheim ausdrücklich als Außen-/Schulungsort. Konkrete Maßnahme und Adresse vor Zuweisung prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Qualifizierung",
       "Berufliche Rehabilitation",
@@ -11820,9 +11820,9 @@
       "Umschulung / Qualifizierung",
       "bfz"
     ],
-    "lat": 49.352850000000004,
-    "lon": 9.14625,
-    "note": "bfz Würzburg nennt Mosbach ausdrücklich als Außen-/Schulungsort. Für deine Landkarte besonders relevant, da unmittelbar im Neckar-Odenwald-Kreis.",
+    "lat": null,
+    "lon": null,
+    "note": "bfz Würzburg nennt Mosbach ausdrücklich als Außen-/Schulungsort. Für deine Landkarte besonders relevant, da unmittelbar im Neckar-Odenwald-Kreis. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Berufliche Rehabilitation / Qualifizierung",
       "Berufliche Rehabilitation",
@@ -11992,9 +11992,9 @@
     "categories": [
       "Soziale Teilhabe / Wohnen"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Beratung zu Wohnungsanpassung, Hilfsmitteln, Umbau und Finanzierung. Für unfallbedingte Wohnungshilfe als regionale Fachreferenz sinnvoll.",
+    "lat": null,
+    "lon": null,
+    "note": "Beratung zu Wohnungsanpassung, Hilfsmitteln, Umbau und Finanzierung. Für unfallbedingte Wohnungshilfe als regionale Fachreferenz sinnvoll. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Wohnberatung / soziale Teilhabe",
       "Wohnungsanpassung",
@@ -12050,9 +12050,9 @@
     "categories": [
       "Soziale Teilhabe / Wohnen"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Unabhängige, kostenfreie Wohnberatung auch direkt zuhause; regionale Sprechstunden u.a. in Eberbach, Sinsheim, Wiesloch und weiteren RNK-Gemeinden.",
+    "lat": null,
+    "lon": null,
+    "note": "Unabhängige, kostenfreie Wohnberatung auch direkt zuhause; regionale Sprechstunden u.a. in Eberbach, Sinsheim, Wiesloch und weiteren RNK-Gemeinden. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Wohnberatung / soziale Teilhabe",
       "kostenfreie Wohnberatung",
@@ -12110,9 +12110,9 @@
     "categories": [
       "Soziale Teilhabe / Beratung"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Unabhängige Beratungsstruktur mit weiteren Sprechstellen in Schwetzingen, Walldorf, Neckargemünd und Hirschberg; geeignet als Lotsen-/Ergänzungsangebot.",
+    "lat": null,
+    "lon": null,
+    "note": "Unabhängige Beratungsstruktur mit weiteren Sprechstellen in Schwetzingen, Walldorf, Neckargemünd und Hirschberg; geeignet als Lotsen-/Ergänzungsangebot. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Teilhabeberatung",
       "EUTB",
@@ -12309,9 +12309,9 @@
       "Leistungen zur Teilhabe am Arbeitsleben (LTA)",
       "Kfz-Hilfe / Mobilität"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Direkte PARAVAN-Niederlassung im Kerngebiet Heidelberg. Besonders relevant für komplexe elektronische Fahr- und Lenksysteme sowie individuelle Rollstuhlfahrer-Lösungen.",
+    "lat": null,
+    "lon": null,
+    "note": "Direkte PARAVAN-Niederlassung im Kerngebiet Heidelberg. Besonders relevant für komplexe elektronische Fahr- und Lenksysteme sowie individuelle Rollstuhlfahrer-Lösungen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Kfz-Umrüstung / behindertengerechte Fahrzeuge",
       "Individuelle Fahrzeugumbauten",
@@ -12440,9 +12440,9 @@
     "categories": [
       "Sonstige"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Traditionsbetrieb in Heilbronn; orthopädische Maßschuhe, Einlagen, Diabetes-Fußversorgung sowie Gang- und Laufanalysen.",
+    "lat": null,
+    "lon": null,
+    "note": "Traditionsbetrieb in Heilbronn; orthopädische Maßschuhe, Einlagen, Diabetes-Fußversorgung sowie Gang- und Laufanalysen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Orthopädische Schuhmacher",
       "Orthopädieschuhtechnik",
@@ -12494,9 +12494,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.3159,
-    "lon": 8.4308,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -12646,9 +12646,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologische Psychotherapeutin"
@@ -12694,9 +12694,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -12748,9 +12748,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -12796,9 +12796,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -12848,9 +12848,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -12896,9 +12896,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -12944,9 +12944,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -12992,9 +12992,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotraumatherapie",
@@ -13042,9 +13042,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13090,9 +13090,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -13144,9 +13144,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13192,9 +13192,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -13244,9 +13244,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13292,9 +13292,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4105,
-    "lon": 8.681,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologischer Psychotherapeut",
@@ -13342,9 +13342,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13390,9 +13390,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13438,9 +13438,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13486,9 +13486,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologische Psychotherapeutin",
@@ -13536,9 +13536,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13584,9 +13584,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13632,9 +13632,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13680,9 +13680,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologische Psychotherapeutin",
@@ -13726,15 +13726,15 @@
   },
   {
     "id": 255,
-    "name": "Julia Klöver",
+    "name": "Julia Klöfer",
     "city": "Mannheim",
     "region": "Mannheim",
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.4912,
-    "lon": 8.47,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Namensschreibweise gemäß manueller Korrektur 19.08.2026: Julia Klöver. Öffentliche Kontaktdaten weiterhin zu ergänzen/verifizieren. Historischer Such-/Namensalias: Julia Klöfer.",
+    "lat": 49.500798,
+    "lon": 8.468044,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Namensschreibweise gemäß manueller Korrektur 19.08.2026: Julia Klöver. Öffentliche Kontaktdaten weiterhin zu ergänzen/verifizieren. Historischer Such-/Namensalias: Julia Klöfer. Namensschreibweise und adressbezogene Geoposition am 20.08.2026 korrigiert. Geodaten-Fix V4 20.08.2026: Name Julia Klöfer; Marker Humboldtstr. 20a adressbezogen korrigiert.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13744,7 +13744,7 @@
     "email": "kontakt@praxiskloefer.de",
     "website": "",
     "address": "Humboldtstr. 20a 68169 Mannheim",
-    "contact": "Julia Klöver",
+    "contact": "Julia Klöfer",
     "department": "Psychotherapeut/in",
     "source": "",
     "dataQuality": "zu prüfen",
@@ -13780,9 +13780,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Psychotrauma-Ambulanz der BG Klinik Ludwigshafen; Anmeldung per E-Mail möglich. Kontakt laut interner Übersicht: melanie.bruenn@bgu-ludwigshafen.de, Tel. 0621 6810-2484. Bestehende personenbezogene Kontaktdaten bleiben zusätzlich erhalten.",
+    "lat": null,
+    "lon": null,
+    "note": "Psychotrauma-Ambulanz der BG Klinik Ludwigshafen; Anmeldung per E-Mail möglich. Kontakt laut interner Übersicht: melanie.bruenn@bgu-ludwigshafen.de, Tel. 0621 6810-2484. Bestehende personenbezogene Kontaktdaten bleiben zusätzlich erhalten. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Leitende Psychologin",
@@ -13836,9 +13836,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.48225,
-    "lon": 8.42445,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Historischer Such-/Namensalias: Tamara Uhlmann-Jäger.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Historischer Such-/Namensalias: Tamara Uhlmann-Jäger. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -13932,9 +13932,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.5493,
-    "lon": 8.6673,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14178,9 +14178,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.1989,
-    "lon": 8.1186,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14226,9 +14226,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.1989,
-    "lon": 8.1186,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologischer Psychotherapeut"
@@ -14274,9 +14274,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.1989,
-    "lon": 8.1186,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -14326,9 +14326,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14374,9 +14374,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14422,9 +14422,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Arzt für Psychotherapie",
@@ -14570,9 +14570,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14618,9 +14618,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.008700000000005,
-    "lon": 8.4041,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14666,9 +14666,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.6819,
-    "lon": 8.622,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Verhaltenstherapie",
@@ -14720,9 +14720,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.352850000000004,
-    "lon": 9.14625,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14870,9 +14870,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 48.9047251,
-    "lon": 8.5016494,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -14918,9 +14918,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 48.9047251,
-    "lon": 8.5016494,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologischer Psychotherapeut",
@@ -14972,9 +14972,9 @@
       "Schmerztherapie",
       "Psychotherapie DGUV"
     ],
-    "lat": 48.9047251,
-    "lon": 8.5016494,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; öffentliche Kontaktdaten soweit auffindbar ergänzt.; Standort/Name/Kontakt am 19.08.2026 erneut geprüft; frühere Zuordnung 'Calw' war sachlich falsch. Tatsächlicher Standort Karlsbad bzw. Karlsbad-Langensteinbach. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychologische Psychotherapeutin",
@@ -15275,9 +15275,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.150499999999994,
-    "lon": 9.21945,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -15725,9 +15725,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Namensschreibweise laut Nutzerangabe; öffentliche Zuordnung noch zu prüfen.",
+    "lat": null,
+    "lon": null,
+    "note": "Namensschreibweise laut Nutzerangabe; öffentliche Zuordnung noch zu prüfen. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -15773,9 +15773,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.98015,
-    "lon": 9.1484,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -15821,9 +15821,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -15869,9 +15869,9 @@
     "categories": [
       "Psychotherapie DGUV"
     ],
-    "lat": 49.8007,
-    "lon": 9.9553,
-    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren.",
+    "lat": null,
+    "lon": null,
+    "note": "Teilnahme am Psychotherapeutenverfahren nach Nutzerangabe; Kontaktdaten weiter zu verifizieren. Unplausible Sammel-/Stadtmittelpunktkoordinate am 20.08.2026 entfernt; adressgenaue Nachgeocodierung erforderlich.",
     "focus": [
       "Psychotherapeutenverfahren DGUV",
       "Psychotherapeutenverfahren DGUV – Nutzerangabe"
@@ -16459,7 +16459,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "EFL-Durchführungsort laut aktuellem BFW-Schömberg-Informationsblatt. Genaue Standortanschrift vor Zuweisung prüfen, sofern hier nicht eingetragen.",
+    "note": "EFL-Durchführungsort laut aktuellem BFW-Schömberg-Informationsblatt. Genaue Standortanschrift vor Zuweisung prüfen, sofern hier nicht eingetragen. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "EFL nach WORKWELL / ISERNHAGEN",
       "EFL – WORKWELL/Isernhagen",
@@ -16471,7 +16471,7 @@
     "fax": "",
     "email": "c.erlenmaier@bfw-schoemberg.de",
     "website": "https://www.bfw-schoemberg.de/",
-    "address": "Reutlingen",
+    "address": "Ziegelweg 1 72764 Reutlingen",
     "contact": "Christiane Erlenmaier",
     "department": "EFL / Reha-Assessment",
     "source": "https://www.bfw-schoemberg.de/images/infoblaetter/reha-assessment/EFL_Evaluation-der-Funktionellen-Leistungsfaehigkeit.pdf",
@@ -16578,9 +16578,9 @@
       "EAP",
       "EFL / FCE"
     ],
-    "lat": null,
-    "lon": null,
-    "note": "Korrektur 19.08.2026: Der bisherige Eintrag „Zentrum Mannheim GmbH“ wurde ZAR Mannheim GmbH zugeordnet. Die aktuelle ZAR-Standortseite beschreibt das ALA®-Verfahren als analog zum bekannten EFL®-Testverfahren. Daher nicht als klassischer EFL®-Volltest bezeichnet, sondern als EFL/FCE-analog geführt.",
+    "lat": 49.5151,
+    "lon": 8.508059,
+    "note": "Korrektur 19.08.2026: Der bisherige Eintrag „Zentrum Mannheim GmbH“ wurde ZAR Mannheim GmbH zugeordnet. Die aktuelle ZAR-Standortseite beschreibt das ALA®-Verfahren als analog zum bekannten EFL®-Testverfahren. Daher nicht als klassischer EFL®-Volltest bezeichnet, sondern als EFL/FCE-analog geführt. Geoposition Auf dem Sand 75–77 am 20.08.2026 korrigiert. Geodaten-Fix V4 20.08.2026: Marker Auf dem Sand 75-77 adressbezogen korrigiert.",
     "focus": [
       "Beruflich orientierte Rehabilitation",
       "ALA® / FCE",
@@ -16815,7 +16815,7 @@
     ],
     "lat": null,
     "lon": null,
-    "note": "Familienbetrieb in Kraichtal; behindertengerechte Fahrzeugumbauten ausdrücklich angeboten. Straßenanschrift noch zu verifizieren.",
+    "note": "Familienbetrieb in Kraichtal; behindertengerechte Fahrzeugumbauten ausdrücklich angeboten. Straßenanschrift noch zu verifizieren. Adresse am 20.08.2026 nach manueller Nutzerprüfung korrigiert.",
     "focus": [
       "Kfz-Umrüstung / behindertengerechte Fahrzeuge",
       "behindertengerechter Fahrzeugumbau",
@@ -16828,7 +16828,7 @@
     "fax": "",
     "email": "info@mfb-schuhmann.de",
     "website": "https://www.mfb-schuhmann.de/",
-    "address": "Kraichtal",
+    "address": "Bahnbrückenstraße 1 76703 Kraichtal",
     "contact": "",
     "department": "Fahrzeugumrüstung",
     "source": "https://www.mfb-schuhmann.de/",
