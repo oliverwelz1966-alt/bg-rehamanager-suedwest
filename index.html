@@ -22,6 +22,8 @@ button,input,select{font:inherit}.app{min-height:100vh;display:grid;grid-templat
 h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.muted{color:var(--muted);font-size:12px}
 .status{font-size:12px;background:#e9f6ee;color:var(--ok);border:1px solid #bfe4cc;padding:7px 9px;border-radius:999px;white-space:nowrap}
 .view{display:none}.view.active{display:block}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(5,minmax(130px,1fr));margin-bottom:16px}
+.dashboard-summary{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:12px;margin-bottom:18px}.summary-box{padding:14px 16px}.summary-box strong{display:block;font-size:25px}.summary-box span{font-size:12px;color:var(--muted)}
+.dashboard-group{margin-bottom:22px}.dashboard-group-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:2px 0 10px}.dashboard-group-head h2{font-size:18px;margin:0}.dashboard-group-head span{font-size:12px;color:var(--muted);text-align:right}.kpis.medical{grid-template-columns:repeat(5,minmax(130px,1fr))}.kpis.lta{grid-template-columns:repeat(4,minmax(150px,1fr))}.kpi small{display:block;margin-top:5px;font-size:10px;color:#8391a1}.dashboard-note{font-size:11px;color:var(--muted);margin:-8px 0 16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}.panel{padding:16px}.kpi{padding:16px;cursor:pointer}.kpi strong{font-size:27px;display:block}.kpi span{font-size:12px;color:var(--muted)}
 .two-col{grid-template-columns:1.45fr 1fr}.three-col{grid-template-columns:repeat(3,1fr)}#dashboardMap,#mainMap,#routeMap{height:560px;border-radius:12px;overflow:hidden}
 .controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:9px;margin-bottom:10px}input[type=search],input[type=text],select{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:#fff}
@@ -37,15 +39,15 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 .qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.qa-box{padding:14px;border:1px solid var(--line);border-radius:10px;background:#fff}.qa-box strong{font-size:22px;display:block}
 .legend{background:white;padding:10px;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,.2);font-size:11px;line-height:1.7;max-height:300px;overflow:auto}.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
 .loading{padding:35px;text-align:center;color:var(--muted)}
-@media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.qa-grid{grid-template-columns:repeat(2,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
-@media(max-width:650px){.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.qa-grid{grid-template-columns:1fr 1fr}#dashboardMap,#mainMap,#routeMap{height:430px}}
+@media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:repeat(2,1fr)}.dashboard-summary{grid-template-columns:repeat(3,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
+@media(max-width:650px){.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:1fr 1fr}.dashboard-summary{grid-template-columns:1fr}.dashboard-group-head{display:block}.dashboard-group-head span{display:block;text-align:left;margin-top:4px}#dashboardMap,#mainMap,#routeMap{height:430px}}
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
   <div class="brand">BG-Reha-Manager<br>Einsatzatlas Südwest</div>
-  <div class="version">Webanwendung · Version 4.2.1 · Release 21.08.2026</div>
+  <div class="version">Webanwendung · Version 4.2.1 · Dashboardrevision 2 · 21.08.2026</div>
   <nav class="nav">
     <button class="active" data-view="dashboard">▦ Dashboard</button>
     <button data-view="mapView">⌖ Interaktive Karte</button>
@@ -62,7 +64,16 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
   <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div id="status" class="status">Daten werden geladen …</div></div>
 
   <section id="dashboard" class="view active">
-    <div id="kpis" class="grid kpis"></div>
+    <div id="dashboardSummary" class="dashboard-summary"></div>
+    <div class="dashboard-group">
+      <div class="dashboard-group-head"><h2>Medizinische Reha & Heilverfahren</h2><span>Akutversorgung, Rehabilitation, Therapie und medizinisch-berufliche Steuerung</span></div>
+      <div id="kpisMedical" class="grid kpis medical"></div>
+    </div>
+    <div class="dashboard-group">
+      <div class="dashboard-group-head"><h2>Berufliche Reha & Leistungen zur Teilhabe am Arbeitsleben</h2><span>Umschulung, Qualifizierung, Vermittlung, Mobilität und berufliche Integration</span></div>
+      <div id="kpisLta" class="grid kpis lta"></div>
+    </div>
+    <div class="dashboard-note">Die Kacheln zeigen fachliche Zuordnungen. Eine Einrichtung kann mehreren Gruppen angehören; deshalb werden die Kachelzahlen nicht addiert. Maßgeblich für den Gesamtbestand ist die Zahl „Einrichtungen gesamt“.</div>
     <div class="grid two-col">
       <div class="card panel"><h2>Gesamtübersicht</h2><div id="dashboardMap"></div></div>
       <div class="grid">
@@ -140,8 +151,8 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 <script>
 "use strict";
 const APP_VERSION="4.2.1";
-const RELEASE_ID="4.2.1-release-20260821-1";
-const DATA_URL="./data.json?v=4.2.1-release-20260821-1";
+const RELEASE_ID="4.2.1-dashboard2-20260821";
+const DATA_URL="./data.json?v=4.2.1-dashboard2-20260821";
 let facilities=[], filtered=[], mainMap, dashboardMap, routeMap, mainLayer, dashLayer, routeLayer;
 const favorites=new Set(JSON.parse(localStorage.getItem("bg-reha-favorites")||"[]"));
 const $=id=>document.getElementById(id);
@@ -194,10 +205,32 @@ function fillSelectors(){
   $("bestQuality").innerHTML='<option value="">Alle Qualitätsstufen</option><option value="verifiziert">nur verifiziert</option><option value="usable">verifiziert + teilverifiziert</option>';
   $("catFilters").innerHTML=cats.map(c=>`<button class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
 }
+function groupValues(f){return [...(f.categories||[]),...(f.serviceGroups||[]),...(f.specialtyGroups||[])];}
+function groupMatch(f,key){const k=norm(key);return groupValues(f).some(v=>norm(v)===k);}
+let dashboardGroupFilter="";
 function renderKpis(){
-  const defs=["SAV","EAP","Psychotherapie DGUV","EFL / FCE","Berufliche Reha"];
-  $("kpis").innerHTML=defs.map(c=>{const n=facilities.filter(f=>(f.categories||[]).includes(c)).length;return `<div class="card kpi" data-kpi="${esc(c)}"><strong>${n}</strong><span>${esc(c)}</span></div>`}).join("");
-  document.querySelectorAll("[data-kpi]").forEach(x=>x.onclick=()=>{showView("mapView");document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c.dataset.cat===x.dataset.kpi));applyFilters()});
+  const medical=[
+    ["SAV","SAV"],["VAV","VAV"],["EAP","EAP"],["BG-Klinik","BG-Kliniken"],["Stationäre Reha","Stationäre Reha"],
+    ["EFL / FCE","EFL / FCE"],["ABMR","ABMR"],["TOR","TOR"],["BGSW","BGSW"],["CRPS","CRPS"],
+    ["Schmerztherapie","Schmerztherapie"],["Psychotherapie DGUV","Psychotherapie DGUV"],["Neurologie","Neurologie"],["Neuropsychologie","Neuropsychologie"],
+    ["Orthopädische Schuhmacher","Orthopädische Schuhmacher"],["Arbeitsmedizin","Arbeitsmedizin"],["Handchirurgie","Handchirurgie"],["Orthopädietechnik / Prothetik","Orthopädietechnik / Prothetik"]
+  ];
+  const lta=[
+    ["Berufliche Reha","Berufliche Reha"],["Leistungen zur Teilhabe am Arbeitsleben (LTA)","LTA"],["Umschulung / Qualifizierung","Umschulung / Qualifizierung"],
+    ["Betriebliche Umschulung","Betriebliche Umschulung"],["BFW","BFW"],["BTZ","BTZ"],["bfz","bfz"],["FAW","FAW"],
+    ["IHK","IHK"],["Arbeitsvermittlung","Arbeitsvermittlung"],["Kfz-Hilfe / Mobilität","Kfz-Hilfe / Mobilität"],["Bildungsträger","Bildungsträger"],
+    ["Reha-Coaching / Neuorientierung","Reha-Coaching"],["Soziale Teilhabe / Wohnen","Soziale Teilhabe / Wohnen"]
+  ];
+  const card=([key,label])=>{const n=facilities.filter(f=>groupMatch(f,key)).length;return `<div class="card kpi" data-kpi-group="${esc(key)}" title="Auf Karte anzeigen"><strong>${n}</strong><span>${esc(label)}</span><small>anklicken → Karte</small></div>`};
+  $("kpisMedical").innerHTML=medical.map(card).join("");
+  $("kpisLta").innerHTML=lta.map(card).join("");
+  $("dashboardSummary").innerHTML=`<div class="card summary-box"><strong>${facilities.length}</strong><span>Einrichtungen gesamt</span></div><div class="card summary-box"><strong>${facilities.filter(validCoord).length}</strong><span>kartierbar</span></div><div class="card summary-box"><strong>${facilities.length-facilities.filter(validCoord).length}</strong><span>ohne nutzbare Koordinate</span></div>`;
+  document.querySelectorAll("[data-kpi-group]").forEach(x=>x.onclick=()=>{
+    dashboardGroupFilter=x.dataset.kpiGroup;
+    $("search").value="";$("region").value="";$("qualityFilter").value="";
+    document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
+    showView("mapView");applyFilters();
+  });
 }
 function renderDashboard(){
   dashLayer.clearLayers();facilities.filter(validCoord).forEach(f=>markerFor(f).addTo(dashLayer));fitLayer(dashboardMap,dashLayer);
@@ -207,14 +240,15 @@ function activeCats(){return [...document.querySelectorAll(".chip.on")].map(x=>x
 function applyFilters(){
   const q=norm($("search")?.value),reg=$("region")?.value||"",qf=$("qualityFilter")?.value||"",cats=activeCats();
   filtered=facilities.filter(f=>{
-    const hay=norm([f.name,f.city,f.region,f.address,...(f.categories||[]),...(f.specialtyGroups||[]),...(f.focus||[]),...(f.keywords||[])].join(" "));
+    const hay=norm([f.name,f.city,f.region,f.address,...(f.categories||[]),...(f.serviceGroups||[]),...(f.specialtyGroups||[]),...(f.focus||[]),...(f.keywords||[])].join(" "));
     const catOk=!cats.length||cats.some(c=>(f.categories||[]).includes(c));
+    const groupOk=!dashboardGroupFilter||groupMatch(f,dashboardGroupFilter);
     let qo=true;const ql=norm(qualityLabel(f));
     if(qf==="verifiziert")qo=ql==="verifiziert"; else if(qf==="teil")qo=ql.includes("teil"); else if(qf==="prüfen")qo=ql.includes("prüf");
-    return (!q||hay.includes(q))&&(!reg||f.region===reg)&&catOk&&qo;
+    return (!q||hay.includes(q))&&(!reg||f.region===reg)&&catOk&&groupOk&&qo;
   });
   if(mainLayer){mainLayer.clearLayers();filtered.filter(validCoord).forEach(f=>markerFor(f).addTo(mainLayer));}
-  $("resultCount").textContent=`${filtered.length} Treffer · ${filtered.filter(validCoord).length} kartierbar`;
+  $("resultCount").textContent=`${filtered.length} Treffer · ${filtered.filter(validCoord).length} kartierbar${dashboardGroupFilter?` · Dashboardfilter: ${dashboardGroupFilter}`:""}`;
   renderDirectory(filtered);
 }
 function renderDirectory(list=facilities){
@@ -305,8 +339,8 @@ function showView(id){
 }
 function bindEvents(){
  document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.view));
- $("search").oninput=applyFilters;$("region").onchange=applyFilters;$("qualityFilter").onchange=applyFilters;
- document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{c.classList.toggle("on");applyFilters()});
+ $("search").oninput=()=>{dashboardGroupFilter="";applyFilters()};$("region").onchange=()=>{dashboardGroupFilter="";applyFilters()};$("qualityFilter").onchange=()=>{dashboardGroupFilter="";applyFilters()};
+ document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{dashboardGroupFilter="";c.classList.toggle("on");applyFilters()});
  $("fitMap").onclick=()=>fitLayer(mainMap,mainLayer);$("exportCsv").onclick=exportCsv;$("runNavigator").onclick=runNavigator;$("runRoute").onclick=runRoute;$("runBest").onclick=runBest;
  $("modalClose").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};
 }
