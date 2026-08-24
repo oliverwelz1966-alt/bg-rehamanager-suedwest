@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>BG-RehaManager Südwest 4.2</title>
+<title>BG-RehaManager Südwest 4.3</title>
+<meta name="author" content="Oliver Welz">
+<meta name="copyright" content="© 2026 Oliver Welz">
+<meta name="application-name" content="BG-RehaManager Südwest 4.3">
 <meta name="theme-color" content="#123247">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BG-Reha Südwest">
@@ -39,29 +42,34 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 .qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.qa-box{padding:14px;border:1px solid var(--line);border-radius:10px;background:#fff}.qa-box strong{font-size:22px;display:block}
 .legend{background:white;padding:10px;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,.2);font-size:11px;line-height:1.7;max-height:300px;overflow:auto}.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
 .loading{padding:35px;text-align:center;color:var(--muted)}
-@media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:repeat(2,1fr)}.dashboard-summary{grid-template-columns:repeat(3,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
-@media(max-width:650px){.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:1fr 1fr}.dashboard-summary{grid-template-columns:1fr}.dashboard-group-head{display:block}.dashboard-group-head span{display:block;text-align:left;margin-top:4px}#dashboardMap,#mainMap,#routeMap{height:430px}}
+.neuro-flow{display:grid;grid-template-columns:repeat(6,minmax(90px,1fr));gap:9px;margin:12px 0 16px}.phase-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;cursor:pointer;text-align:left}.phase-card strong{display:block;font-size:22px;color:var(--accent2)}.phase-card span{display:block;font-size:11px;color:var(--muted);margin-top:3px}.phase-card.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(15,94,120,.12);background:#f2f9fb}.neuro-special{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}.neuro-special button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px;text-align:left;cursor:pointer}.neuro-special button.active{background:var(--accent);color:#fff;border-color:var(--accent)}.phase-help{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.phase-help div{padding:10px;border-radius:9px;background:#f7f9fc;font-size:11px;line-height:1.4}.creator-mark{position:fixed;right:14px;bottom:14px;z-index:800;background:rgba(18,32,47,.92);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:8px 11px;box-shadow:0 5px 18px rgba(0,0,0,.18);font-size:10px;line-height:1.3;backdrop-filter:blur(6px);pointer-events:none}.creator-mark b{font-size:11px}.about-hero{padding:22px;background:linear-gradient(135deg,#123247,#0f5e78);color:#fff;border-radius:14px;margin-bottom:16px}.about-hero h2{font-size:23px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}#neuroMap{height:520px;border-radius:12px;overflow:hidden}
+@media(max-width:1050px){.neuro-flow{grid-template-columns:repeat(3,1fr)}.phase-help,.about-grid{grid-template-columns:1fr}.neuro-special{grid-template-columns:1fr 1fr 1fr}.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:repeat(2,1fr)}.dashboard-summary{grid-template-columns:repeat(3,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
+@media(max-width:650px){.neuro-flow{grid-template-columns:repeat(2,1fr)}.neuro-special{grid-template-columns:1fr}.creator-mark{right:8px;bottom:8px;max-width:210px}.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:1fr 1fr}.dashboard-summary{grid-template-columns:1fr}.dashboard-group-head{display:block}.dashboard-group-head span{display:block;text-align:left;margin-top:4px}#dashboardMap,#mainMap,#routeMap{height:430px}}
+
+.master-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.master-pill{font-size:11px;padding:6px 9px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted)}.master-pill.on{background:#fff4d6;color:#704f00;border-color:#e0c168}.master-box{border:1px solid #e0c168;background:#fffaf0;border-radius:12px;padding:13px;margin:10px 0}.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.edit-grid .wide{grid-column:1/-1}.edit-grid label{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}.edit-grid textarea{width:100%;min-height:72px;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;resize:vertical}.phase-checks{display:flex;gap:8px;flex-wrap:wrap}.phase-checks label{display:flex;align-items:center;gap:4px;background:#f5f7fa;border:1px solid var(--line);padding:6px 8px;border-radius:8px}.danger{background:#fff;color:var(--bad);border:1px solid #e1b5b5;border-radius:9px;padding:9px 11px;cursor:pointer}.private-note{font-size:11px;color:#755300;line-height:1.45}.owner-only{display:none}.owner-on .owner-only{display:inline-flex}.master-history{max-height:220px;overflow:auto;font-size:12px}.master-history div{padding:7px 0;border-bottom:1px solid #eee}.topbar-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
   <div class="brand">BG-Reha-Manager<br>Einsatzatlas Südwest</div>
-  <div class="version">Webanwendung · Version 4.2.1 · Dashboardrevision 2 · 21.08.2026</div>
+  <div class="version">Webanwendung · Version 4.3 · Master-Datenpflege · 24.08.2026</div>
   <nav class="nav">
     <button class="active" data-view="dashboard">▦ Dashboard</button>
     <button data-view="mapView">⌖ Interaktive Karte</button>
     <button data-view="directory">≡ Einrichtungsverzeichnis</button>
+    <button data-view="neurology">◉ Neurologie 4.3</button>
     <button data-view="navigator">◇ Reha-Navigator</button>
     <button data-view="reachability">↗ Standort & Fahrzeit</button>
     <button data-view="bestMatch">★ Beste Einrichtung</button>
     <button data-view="statistics">▥ Statistik</button>
     <button data-view="quality">✓ Datenqualität</button>
+    <button data-view="about">ⓘ Über den RehaManager</button>
   </nav>
-  <div class="sidebar-note">Version 4.2 lädt den zentralen Web-Datenbestand ausschließlich aus <b>data.json</b>. Favoriten werden lokal auf diesem Gerät gespeichert.</div>
+  <div class="sidebar-note">Version 4.3 lädt den zentralen Web-Datenbestand aus <b>data.json</b>. Neurologie, Phase F, Neuro-Jugend und EUTB sind als geprüfte Module integriert. Favoriten werden lokal auf diesem Gerät gespeichert. <b>Masteränderungen</b> sind nur im privaten Master-Modus möglich; die zentrale Datei bleibt durch die GitHub-Schreibrechte des Herausgebers geschützt.</div>
 </aside>
 <main class="content">
-  <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div id="status" class="status">Daten werden geladen …</div></div>
+  <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div class="topbar-right"><span id="masterState" class="master-pill">🔒 Lesemodus</span><button id="masterAccessBtn" class="secondary">Master-Zugang</button><div id="status" class="status">Daten werden geladen …</div></div></div>
 
   <section id="dashboard" class="view active">
     <div id="dashboardSummary" class="dashboard-summary"></div>
@@ -69,9 +77,19 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
       <div class="dashboard-group-head"><h2>Medizinische Reha & Heilverfahren</h2><span>Akutversorgung, Rehabilitation, Therapie und medizinisch-berufliche Steuerung</span></div>
       <div id="kpisMedical" class="grid kpis medical"></div>
     </div>
+
+    <div class="dashboard-group">
+      <div class="dashboard-group-head"><h2>Neurologische Rehabilitation</h2><span>BAR-Phasen A–E, Phase F sowie Jugend & junge Erwachsene</span></div>
+      <div id="kpisNeuro" class="grid kpis medical"></div>
+    </div>
     <div class="dashboard-group">
       <div class="dashboard-group-head"><h2>Berufliche Reha & Leistungen zur Teilhabe am Arbeitsleben</h2><span>Umschulung, Qualifizierung, Vermittlung, Mobilität und berufliche Integration</span></div>
       <div id="kpisLta" class="grid kpis lta"></div>
+    </div>
+
+    <div class="dashboard-group">
+      <div class="dashboard-group-head"><h2>Soziale Teilhabe & Beratung</h2><span>Wohnungshilfe, Wohnberatung und unabhängige Teilhabeberatung</span></div>
+      <div id="kpisSocial" class="grid kpis lta"></div>
     </div>
     <div class="dashboard-note">Die Kacheln zeigen fachliche Zuordnungen. Eine Einrichtung kann mehreren Gruppen angehören; deshalb werden die Kachelzahlen nicht addiert. Maßgeblich für den Gesamtbestand ist die Zahl „Einrichtungen gesamt“.</div>
     <div class="grid two-col">
@@ -94,8 +112,33 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 
   <section id="directory" class="view">
     <div class="card panel"><h2>Einrichtungsverzeichnis</h2>
-      <div class="success">Master 4.2 ist die führende Datenquelle. Datensätze mit Prüfbedarf bleiben sichtbar gekennzeichnet.</div>
+      <div class="success">Master 4.3 ist die Integrationsdatenquelle. Der freigegebene 4.2.1-Stand bleibt Rückfallebene; Datensätze mit Prüfbedarf bleiben sichtbar gekennzeichnet.</div>
       <div class="table-wrap"><table><thead><tr><th></th><th>Einrichtung</th><th>Ort</th><th>Versorgungsgruppen</th><th>Fachgruppen</th><th>Datenqualität</th></tr></thead><tbody id="clinicTableBody"></tbody></table></div>
+    </div>
+  </section>
+
+
+  <section id="neurology" class="view">
+    <div class="card panel">
+      <div class="topbar"><div><h2>Neurologische Rehabilitation · BAR-Phasenmodell</h2><div class="muted">Eigener 4.3-Fachbereich mit phasenbezogener Suche und ergänzender neurologischer Fachversorgung.</div></div><span id="neuroCount" class="status"></span></div>
+      <div id="neuroPhases" class="neuro-flow"></div>
+      <div class="neuro-special">
+        <button data-neuro="F">Phase F / Langzeitversorgung<br><small>Wachkoma, schwere Hirnschädigung, aktivierende Langzeitversorgung</small></button>
+        <button data-neuro="YOUTH">Jugend & junge Erwachsene<br><small>Neuropädagogische und medizinisch-berufliche Rehabilitation</small></button>
+        <button data-neuro="SPECIALISTS">Fachversorgung ergänzen<br><small>Neurologie und Neuropsychologie aus dem Gesamtbestand</small></button>
+      </div>
+      <div class="phase-help">
+        <div><b>A · Akutbehandlung</b><br>Akutmedizinische neurologische Versorgung unmittelbar nach Erkrankung oder Verletzung.</div>
+        <div><b>B · Frührehabilitation</b><br>Frührehabilitation bei noch hohem medizinischem und pflegerischem Unterstützungsbedarf.</div>
+        <div><b>C · Weiterführende Reha</b><br>Patientinnen und Patienten können bereits aktiv an mehreren Therapien mitwirken.</div>
+        <div><b>D · Medizinische Rehabilitation</b><br>Weitgehend selbstständige Rehabilitation mit Schwerpunkt auf Alltag und Teilhabe.</div>
+        <div><b>E · Nachsorge / berufliche Teilhabe</b><br>Schulische oder berufliche Wiedereingliederung, Belastungserprobung und medizinisch-berufliche Rehabilitation.</div>
+        <div><b>F · Langzeitversorgung</b><br>Dauerhaft unterstützende, pflegerische und aktivierende Versorgung bei schwersten neurologischen Schädigungen.</div>
+      </div>
+      <div class="grid two-col">
+        <div><div id="neuroMap"></div></div>
+        <div><div id="neuroResults"></div></div>
+      </div>
     </div>
   </section>
 
@@ -143,25 +186,54 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
     <div id="qualityKpis" class="qa-grid"></div>
     <div class="card panel" style="margin-top:16px"><h2>Datensätze mit Prüfbedarf</h2><div id="qualityList"></div></div>
   </section>
+
+  <section id="about" class="view">
+    <div class="about-hero"><h2>BG-RehaManager Südwest</h2><p>Digitales Arbeitsinstrument zur regionalen Reha-Steuerung und zur Vernetzung medizinischer, beruflicher und sozialer Teilhabeleistungen.</p><p><b>Konzeption & Herausgabe: Oliver Welz</b><br>© 2026 Oliver Welz</p></div>
+    <div class="about-grid">
+      <div class="card panel"><h2>Version 4.3</h2><p>Integrationsfassung mit eigenständigem Modul „Neurologische Rehabilitation“, BAR-Phasen A–E, separater Phase F, Neuro-Rehabilitation für Jugend und junge Erwachsene sowie regionalem EUTB-Bestand.</p><p class="muted">Die Kennzeichnung dokumentiert Konzeption und Herausgabe des Arbeitsinstruments. Rechte an externen Quellen, Karten- und Fachdaten verbleiben bei den jeweiligen Rechteinhabern.</p></div>
+      <div class="card panel"><h2>Datenprinzip</h2><p>Masterdaten haben Vorrang vor lokaler Browser-Geokodierung. Ortsmittelpunkte werden nicht als verifizierte Einrichtungspunkte akzeptiert. Offene Geodaten bleiben sichtbar offen, statt geschätzt zu werden.</p></div>
+    </div>
+  </section>
 </main>
 </div>
 
+<div class="creator-mark"><b>BG-RehaManager Südwest</b><br>Konzeption & Herausgabe: Oliver Welz · © 2026</div>
+
+
+<div id="masterModal" class="modal"><div class="modal-card"><div class="modal-head"><div><h2>Master-Datenpflege</h2><div class="muted">Privater Herausgebermodus · Oliver Welz</div></div><button id="masterClose" class="icon-btn">✕</button></div><div id="masterBody"></div></div></div>
+<input id="masterKeyInput" type="file" accept="application/json,.json" style="display:none">
 <div id="modal" class="modal"><div class="modal-card"><div class="modal-head"><div><h2 id="modalTitle"></h2><div id="modalSubtitle" class="muted"></div></div><button id="modalClose" class="icon-btn">✕</button></div><div id="modalBody"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 "use strict";
-const APP_VERSION="4.2.1";
-const RELEASE_ID="4.2.1-dashboard2-20260821";
-const DATA_URL="./data.json?v=4.2.1-dashboard2-20260821";
-let facilities=[], filtered=[], mainMap, dashboardMap, routeMap, mainLayer, dashLayer, routeLayer;
+const APP_VERSION="4.3";
+const RELEASE_ID="4.3-masterpflege-20260824";
+const DATA_URL="./data.json?v=4.3-masterpflege-20260824";
+let facilities=[], filtered=[], mainMap, dashboardMap, routeMap, neuroMap, mainLayer, dashLayer, routeLayer, neuroLayer;
 const favorites=new Set(JSON.parse(localStorage.getItem("bg-reha-favorites")||"[]"));
+const MASTER_KEY_HASH="e3f4c20352be703081c84836eb3612d9dc2a471a9727d563a7d5cd36583f9a1f";
+const MASTER_OVERRIDES_KEY="bg-reha-master-overrides-v43";
+const MASTER_LOG_KEY="bg-reha-master-log-v43";
+let ownerUnlocked=false;
+let masterOverrides=JSON.parse(localStorage.getItem(MASTER_OVERRIDES_KEY)||"{}");
+let masterLog=JSON.parse(localStorage.getItem(MASTER_LOG_KEY)||"[]");
+let baseFacilities=[];
+
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const norm=s=>String(s??"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/ß/g,"ss");
 const uniq=a=>[...new Set(a.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),"de"));
 const validCoord=f=>Number.isFinite(Number(f.lat))&&Number.isFinite(Number(f.lon));
+const splitList=s=>String(s??"").split(/[;\n,]+/).map(x=>x.trim()).filter(Boolean);
+async function sha256(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function applyMasterOverrides(list){return list.map(f=>masterOverrides[String(f.id)]?{...f,...masterOverrides[String(f.id)]}:f)}
+function persistMaster(){localStorage.setItem(MASTER_OVERRIDES_KEY,JSON.stringify(masterOverrides));localStorage.setItem(MASTER_LOG_KEY,JSON.stringify(masterLog))}
+function downloadBlob(content,type,name){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function nowIso(){return new Date().toISOString()}
+function refreshOwnerUI(){document.body.classList.toggle("owner-on",ownerUnlocked);$("masterState").textContent=ownerUnlocked?`✎ Mastermodus · ${Object.keys(masterOverrides).length} Änderung(en)`:"🔒 Lesemodus";$("masterState").classList.toggle("on",ownerUnlocked);$("masterAccessBtn").textContent=ownerUnlocked?"Master-Datenpflege":"Master-Zugang"}
+
 const qualityLabel=f=>f.dataQuality|| (f.verified?"verifiziert":"zu prüfen");
-const catColor=c=>({SAV:"#c0392b",VAV:"#2980b9",EAP:"#27ae60","BG-Klinik":"#8e44ad","Stationäre Reha":"#e67e22","Psychotherapie DGUV":"#b03a2e","Schmerztherapie":"#d35400","Berufliche Reha":"#2c3e50",BFW:"#34495e",EFL:"#16a085","EFL / FCE":"#16a085"}[c]||"#557b8d");
+const catColor=c=>({SAV:"#c0392b",VAV:"#2980b9",EAP:"#27ae60","BG-Klinik":"#8e44ad","Stationäre Reha":"#e67e22","Psychotherapie DGUV":"#b03a2e","Schmerztherapie":"#d35400","Berufliche Reha":"#2c3e50",BFW:"#34495e",EFL:"#16a085","EFL / FCE":"#16a085","Neurologische Rehabilitation":"#5b4bb7","EUTB / Teilhabeberatung":"#087f8c","Soziale Teilhabe / Wohnen":"#7c5c2e"}[c]||"#557b8d");
 function saveFav(){localStorage.setItem("bg-reha-favorites",JSON.stringify([...favorites]));renderFavs()}
 function toggleFav(id){favorites.has(id)?favorites.delete(id):favorites.add(id);saveFav();renderDirectory()}
 function setupMap(id){const m=L.map(id,{zoomControl:true}).setView([49.35,8.7],7);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(m);return m}
@@ -174,9 +246,10 @@ async function loadData(){
     if(!r.ok)throw new Error(`HTTP ${r.status}`);
     const j=await r.json();
     if(!Array.isArray(j))throw new Error("data.json ist kein Array");
-    facilities=j.filter(f=>f&&f.name&&f.city);
+    baseFacilities=j.filter(f=>f&&f.name&&f.city);
+    facilities=applyMasterOverrides(baseFacilities);
     filtered=[...facilities];
-    status.textContent=`Master 4.2 · ${facilities.length} Einrichtungen`;
+    status.textContent=`Master 4.3 · ${facilities.length} Einrichtungen · ${facilities.filter(validCoord).length} kartierbar`;
     status.className="status";
     initUI();
   }catch(e){
@@ -186,9 +259,9 @@ async function loadData(){
   }
 }
 function initUI(){
-  mainMap=setupMap("mainMap");dashboardMap=setupMap("dashboardMap");routeMap=setupMap("routeMap");
-  mainLayer=L.layerGroup().addTo(mainMap);dashLayer=L.layerGroup().addTo(dashboardMap);routeLayer=L.layerGroup().addTo(routeMap);
-  fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();
+  mainMap=setupMap("mainMap");dashboardMap=setupMap("dashboardMap");routeMap=setupMap("routeMap");neuroMap=setupMap("neuroMap");
+  mainLayer=L.layerGroup().addTo(mainMap);dashLayer=L.layerGroup().addTo(dashboardMap);routeLayer=L.layerGroup().addTo(routeMap);neuroLayer=L.layerGroup().addTo(neuroMap);
+  fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();
   bindEvents();
 }
 function allCategories(){return uniq(facilities.flatMap(f=>f.categories||[]))}
@@ -206,7 +279,11 @@ function fillSelectors(){
   $("catFilters").innerHTML=cats.map(c=>`<button class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
 }
 function groupValues(f){return [...(f.categories||[]),...(f.serviceGroups||[]),...(f.specialtyGroups||[])];}
-function groupMatch(f,key){const k=norm(key);return groupValues(f).some(v=>norm(v)===k);}
+function isNeuroRehab(f){return groupValues(f).some(v=>norm(v)==="neurologische rehabilitation");}
+function hasNeuroPhase(f,p){const target=norm(`Phase ${p}`);return [...(f.keywords||[]),...(f.specialtyGroups||[]),f.carePath||""].some(v=>norm(v).includes(target));}
+function isNeuroYouth(f){return [...(f.keywords||[]),...(f.specialtyGroups||[])].some(v=>norm(v).includes("jugend & junge erwachsene")||norm(v).includes("neuropadagog"));}
+function isNeuroSpecialist(f){return !isNeuroRehab(f)&&groupValues(f).some(v=>["neurologie","neuropsychologie"].includes(norm(v)));}
+function groupMatch(f,key){if(key&&key.startsWith("__PHASE_"))return hasNeuroPhase(f,key.slice(-1));if(key==="__NEURO_YOUTH")return isNeuroYouth(f);const k=norm(key);return groupValues(f).some(v=>norm(v)===k);}
 let dashboardGroupFilter="";
 function renderKpis(){
   const medical=[
@@ -219,14 +296,25 @@ function renderKpis(){
     ["Berufliche Reha","Berufliche Reha"],["Leistungen zur Teilhabe am Arbeitsleben (LTA)","LTA"],["Umschulung / Qualifizierung","Umschulung / Qualifizierung"],
     ["Betriebliche Umschulung","Betriebliche Umschulung"],["BFW","BFW"],["BTZ","BTZ"],["bfz","bfz"],["FAW","FAW"],
     ["IHK","IHK"],["Arbeitsvermittlung","Arbeitsvermittlung"],["Kfz-Hilfe / Mobilität","Kfz-Hilfe / Mobilität"],["Bildungsträger","Bildungsträger"],
-    ["Reha-Coaching / Neuorientierung","Reha-Coaching"],["Soziale Teilhabe / Wohnen","Soziale Teilhabe / Wohnen"]
+    ["Reha-Coaching / Neuorientierung","Reha-Coaching"]
   ];
-  const card=([key,label])=>{const n=facilities.filter(f=>groupMatch(f,key)).length;return `<div class="card kpi" data-kpi-group="${esc(key)}" title="Auf Karte anzeigen"><strong>${n}</strong><span>${esc(label)}</span><small>anklicken → Karte</small></div>`};
+  const neuro=[
+    ["__PHASE_A","Phase A"],["__PHASE_B","Phase B"],["__PHASE_C","Phase C"],["__PHASE_D","Phase D"],["__PHASE_E","Phase E"],
+    ["__PHASE_F","Phase F"],["__NEURO_YOUTH","Jugend / junge Erw."]
+  ];
+  const social=[["EUTB / Teilhabeberatung","EUTB / Teilhabeberatung"],["Soziale Teilhabe / Wohnen","Wohnen / Wohnungshilfe"]];
+  const specialCount=key=>key.startsWith("__PHASE_")?facilities.filter(f=>hasNeuroPhase(f,key.slice(-1))).length:key==="__NEURO_YOUTH"?facilities.filter(isNeuroYouth).length:null;
+  const card=([key,label])=>{const sn=specialCount(key);const n=sn===null?facilities.filter(f=>groupMatch(f,key)).length:sn;return `<div class="card kpi" data-kpi-group="${esc(key)}" title="Auf Karte anzeigen"><strong>${n}</strong><span>${esc(label)}</span><small>anklicken → Karte</small></div>`};
   $("kpisMedical").innerHTML=medical.map(card).join("");
+  $("kpisNeuro").innerHTML=neuro.map(card).join("");
   $("kpisLta").innerHTML=lta.map(card).join("");
+  $("kpisSocial").innerHTML=social.map(card).join("");
   $("dashboardSummary").innerHTML=`<div class="card summary-box"><strong>${facilities.length}</strong><span>Einrichtungen gesamt</span></div><div class="card summary-box"><strong>${facilities.filter(validCoord).length}</strong><span>kartierbar</span></div><div class="card summary-box"><strong>${facilities.length-facilities.filter(validCoord).length}</strong><span>ohne nutzbare Koordinate</span></div>`;
   document.querySelectorAll("[data-kpi-group]").forEach(x=>x.onclick=()=>{
-    dashboardGroupFilter=x.dataset.kpiGroup;
+    const key=x.dataset.kpiGroup;
+    if(key.startsWith("__PHASE_")){showView("neurology");renderNeurology(key.slice(-1));return;}
+    if(key==="__NEURO_YOUTH"){showView("neurology");renderNeurology("YOUTH");return;}
+    dashboardGroupFilter=key;
     $("search").value="";$("region").value="";$("qualityFilter").value="";
     document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
     showView("mapView");applyFilters();
@@ -236,6 +324,25 @@ function renderDashboard(){
   dashLayer.clearLayers();facilities.filter(validCoord).forEach(f=>markerFor(f).addTo(dashLayer));fitLayer(dashboardMap,dashLayer);
   renderBars("regionBars",countBy(facilities,f=>f.region),12);
 }
+
+let neuroFilter="ALL";
+function neuroListFor(key){
+  if(key==="SPECIALISTS")return facilities.filter(isNeuroSpecialist);
+  if(key==="YOUTH")return facilities.filter(isNeuroYouth);
+  if(["A","B","C","D","E","F"].includes(key))return facilities.filter(f=>isNeuroRehab(f)&&hasNeuroPhase(f,key));
+  return facilities.filter(isNeuroRehab);
+}
+function renderNeurology(key=neuroFilter){
+  neuroFilter=key;
+  const phases=["A","B","C","D","E"];
+  $("neuroPhases").innerHTML=phases.map(p=>`<button class="phase-card ${key===p?"active":""}" data-neuro="${p}"><strong>${p}</strong><span>${neuroListFor(p).length} Einrichtungen</span></button>`).join("")+`<button class="phase-card ${key==="ALL"?"active":""}" data-neuro="ALL"><strong>Alle</strong><span>${neuroListFor("ALL").length} Neuro-Reha</span></button>`;
+  document.querySelectorAll("[data-neuro]").forEach(b=>{b.classList.toggle("active",b.dataset.neuro===key);b.onclick=()=>renderNeurology(b.dataset.neuro)});
+  const list=neuroListFor(key);
+  $("neuroCount").textContent=`${list.length} Treffer · ${list.filter(validCoord).length} kartierbar`;
+  neuroLayer.clearLayers();list.filter(validCoord).forEach(f=>markerFor(f).addTo(neuroLayer));fitLayer(neuroMap,neuroLayer);
+  $("neuroResults").innerHTML=list.length?list.slice(0,100).map(f=>resultCard(f,`· ${(f.keywords||[]).filter(x=>/^Phase [A-F]$/.test(x)).join(" / ")}`)).join(""):'<div class="warning">Keine Einrichtungen in diesem Teilfilter.</div>';
+}
+
 function activeCats(){return [...document.querySelectorAll(".chip.on")].map(x=>x.dataset.cat)}
 function applyFilters(){
   const q=norm($("search")?.value),reg=$("region")?.value||"",qf=$("qualityFilter")?.value||"",cats=activeCats();
@@ -275,13 +382,42 @@ function showDetails(f){
     <p><b>Versorgungsgruppen</b><br>${(f.serviceGroups||f.categories||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
     <p><b>Fachgruppen</b><br>${(f.specialtyGroups||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
     <p><b>Schwerpunkte / Schlagworte</b><br>${(f.keywords||f.focus||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
+    ${isNeuroRehab(f)||isNeuroYouth(f)?`<p><b>Neurologische Zuordnung</b><br>${(f.keywords||[]).filter(x=>/^Phase [A-F]$/.test(x)||norm(x).includes("jugend")||norm(x).includes("neuropadagog")).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>`:""}
     <p><b>Versorgungspfad</b><br>${esc(f.carePath||"–")}</p><p><b>Fallbezogene Eignung</b><br>${esc(f.caseSuitability||"–")}</p>
     <p><b>Hinweise</b><br>${esc(f.note||"–")}</p>
     <div class="contact-grid"><div><b>Datenqualität</b><br>${qualityBadge(f)}</div><div><b>Datenstand / nächste Prüfung</b><br>${esc(f.dataDate||"–")} / ${esc(f.nextReview||"–")}</div>
       <div><b>KIM-Adresse</b><br>${esc(f.kimAddress||"–")}</div><div><b>KIM-Status</b><br>${esc(f.kimStatus||"–")}</div></div>
-    <div class="toolbar"><button class="icon-btn ${favorites.has(f.id)?"starred":""}" onclick='toggleFav(${JSON.stringify(f.id)});showDetailsById(${JSON.stringify(f.id)})'>★ Favorit</button>${validCoord(f)?`<button class="secondary" onclick="showOnMap(${Number(f.lat)},${Number(f.lon)})">Auf Karte anzeigen</button>`:""}</div>`;
+    <div class="toolbar"><button class="icon-btn ${favorites.has(f.id)?"starred":""}" onclick='toggleFav(${JSON.stringify(f.id)});showDetailsById(${JSON.stringify(f.id)})'>★ Favorit</button>${validCoord(f)?`<button class="secondary" onclick="showOnMap(${Number(f.lat)},${Number(f.lon)})">Auf Karte anzeigen</button>`:""}${ownerUnlocked?`<button class="primary" onclick='editRecord(${JSON.stringify(f.id)})'>✎ Datensatz bearbeiten</button>`:""}</div>`;
   $("modal").classList.add("open");
 }
+function openMasterPanel(){
+  $("masterModal").classList.add("open");
+  if(!ownerUnlocked){
+    $("masterBody").innerHTML=`<div class="master-box"><b>🔒 Privater Master-Zugang</b><p class="private-note">Zum Freischalten wird die private Master-Schlüsseldatei benötigt. Sie gehört ausschließlich zum Herausgeber und darf nicht in das GitHub-Repository oder an andere Nutzer weitergegeben werden.</p><div class="toolbar"><button class="primary" onclick="document.getElementById('masterKeyInput').click()">Master-Schlüssel auswählen</button></div></div><div class="muted">Ohne Master-Schlüssel bleibt die Anwendung vollständig im Lesemodus. Auch ein lokal entsperrter Browser kann den veröffentlichten Zentralbestand nicht direkt überschreiben; dafür gelten zusätzlich die Schreibrechte des GitHub-Repositories.</div>`;
+    return;
+  }
+  const changed=Object.keys(masterOverrides).length;
+  $("masterBody").innerHTML=`<div class="success"><b>Mastermodus aktiv.</b> Lokale Datenpflege ist freigeschaltet. ${changed} Datensatz/Datensätze enthalten lokale Masteränderungen.</div>
+    <div class="master-box"><b>Master-Ausgabe</b><p class="muted">Die bearbeiteten Werte werden in diesem Browser gespeichert. Mit „Master data.json exportieren“ erzeugst du den vollständigen aktuellen Datenbestand. Erst das Hochladen/Committen dieser Datei durch einen berechtigten GitHub-Nutzer verändert den zentralen Master.</p><div class="toolbar"><button class="primary" onclick="exportMasterJson()">Master data.json exportieren</button><button class="secondary" onclick="exportMasterLog()">Änderungsprotokoll exportieren</button><button class="secondary" onclick="lockMaster()">Mastermodus sperren</button>${changed?'<button class="danger" onclick="resetMasterOverrides()">Lokale Änderungen verwerfen</button>':''}</div></div>
+    <div class="card panel"><h2>Letzte Änderungen</h2><div class="master-history">${masterLog.length?masterLog.slice().reverse().slice(0,30).map(x=>`<div><b>${esc(x.name||x.id)}</b><br>${esc(x.time)} · ${esc(x.summary||'Datensatz geändert')}</div>`).join(''):'Noch keine Änderungen.'}</div></div>`;
+}
+async function handleMasterKeyFile(file){
+  try{const txt=await file.text();const obj=JSON.parse(txt);const h=await sha256(obj.token||"");if(h!==MASTER_KEY_HASH)throw new Error("Master-Schlüssel ist für diese 4.3-Fassung nicht gültig.");ownerUnlocked=true;sessionStorage.setItem("bg-reha-master-unlocked","1");refreshOwnerUI();openMasterPanel()}catch(e){alert(e.message||"Master-Schlüssel konnte nicht gelesen werden.")}
+}
+function lockMaster(){ownerUnlocked=false;sessionStorage.removeItem("bg-reha-master-unlocked");refreshOwnerUI();$("masterModal").classList.remove("open")}
+function editRecord(id){if(!ownerUnlocked){openMasterPanel();return}const f=facilities.find(x=>String(x.id)===String(id));if(!f)return;const phases=["A","B","C","D","E","F"];$("modalTitle").textContent=`Datensatz bearbeiten · ${f.name}`;$("modalSubtitle").textContent=`ID ${f.id} · Änderungen gelten lokal bis zum Master-Export`;$("modalBody").innerHTML=`<div class="warning"><b>Master-Datenpflege:</b> Änderungen werden protokolliert. Geodaten nur eintragen, wenn die Koordinate belastbar adressgenau geprüft wurde.</div><form id="editForm" class="edit-grid" onsubmit="saveRecord(event,${JSON.stringify(f.id)})">
+${editInput("Name","name",f.name,true)}${editInput("Ort","city",f.city,true)}${editInput("Anschrift","address",f.address,true)}${editInput("Region","region",f.region)}${editInput("Telefon","phone",f.phone)}${editInput("Fax","fax",f.fax)}${editInput("E-Mail","email",f.email)}${editInput("Website","website",f.website)}${editInput("Ansprechpartner","contact",f.contact)}${editInput("Funktion / Abteilung","department",f.department)}${editInput("Datenqualität","dataQuality",f.dataQuality)}${editInput("Geo-Status","geoStatus",f.geoStatus)}${editInput("Breitengrad","lat",f.lat)}${editInput("Längengrad","lon",f.lon)}
+<div class="wide"><label>BAR-Phasen</label><div class="phase-checks">${phases.map(p=>`<label><input type="checkbox" name="phase_${p}" ${hasNeuroPhase(f,p)?'checked':''}> Phase ${p}</label>`).join('')}</div></div>
+${editArea("Versorgungsgruppen (mit ; trennen)","serviceGroups",(f.serviceGroups||f.categories||[]).join("; "))}${editArea("Fachgruppen (mit ; trennen)","specialtyGroups",(f.specialtyGroups||[]).join("; "))}${editArea("Schwerpunkte / Schlagworte (mit ; trennen)","keywords",(f.keywords||f.focus||[]).filter(x=>!/^Phase [A-F]$/.test(x)).join("; "))}${editArea("Versorgungspfad","carePath",f.carePath)}${editArea("Fallbezogene Eignung","caseSuitability",f.caseSuitability)}${editArea("Hinweise","note",f.note)}${editArea("Quelle(n)","source",f.source)}
+<div class="wide toolbar"><button class="primary" type="submit">Änderung übernehmen</button><button class="secondary" type="button" onclick="showDetailsById(${JSON.stringify(f.id)})">Abbrechen</button>${masterOverrides[String(f.id)]?`<button class="danger" type="button" onclick="restoreRecord(${JSON.stringify(f.id)})">Master-Original wiederherstellen</button>`:''}</div></form>`;}
+function editInput(label,name,value,wide=false){return `<div class="${wide?'wide':''}"><label>${esc(label)}</label><input name="${esc(name)}" type="text" value="${esc(value??'')}"></div>`}
+function editArea(label,name,value){return `<div class="wide"><label>${esc(label)}</label><textarea name="${esc(name)}">${esc(value??'')}</textarea></div>`}
+function saveRecord(e,id){e.preventDefault();if(!ownerUnlocked)return;const old=facilities.find(x=>String(x.id)===String(id));const fd=new FormData(e.target);const patch={};["name","city","address","region","phone","fax","email","website","contact","department","dataQuality","geoStatus","carePath","caseSuitability","note","source"].forEach(k=>patch[k]=String(fd.get(k)||"").trim());["lat","lon"].forEach(k=>{const v=String(fd.get(k)||"").trim();patch[k]=v===""?null:Number(v)});patch.serviceGroups=splitList(fd.get("serviceGroups"));patch.specialtyGroups=splitList(fd.get("specialtyGroups"));let kw=splitList(fd.get("keywords"));["A","B","C","D","E","F"].forEach(p=>{if(fd.get(`phase_${p}`))kw.push(`Phase ${p}`)});patch.keywords=uniq(kw);patch.version="4.3";patch.dataDate=new Date().toLocaleDateString("de-DE");masterOverrides[String(id)]={...(masterOverrides[String(id)]||{}),...patch};const changed=Object.keys(patch).filter(k=>JSON.stringify(old?.[k]??null)!==JSON.stringify(patch[k]??null));masterLog.push({time:nowIso(),id,name:patch.name||old?.name,summary:changed.length?`Geändert: ${changed.join(', ')}`:"Datensatz gespeichert"});persistMaster();facilities=applyMasterOverrides(baseFacilities);filtered=[...facilities];fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();refreshOwnerUI();showDetailsById(id)}
+function restoreRecord(id){if(!ownerUnlocked)return;if(!confirm("Lokale Änderungen dieses Datensatzes wirklich verwerfen?"))return;const original=baseFacilities.find(x=>String(x.id)===String(id));delete masterOverrides[String(id)];masterLog.push({time:nowIso(),id,name:original?.name,summary:"Lokale Änderungen verworfen; Master-Original wiederhergestellt"});persistMaster();facilities=applyMasterOverrides(baseFacilities);filtered=[...facilities];refreshOwnerUI();fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();showDetailsById(id)}
+function exportMasterJson(){if(!ownerUnlocked)return;downloadBlob(JSON.stringify(facilities,null,2),"application/json;charset=utf-8",`BG-RehaManager_4.3_MASTER_${new Date().toISOString().slice(0,10)}.json`)}
+function exportMasterLog(){if(!ownerUnlocked)return;downloadBlob(JSON.stringify(masterLog,null,2),"application/json;charset=utf-8",`BG-RehaManager_4.3_AENDERUNGSPROTOKOLL_${new Date().toISOString().slice(0,10)}.json`)}
+function resetMasterOverrides(){if(!ownerUnlocked)return;if(!confirm("ALLE lokalen Masteränderungen verwerfen und auf den veröffentlichten Datenbestand zurücksetzen?"))return;masterOverrides={};masterLog.push({time:nowIso(),id:"*",name:"Gesamtbestand",summary:"Alle lokalen Masteränderungen verworfen"});persistMaster();facilities=[...baseFacilities];filtered=[...facilities];refreshOwnerUI();$("masterModal").classList.remove("open");fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology()}
+
 function showOnMap(lat,lon){$("modal").classList.remove("open");showView("mapView");mainMap.setView([lat,lon],14)}
 function countBy(list,fn){const m={};list.forEach(x=>{const k=fn(x)||"Ohne Zuordnung";m[k]=(m[k]||0)+1});return m}
 function countMulti(list,fn){const m={};list.forEach(x=>(fn(x)||[]).forEach(k=>m[k]=(m[k]||0)+1));return m}
@@ -303,7 +439,7 @@ function renderQuality(){
 function exportCsv(){
  const cols=["id","name","address","city","region","phone","email","website","dataQuality"];let s=cols.join(";")+"\n";
  filtered.forEach(f=>s+=cols.map(k=>`"${String(f[k]??"").replaceAll('"','""')}"`).join(";")+"\n");
- const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+s],{type:"text/csv;charset=utf-8"}));a.download="BG_RehaManager_4_2_Treffer.csv";a.click();URL.revokeObjectURL(a.href);
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+s],{type:"text/csv;charset=utf-8"}));a.download="BG_RehaManager_4_3_Treffer.csv";a.click();URL.revokeObjectURL(a.href);
 }
 function haversine(a,b,c,d){const R=6371,toRad=x=>x*Math.PI/180,dp=toRad(c-a),dl=toRad(d-b),q=Math.sin(dp/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(dl/2)**2;return 2*R*Math.asin(Math.sqrt(q))}
 async function geocode(q){const u="https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=de&q="+encodeURIComponent(q);const r=await fetch(u,{headers:{"Accept-Language":"de"}});const j=await r.json();if(!j.length)throw new Error("Startort nicht gefunden");return {lat:+j[0].lat,lon:+j[0].lon,label:j[0].display_name}}
@@ -333,9 +469,9 @@ function runBest(){
 function showView(id){
  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));
  document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
- const titles={dashboard:"Dashboard",mapView:"Interaktive Karte",directory:"Einrichtungsverzeichnis",navigator:"Reha-Navigator",reachability:"Standort & Fahrzeit",bestMatch:"Beste Einrichtung",statistics:"Statistik",quality:"Datenqualität"};
+ const titles={dashboard:"Dashboard",mapView:"Interaktive Karte",directory:"Einrichtungsverzeichnis",neurology:"Neurologische Rehabilitation",navigator:"Reha-Navigator",reachability:"Standort & Fahrzeit",bestMatch:"Beste Einrichtung",statistics:"Statistik",quality:"Datenqualität",about:"Über den BG-RehaManager"};
  $("pageTitle").textContent=titles[id]||"BG-RehaManager";
- setTimeout(()=>{if(id==="mapView")mainMap.invalidateSize();if(id==="dashboard")dashboardMap.invalidateSize();if(id==="reachability")routeMap.invalidateSize()},80);
+ setTimeout(()=>{if(id==="mapView")mainMap.invalidateSize();if(id==="dashboard")dashboardMap.invalidateSize();if(id==="reachability")routeMap.invalidateSize();if(id==="neurology")neuroMap.invalidateSize()},80);
 }
 function bindEvents(){
  document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.view));
@@ -343,10 +479,11 @@ function bindEvents(){
  document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{dashboardGroupFilter="";c.classList.toggle("on");applyFilters()});
  $("fitMap").onclick=()=>fitLayer(mainMap,mainLayer);$("exportCsv").onclick=exportCsv;$("runNavigator").onclick=runNavigator;$("runRoute").onclick=runRoute;$("runBest").onclick=runBest;
  $("modalClose").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};
+ $("masterAccessBtn").onclick=openMasterPanel;$("masterClose").onclick=()=>$("masterModal").classList.remove("open");$("masterModal").onclick=e=>{if(e.target===$("masterModal"))$("masterModal").classList.remove("open")};$("masterKeyInput").onchange=e=>{const f=e.target.files&&e.target.files[0];if(f)handleMasterKeyFile(f);e.target.value=""};
 }
 if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}))}
-window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;
-loadData();
+window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;window.editRecord=editRecord;window.saveRecord=saveRecord;window.restoreRecord=restoreRecord;window.openMasterPanel=openMasterPanel;window.exportMasterJson=exportMasterJson;window.exportMasterLog=exportMasterLog;window.lockMaster=lockMaster;window.resetMasterOverrides=resetMasterOverrides;
+refreshOwnerUI();loadData();
 </script>
 </body>
 </html>
