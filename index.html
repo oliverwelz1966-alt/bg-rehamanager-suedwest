@@ -3,15 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>BG-RehaManager Südwest 4.3</title>
-<meta name="author" content="Oliver Welz">
-<meta name="copyright" content="© 2026 Oliver Welz">
-<meta name="application-name" content="BG-RehaManager Südwest 4.3">
+<title>BG-RehaManager Südwest 4.5</title>
 <meta name="theme-color" content="#123247">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BG-Reha Südwest">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{--bg:#eef2f7;--panel:#fff;--ink:#172033;--muted:#617082;--line:#d8dee8;--accent:#0f5e78;--accent2:#123247;--ok:#1b6d3c;--warn:#855f00;--bad:#a02a2a;--shadow:0 10px 28px rgba(22,35,50,.08)}
@@ -42,34 +39,60 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 .qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.qa-box{padding:14px;border:1px solid var(--line);border-radius:10px;background:#fff}.qa-box strong{font-size:22px;display:block}
 .legend{background:white;padding:10px;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,.2);font-size:11px;line-height:1.7;max-height:300px;overflow:auto}.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
 .loading{padding:35px;text-align:center;color:var(--muted)}
-.neuro-flow{display:grid;grid-template-columns:repeat(6,minmax(90px,1fr));gap:9px;margin:12px 0 16px}.phase-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;cursor:pointer;text-align:left}.phase-card strong{display:block;font-size:22px;color:var(--accent2)}.phase-card span{display:block;font-size:11px;color:var(--muted);margin-top:3px}.phase-card.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(15,94,120,.12);background:#f2f9fb}.neuro-special{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}.neuro-special button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px;text-align:left;cursor:pointer}.neuro-special button.active{background:var(--accent);color:#fff;border-color:var(--accent)}.phase-help{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.phase-help div{padding:10px;border-radius:9px;background:#f7f9fc;font-size:11px;line-height:1.4}.creator-mark{position:fixed;right:14px;bottom:14px;z-index:800;background:rgba(18,32,47,.92);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:8px 11px;box-shadow:0 5px 18px rgba(0,0,0,.18);font-size:10px;line-height:1.3;backdrop-filter:blur(6px);pointer-events:none}.creator-mark b{font-size:11px}.about-hero{padding:22px;background:linear-gradient(135deg,#123247,#0f5e78);color:#fff;border-radius:14px;margin-bottom:16px}.about-hero h2{font-size:23px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}#neuroMap{height:520px;border-radius:12px;overflow:hidden}
-@media(max-width:1050px){.neuro-flow{grid-template-columns:repeat(3,1fr)}.phase-help,.about-grid{grid-template-columns:1fr}.neuro-special{grid-template-columns:1fr 1fr 1fr}.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:repeat(2,1fr)}.dashboard-summary{grid-template-columns:repeat(3,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
-@media(max-width:650px){.neuro-flow{grid-template-columns:repeat(2,1fr)}.neuro-special{grid-template-columns:1fr}.creator-mark{right:8px;bottom:8px;max-width:210px}.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:1fr 1fr}.dashboard-summary{grid-template-columns:1fr}.dashboard-group-head{display:block}.dashboard-group-head span{display:block;text-align:left;margin-top:4px}#dashboardMap,#mainMap,#routeMap{height:430px}}
+.creator-badge{position:fixed;right:12px;bottom:10px;z-index:9000;background:rgba(18,32,47,.92);color:#e9f1f7;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:6px 9px;font-size:10px;line-height:1.25;box-shadow:0 4px 16px rgba(0,0,0,.18);max-width:310px}
+@media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:repeat(2,1fr)}.dashboard-summary{grid-template-columns:repeat(3,1fr)}.two-col,.navigator,.reach-grid,.three-col{grid-template-columns:1fr}}
+@media(max-width:650px){.creator-badge{position:static;margin:8px 14px 14px;max-width:none}.content{padding:14px}.controls,.contact-grid,.small-grid{grid-template-columns:1fr}.kpis,.kpis.medical,.kpis.lta,.qa-grid{grid-template-columns:1fr 1fr}.dashboard-summary{grid-template-columns:1fr}.dashboard-group-head{display:block}.dashboard-group-head span{display:block;text-align:left;margin-top:4px}#dashboardMap,#mainMap,#routeMap{height:430px}}
 
-.master-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.master-pill{font-size:11px;padding:6px 9px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted)}.master-pill.on{background:#fff4d6;color:#704f00;border-color:#e0c168}.master-box{border:1px solid #e0c168;background:#fffaf0;border-radius:12px;padding:13px;margin:10px 0}.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.edit-grid .wide{grid-column:1/-1}.edit-grid label{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}.edit-grid textarea{width:100%;min-height:72px;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;resize:vertical}.phase-checks{display:flex;gap:8px;flex-wrap:wrap}.phase-checks label{display:flex;align-items:center;gap:4px;background:#f5f7fa;border:1px solid var(--line);padding:6px 8px;border-radius:8px}.danger{background:#fff;color:var(--bad);border:1px solid #e1b5b5;border-radius:9px;padding:9px 11px;cursor:pointer}.private-note{font-size:11px;color:#755300;line-height:1.45}.owner-only{display:none}.owner-on .owner-only{display:inline-flex}.master-history{max-height:220px;overflow:auto;font-size:12px}.master-history div{padding:7px 0;border-bottom:1px solid #eee}.topbar-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+/* 4.5 additions */
+textarea{font:inherit;width:100%;min-height:110px;border:1px solid var(--line);border-radius:9px;padding:10px;resize:vertical;background:#fff;color:var(--ink)}
+.status-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.status-pill{display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700;background:#edf2f7;color:#455468}
+.status-pill.ok{background:#e9f6ee;color:var(--ok)}.status-pill.warn{background:#fff6dc;color:var(--warn)}.status-pill.bad{background:#fdeaea;color:var(--bad)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:12px}.feature-card{padding:14px}.feature-card strong{display:block;margin-bottom:5px}
+.notes-box{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:14px}.notes-box small{display:block;color:var(--muted);margin-bottom:8px}
+.score{font-weight:800;color:var(--accent)}.reason{font-size:11px;color:var(--muted);margin-top:4px}.empty{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}
+.info-steps{counter-reset:step;display:grid;gap:10px}.info-step{counter-increment:step;padding:12px 14px 12px 48px;border:1px solid var(--line);border-radius:10px;position:relative;background:#fff}
+.info-step:before{content:counter(step);position:absolute;left:13px;top:12px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:var(--accent2);color:#fff;font-weight:800;font-size:12px}
+.qa-table{width:100%;border-collapse:collapse}.qa-table td,.qa-table th{padding:8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.qa-table th{font-size:11px;color:var(--muted);text-transform:uppercase}
+.local-only{background:#eef7ff;border-left:4px solid #4e8fc7;padding:10px 12px;border-radius:8px;font-size:12px}
+@media(max-width:1050px){.feature-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.feature-grid{grid-template-columns:1fr}}
+
+/* 4.5 final QA / usability refinements */
+.map-controls{grid-template-columns:2fr 1fr 1fr 1fr}
+.kpis.participation{grid-template-columns:repeat(3,minmax(150px,1fr))}
+.filter-details{border:1px solid var(--line);border-radius:10px;background:#f8fafc;margin:8px 0 12px;padding:0 10px}
+.filter-details summary{cursor:pointer;padding:10px 2px;font-size:12px;font-weight:700;color:#405166;user-select:none}
+.filter-details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+.map-fallback{height:100%;min-height:280px;display:grid;place-items:center;text-align:center;padding:24px;border:1px dashed #b8c3cf;border-radius:10px;background:#f8fafc;color:var(--muted);line-height:1.5}
+.qa-messages{display:grid;gap:8px;margin-bottom:12px}.qa-hint{background:#eef7ff;border:1px solid #bdd8ee;color:#315a76;padding:10px 12px;border-radius:9px;font-size:12px}
+.result-limit{font-size:11px;color:var(--muted);margin:8px 0}
+@media(max-width:1250px){.map-controls{grid-template-columns:2fr 1fr}.kpis.participation{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.map-controls,.kpis.participation{grid-template-columns:1fr}.bar-row{grid-template-columns:120px 1fr 38px}.topbar{flex-wrap:wrap}}
+
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
-  <div class="brand">BG-Reha-Manager<br>Einsatzatlas Südwest</div>
-  <div class="version">Webanwendung · Version 4.3 · Master-Datenpflege · 24.08.2026</div>
+  <div class="brand">BG-RehaManager<br>Südwest</div>
+  <div class="version">Webanwendung · Version 4.5 · finaler Prüf-/Integrationsstand 31.08.2026 · Basis: eingefrorener 4.4.x-Referenzbestand</div>
   <nav class="nav">
     <button class="active" data-view="dashboard">▦ Dashboard</button>
     <button data-view="mapView">⌖ Interaktive Karte</button>
     <button data-view="directory">≡ Einrichtungsverzeichnis</button>
-    <button data-view="neurology">◉ Neurologie 4.3</button>
+    <button data-view="fallfinder">◎ Fallfinder</button>
     <button data-view="navigator">◇ Reha-Navigator</button>
     <button data-view="reachability">↗ Standort & Fahrzeit</button>
     <button data-view="bestMatch">★ Beste Einrichtung</button>
+    <button data-view="favoritesView">☆ Favoriten & zuletzt</button>
     <button data-view="statistics">▥ Statistik</button>
     <button data-view="quality">✓ Datenqualität</button>
-    <button data-view="about">ⓘ Über den RehaManager</button>
+    <button data-view="info">ⓘ Info / Zugang</button>
   </nav>
-  <div class="sidebar-note">Version 4.3 lädt den zentralen Web-Datenbestand aus <b>data.json</b>. Neurologie, Phase F, Neuro-Jugend und EUTB sind als geprüfte Module integriert. Favoriten werden lokal auf diesem Gerät gespeichert. <b>Masteränderungen</b> sind nur im privaten Master-Modus möglich; die zentrale Datei bleibt durch die GitHub-Schreibrechte des Herausgebers geschützt.</div>
+  <div class="sidebar-note">4.5 nutzt einen normalisierten Datenbestand. Favoriten, zuletzt verwendete Einrichtungen und Fallnotizen werden ausschließlich lokal auf diesem Gerät gespeichert. 4.4.x bleibt unveränderter Referenzstand.</div>
 </aside>
 <main class="content">
-  <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div class="topbar-right"><span id="masterState" class="master-pill">🔒 Lesemodus</span><button id="masterAccessBtn" class="secondary">Master-Zugang</button><div id="status" class="status">Daten werden geladen …</div></div></div>
+  <div class="topbar"><div><h1 id="pageTitle">Dashboard</h1><div class="subtitle">Versorgungs- und Rehabilitationseinrichtungen im Einsatzgebiet Südwest</div></div><div id="status" class="status">Daten werden geladen …</div></div>
 
   <section id="dashboard" class="view active">
     <div id="dashboardSummary" class="dashboard-summary"></div>
@@ -77,34 +100,28 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
       <div class="dashboard-group-head"><h2>Medizinische Reha & Heilverfahren</h2><span>Akutversorgung, Rehabilitation, Therapie und medizinisch-berufliche Steuerung</span></div>
       <div id="kpisMedical" class="grid kpis medical"></div>
     </div>
-
-    <div class="dashboard-group">
-      <div class="dashboard-group-head"><h2>Neurologische Rehabilitation</h2><span>BAR-Phasen A–E, Phase F sowie Jugend & junge Erwachsene</span></div>
-      <div id="kpisNeuro" class="grid kpis medical"></div>
-    </div>
     <div class="dashboard-group">
       <div class="dashboard-group-head"><h2>Berufliche Reha & Leistungen zur Teilhabe am Arbeitsleben</h2><span>Umschulung, Qualifizierung, Vermittlung, Mobilität und berufliche Integration</span></div>
       <div id="kpisLta" class="grid kpis lta"></div>
     </div>
-
     <div class="dashboard-group">
-      <div class="dashboard-group-head"><h2>Soziale Teilhabe & Beratung</h2><span>Wohnungshilfe, Wohnberatung und unabhängige Teilhabeberatung</span></div>
-      <div id="kpisSocial" class="grid kpis lta"></div>
+      <div class="dashboard-group-head"><h2>Soziale Teilhabe & Wohnen</h2><span>Wohnraumanpassung, Lifttechnik, EUTB und ergänzende soziale Teilhabe</span></div>
+      <div id="kpisParticipation" class="grid kpis participation"></div>
     </div>
-    <div class="dashboard-note">Die Kacheln zeigen fachliche Zuordnungen. Eine Einrichtung kann mehreren Gruppen angehören; deshalb werden die Kachelzahlen nicht addiert. Maßgeblich für den Gesamtbestand ist die Zahl „Einrichtungen gesamt“.</div>
+    <div class="dashboard-note">Die Kacheln zeigen fachliche Zuordnungen. Eine Einrichtung kann mehreren Gruppen angehören; deshalb werden die Kachelzahlen nicht addiert. Maßgeblich für den Gesamtbestand ist die Zahl „Datensätze gesamt“.</div>
     <div class="grid two-col">
       <div class="card panel"><h2>Gesamtübersicht</h2><div id="dashboardMap"></div></div>
       <div class="grid">
-        <div class="card panel"><h2>Einrichtungen nach Region</h2><div id="regionBars" class="stat-bars"></div></div>
-        <div class="card panel"><h2>Meine Favoriten</h2><div id="favList" class="muted"></div></div>
+        <div class="card panel"><h2>Einrichtungen nach Großregion</h2><div id="regionBars" class="stat-bars"></div></div>
+        <div class="card panel"><h2>Meine Favoriten</h2><div id="favList" class="muted"></div></div><div class="card panel"><h2>Zuletzt verwendet</h2><div id="recentList" class="muted"></div></div>
       </div>
     </div>
   </section>
 
   <section id="mapView" class="view">
     <div class="card panel">
-      <div class="controls"><input id="search" type="search" placeholder="Einrichtung, Ort, Region, Fachgruppe oder Schwerpunkt"><select id="region"></select><select id="qualityFilter"></select></div>
-      <div id="catFilters" class="filters"></div>
+      <div class="controls map-controls"><input id="search" type="search" placeholder="Intelligente Suche: Einrichtung, Ort, Bedarf, Leistung, Schlagwort …"><select id="canonicalFilter"></select><select id="region"></select><select id="qualityFilter"></select></div>
+      <details id="fineFilters" class="filter-details"><summary>Feinfilter Leistungen / Kategorien <span id="fineFilterCount"></span></summary><div id="catFilters" class="filters"></div></details>
       <div class="toolbar"><button id="fitMap" class="secondary">Alle Treffer anzeigen</button><button id="exportCsv" class="secondary">Treffer als CSV exportieren</button><span id="resultCount" class="muted"></span></div>
       <div id="mainMap"></div>
     </div>
@@ -112,33 +129,8 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
 
   <section id="directory" class="view">
     <div class="card panel"><h2>Einrichtungsverzeichnis</h2>
-      <div class="success">Master 4.3 ist die Integrationsdatenquelle. Der freigegebene 4.2.1-Stand bleibt Rückfallebene; Datensätze mit Prüfbedarf bleiben sichtbar gekennzeichnet.</div>
+      <div class="success">Master 4.4.x ist der eingefrorene Referenzbestand; 4.5 ergänzt Normalisierung, Suchlogik und lokale Arbeitsfunktionen. Datensätze mit Prüfbedarf bleiben sichtbar gekennzeichnet.</div>
       <div class="table-wrap"><table><thead><tr><th></th><th>Einrichtung</th><th>Ort</th><th>Versorgungsgruppen</th><th>Fachgruppen</th><th>Datenqualität</th></tr></thead><tbody id="clinicTableBody"></tbody></table></div>
-    </div>
-  </section>
-
-
-  <section id="neurology" class="view">
-    <div class="card panel">
-      <div class="topbar"><div><h2>Neurologische Rehabilitation · BAR-Phasenmodell</h2><div class="muted">Eigener 4.3-Fachbereich mit phasenbezogener Suche und ergänzender neurologischer Fachversorgung.</div></div><span id="neuroCount" class="status"></span></div>
-      <div id="neuroPhases" class="neuro-flow"></div>
-      <div class="neuro-special">
-        <button data-neuro="F">Phase F / Langzeitversorgung<br><small>Wachkoma, schwere Hirnschädigung, aktivierende Langzeitversorgung</small></button>
-        <button data-neuro="YOUTH">Jugend & junge Erwachsene<br><small>Neuropädagogische und medizinisch-berufliche Rehabilitation</small></button>
-        <button data-neuro="SPECIALISTS">Fachversorgung ergänzen<br><small>Neurologie und Neuropsychologie aus dem Gesamtbestand</small></button>
-      </div>
-      <div class="phase-help">
-        <div><b>A · Akutbehandlung</b><br>Akutmedizinische neurologische Versorgung unmittelbar nach Erkrankung oder Verletzung.</div>
-        <div><b>B · Frührehabilitation</b><br>Frührehabilitation bei noch hohem medizinischem und pflegerischem Unterstützungsbedarf.</div>
-        <div><b>C · Weiterführende Reha</b><br>Patientinnen und Patienten können bereits aktiv an mehreren Therapien mitwirken.</div>
-        <div><b>D · Medizinische Rehabilitation</b><br>Weitgehend selbstständige Rehabilitation mit Schwerpunkt auf Alltag und Teilhabe.</div>
-        <div><b>E · Nachsorge / berufliche Teilhabe</b><br>Schulische oder berufliche Wiedereingliederung, Belastungserprobung und medizinisch-berufliche Rehabilitation.</div>
-        <div><b>F · Langzeitversorgung</b><br>Dauerhaft unterstützende, pflegerische und aktivierende Versorgung bei schwersten neurologischen Schädigungen.</div>
-      </div>
-      <div class="grid two-col">
-        <div><div id="neuroMap"></div></div>
-        <div><div id="neuroResults"></div></div>
-      </div>
     </div>
   </section>
 
@@ -147,7 +139,7 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
       <div class="card panel"><h2>Versorgung eingrenzen</h2>
         <label>Versorgungsart</label><select id="navCategory"></select>
         <label>Fachgruppe / Schwerpunkt</label><select id="navFocus"></select>
-        <label>Region</label><select id="navRegion"></select>
+        <label>Großregion</label><select id="navRegion"></select>
         <div class="toolbar"><button id="runNavigator" class="primary">Einrichtungen suchen</button></div>
       </div>
       <div class="card panel"><div class="topbar"><h2>Ergebnisse</h2><span id="navCount" class="muted"></span></div><div id="navResults" class="muted">Bitte Suchkriterien auswählen.</div></div>
@@ -158,13 +150,13 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
     <div class="reach-grid">
       <div class="card panel"><h2>Standort- & Erreichbarkeitssuche</h2>
         <label>Startort / PLZ / Anschrift</label><input id="routeStart" type="text" placeholder="z. B. 74722 Buchen">
-        <label>Versorgungsart</label><select id="routeCategory"></select>
+        <label>Hauptgruppe</label><select id="routeCategory"></select>
         <div class="small-grid">
           <div><label>Max. Fahrzeit</label><select id="routeMaxMinutes"><option value="">ohne Limit</option><option value="30">30 Min.</option><option value="45">45 Min.</option><option value="60">60 Min.</option><option value="90">90 Min.</option><option value="120">120 Min.</option></select></div>
           <div><label>Max. Entfernung</label><select id="routeMaxKm"><option value="">ohne Limit</option><option value="25">25 km</option><option value="50">50 km</option><option value="75">75 km</option><option value="100">100 km</option><option value="150">150 km</option></select></div>
         </div>
         <div class="toolbar"><button id="runRoute" class="primary">Nächste Einrichtungen suchen</button></div>
-        <div class="muted">Für die Routensuche werden OpenStreetMap/Nominatim und OSRM verwendet. Ohne Internet steht weiterhin die Luftlinien-Sortierung zur Verfügung, sofern der Startort bereits als Koordinate bekannt ist.</div>
+        <div class="muted">Startorte werden zuerst im lokalen Datenbestand bzw. als direkte Koordinate erkannt. Falls nötig, wird online über OpenStreetMap/Nominatim geocodiert; OSRM liefert nach Möglichkeit Straßenentfernung und Fahrzeit. Ist OSRM nicht erreichbar, bleibt die Luftlinien-Sortierung verfügbar.</div>
       </div>
       <div class="card panel"><div id="routeMap"></div><div id="routeResults" style="margin-top:12px"></div></div>
     </div>
@@ -178,8 +170,30 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
     </div>
   </section>
 
+
+  <section id="fallfinder" class="view">
+    <div class="grid navigator">
+      <div class="card panel"><h2>Fallfinder 4.5</h2>
+        <div class="local-only">Der Fallfinder ist eine strukturierte Orientierungshilfe im vorhandenen Datenbestand. Er ersetzt keine medizinische oder leistungsrechtliche Einzelfallentscheidung.</div>
+        <label>Bedarf / Fallkonstellation</label><select id="caseNeed"></select>
+        <label>Neurologische Phase (optional)</label><select id="casePhase"><option value="">keine Phasenfestlegung</option><option>Phase A</option><option>Phase B</option><option>Phase C</option><option>Phase D</option><option>Phase E</option><option>Phase F</option></select>
+        <label>Großregion (optional)</label><select id="caseRegion"></select>
+        <label>Zusätzliche Stichworte</label><input id="caseText" type="search" placeholder="z. B. Armamputation, Schreinerei, Pflegegutachten, Rollstuhl …">
+        <div class="toolbar"><button id="runCaseFinder" class="primary">Passende Einrichtungen finden</button></div>
+      </div>
+      <div class="card panel"><div class="topbar"><h2>Empfohlene Treffer</h2><span id="caseCount" class="muted"></span></div><div id="caseResults" class="muted">Bitte Fallkonstellation auswählen.</div></div>
+    </div>
+  </section>
+
+  <section id="favoritesView" class="view">
+    <div class="grid two-col">
+      <div class="card panel"><h2>Favoriten</h2><div id="favFullList"></div></div>
+      <div class="card panel"><h2>Zuletzt verwendet</h2><div id="recentFullList"></div><div class="toolbar"><button id="clearRecent" class="secondary">Verlauf löschen</button></div></div>
+    </div>
+  </section>
+
   <section id="statistics" class="view">
-    <div class="grid three-col"><div class="card panel"><h2>Versorgungsgruppen</h2><div id="catStats" class="stat-bars"></div></div><div class="card panel"><h2>Fachgruppen</h2><div id="focusStats" class="stat-bars"></div></div><div class="card panel"><h2>Regionen</h2><div id="regionStats" class="stat-bars"></div></div></div>
+    <div class="grid three-col"><div class="card panel"><h2>Versorgungsgruppen</h2><div id="catStats" class="stat-bars"></div></div><div class="card panel"><h2>Fachgruppen</h2><div id="focusStats" class="stat-bars"></div></div><div class="card panel"><h2>Großregionen</h2><div id="regionStats" class="stat-bars"></div></div></div>
   </section>
 
   <section id="quality" class="view">
@@ -187,303 +201,165 @@ h1{font-size:27px;margin:0 0 4px}h2{font-size:17px;margin:0 0 12px}.subtitle,.mu
     <div class="card panel" style="margin-top:16px"><h2>Datensätze mit Prüfbedarf</h2><div id="qualityList"></div></div>
   </section>
 
-  <section id="about" class="view">
-    <div class="about-hero"><h2>BG-RehaManager Südwest</h2><p>Digitales Arbeitsinstrument zur regionalen Reha-Steuerung und zur Vernetzung medizinischer, beruflicher und sozialer Teilhabeleistungen.</p><p><b>Konzeption & Herausgabe: Oliver Welz</b><br>© 2026 Oliver Welz</p></div>
-    <div class="about-grid">
-      <div class="card panel"><h2>Version 4.3</h2><p>Integrationsfassung mit eigenständigem Modul „Neurologische Rehabilitation“, BAR-Phasen A–E, separater Phase F, Neuro-Rehabilitation für Jugend und junge Erwachsene sowie regionalem EUTB-Bestand.</p><p class="muted">Die Kennzeichnung dokumentiert Konzeption und Herausgabe des Arbeitsinstruments. Rechte an externen Quellen, Karten- und Fachdaten verbleiben bei den jeweiligen Rechteinhabern.</p></div>
-      <div class="card panel"><h2>Datenprinzip</h2><p>Masterdaten haben Vorrang vor lokaler Browser-Geokodierung. Ortsmittelpunkte werden nicht als verifizierte Einrichtungspunkte akzeptiert. Offene Geodaten bleiben sichtbar offen, statt geschätzt zu werden.</p></div>
+  <section id="info" class="view">
+    <div class="grid two-col">
+      <div class="card panel"><h2>Zugang</h2>
+        <div class="info-steps">
+          <div class="info-step"><b>Website aufrufen</b><br><span class="muted">bg-rehamanager-suedwest.com</span></div>
+          <div class="info-step"><b>Freigeschaltete E-Mail-Adresse verwenden</b><br><span class="muted">Der Zugang ist personenbezogen; Zugangscodes nicht weitergeben.</span></div>
+          <div class="info-step"><b>Einmalcode eingeben</b><br><span class="muted">Nach erfolgreicher Prüfung öffnet sich die Anwendung.</span></div>
+          <div class="info-step"><b>Bis zu 30 Tage angemeldet bleiben</b><br><span class="muted">Abhängig von Browser-/Cookie-Einstellungen; nach Ablauf erneut anmelden.</span></div>
+        </div>
+      </div>
+      <div class="card panel"><h2>Lokale Funktionen in 4.5</h2>
+        <div class="feature-grid">
+          <div class="feature-card card"><strong>★ Favoriten</strong><span class="muted">Gerätebezogen gespeichert.</span></div>
+          <div class="feature-card card"><strong>↺ Zuletzt verwendet</strong><span class="muted">Maximal 12 zuletzt geöffnete Einträge.</span></div>
+          <div class="feature-card card"><strong>✎ Fallnotizen</strong><span class="muted">Nur lokal im Browser; nicht Bestandteil des zentralen Datenbestands.</span></div>
+        </div>
+        <div class="local-only" style="margin-top:14px"><b>Datenschutz-Hinweis:</b> In lokalen Fallnotizen keine unnötigen personenbezogenen oder besonders schutzbedürftigen Angaben speichern. Beim Löschen der Browserdaten gehen lokale Favoriten, Verlauf und Notizen verloren.</div>
+      </div>
+    </div>
+    <div class="card panel" style="margin-top:16px"><h2>Installation als App / Desktop-Icon</h2>
+      <p><b>Microsoft Edge:</b> Menü (…) → Apps → „Diese Website als App installieren“ → Installieren. Danach kann das Symbol auf dem Desktop bzw. in der Taskleiste verwendet werden.</p>
+      <p><b>Google Chrome:</b> Menü (…) → Speichern und teilen → „Verknüpfung erstellen“.</p>
+      <p class="muted">Version 4.5 ändert die bestehende Zugangssicherung nicht; sie erweitert die Anwendung hinter dem bestehenden Zugang.</p>
     </div>
   </section>
+
 </main>
 </div>
 
-<div class="creator-mark"><b>BG-RehaManager Südwest</b><br>Konzeption & Herausgabe: Oliver Welz · © 2026</div>
+<div class="creator-badge">BG-RehaManager Südwest – Konzeption &amp; Herausgabe: Oliver Welz · © 2026</div>
 
-
-<div id="masterModal" class="modal"><div class="modal-card"><div class="modal-head"><div><h2>Master-Datenpflege</h2><div class="muted">Privater Herausgebermodus · Oliver Welz</div></div><button id="masterClose" class="icon-btn">✕</button></div><div id="masterBody"></div></div></div>
-<input id="masterKeyInput" type="file" accept="application/json,.json" style="display:none">
 <div id="modal" class="modal"><div class="modal-card"><div class="modal-head"><div><h2 id="modalTitle"></h2><div id="modalSubtitle" class="muted"></div></div><button id="modalClose" class="icon-btn">✕</button></div><div id="modalBody"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <script>
 "use strict";
-const APP_VERSION="4.3";
-const RELEASE_ID="4.3-masterpflege-20260824";
-const DATA_URL="./data.json?v=4.3-masterpflege-20260824";
-let facilities=[], filtered=[], mainMap, dashboardMap, routeMap, neuroMap, mainLayer, dashLayer, routeLayer, neuroLayer;
-const favorites=new Set(JSON.parse(localStorage.getItem("bg-reha-favorites")||"[]"));
-const MASTER_KEY_HASH="e3f4c20352be703081c84836eb3612d9dc2a471a9727d563a7d5cd36583f9a1f";
-const MASTER_OVERRIDES_KEY="bg-reha-master-overrides-v43";
-const MASTER_LOG_KEY="bg-reha-master-log-v43";
-let ownerUnlocked=false;
-let masterOverrides=JSON.parse(localStorage.getItem(MASTER_OVERRIDES_KEY)||"{}");
-let masterLog=JSON.parse(localStorage.getItem(MASTER_LOG_KEY)||"[]");
-let baseFacilities=[];
-
+const APP_VERSION="4.5";
+const RELEASE_ID="4.5-final-qa-20260831";
+const DATA_URL="./data.json";
+let facilities=[],filtered=[],mainMap,dashboardMap,routeMap,mainLayer,dashLayer,routeLayer;
+let dashboardGroupFilter="";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const norm=s=>String(s??"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/ß/g,"ss");
-const uniq=a=>[...new Set(a.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),"de"));
-const validCoord=f=>Number.isFinite(Number(f.lat))&&Number.isFinite(Number(f.lon));
-const splitList=s=>String(s??"").split(/[;\n,]+/).map(x=>x.trim()).filter(Boolean);
-async function sha256(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
-function applyMasterOverrides(list){return list.map(f=>masterOverrides[String(f.id)]?{...f,...masterOverrides[String(f.id)]}:f)}
-function persistMaster(){localStorage.setItem(MASTER_OVERRIDES_KEY,JSON.stringify(masterOverrides));localStorage.setItem(MASTER_LOG_KEY,JSON.stringify(masterLog))}
-function downloadBlob(content,type,name){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function nowIso(){return new Date().toISOString()}
-function refreshOwnerUI(){document.body.classList.toggle("owner-on",ownerUnlocked);$("masterState").textContent=ownerUnlocked?`✎ Mastermodus · ${Object.keys(masterOverrides).length} Änderung(en)`:"🔒 Lesemodus";$("masterState").classList.toggle("on",ownerUnlocked);$("masterAccessBtn").textContent=ownerUnlocked?"Master-Datenpflege":"Master-Zugang"}
-
-const qualityLabel=f=>f.dataQuality|| (f.verified?"verifiziert":"zu prüfen");
-const catColor=c=>({SAV:"#c0392b",VAV:"#2980b9",EAP:"#27ae60","BG-Klinik":"#8e44ad","Stationäre Reha":"#e67e22","Psychotherapie DGUV":"#b03a2e","Schmerztherapie":"#d35400","Berufliche Reha":"#2c3e50",BFW:"#34495e",EFL:"#16a085","EFL / FCE":"#16a085","Neurologische Rehabilitation":"#5b4bb7","EUTB / Teilhabeberatung":"#087f8c","Soziale Teilhabe / Wohnen":"#7c5c2e"}[c]||"#557b8d");
-function saveFav(){localStorage.setItem("bg-reha-favorites",JSON.stringify([...favorites]));renderFavs()}
-function toggleFav(id){favorites.has(id)?favorites.delete(id):favorites.add(id);saveFav();renderDirectory()}
-function setupMap(id){const m=L.map(id,{zoomControl:true}).setView([49.35,8.7],7);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(m);return m}
-function markerFor(f){const c=catColor((f.categories||[])[0]);return L.circleMarker([Number(f.lat),Number(f.lon)],{radius:7,color:"#fff",weight:1.5,fillColor:c,fillOpacity:.9}).bindPopup(`<b>${esc(f.name)}</b><br>${esc(f.address||f.city)}<br><button onclick="showDetailsById(${JSON.stringify(f.id)})">Details anzeigen</button>`)}
-function fitLayer(map,layer){const ls=layer.getLayers();if(!ls.length)return;const b=L.featureGroup(ls).getBounds();if(b.isValid())map.fitBounds(b.pad(.12))}
-async function loadData(){
-  const status=$("status");
-  try{
-    const r=await fetch(DATA_URL,{cache:"no-store"});
-    if(!r.ok)throw new Error(`HTTP ${r.status}`);
-    const j=await r.json();
-    if(!Array.isArray(j))throw new Error("data.json ist kein Array");
-    baseFacilities=j.filter(f=>f&&f.name&&f.city);
-    facilities=applyMasterOverrides(baseFacilities);
-    filtered=[...facilities];
-    status.textContent=`Master 4.3 · ${facilities.length} Einrichtungen · ${facilities.filter(validCoord).length} kartierbar`;
-    status.className="status";
-    initUI();
-  }catch(e){
-    status.textContent="data.json konnte nicht geladen werden";
-    status.style.background="#fdeaea";status.style.color="#a02a2a";
-    document.querySelector(".content").insertAdjacentHTML("afterbegin",`<div class="warning"><b>Datenfehler:</b> ${esc(e.message)}. Prüfe, ob index.html und data.json im selben GitHub-Ordner liegen.</div>`);
-  }
-}
-function initUI(){
-  mainMap=setupMap("mainMap");dashboardMap=setupMap("dashboardMap");routeMap=setupMap("routeMap");neuroMap=setupMap("neuroMap");
-  mainLayer=L.layerGroup().addTo(mainMap);dashLayer=L.layerGroup().addTo(dashboardMap);routeLayer=L.layerGroup().addTo(routeMap);neuroLayer=L.layerGroup().addTo(neuroMap);
-  fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();
-  bindEvents();
-}
+const searchNorm=s=>norm(s).replace(/[^a-z0-9]+/g," ").trim();
+const uniq=a=>[...new Set((a||[]).filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),"de"));
+const coordValue=v=>v===null||v===undefined||String(v).trim()===""?null:Number(v);
+const validCoord=f=>{const lat=coordValue(f?.lat),lon=coordValue(f?.lon);return lat!==null&&lon!==null&&Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180&&!(lat===0&&lon===0)};
+const invalidCoord=f=>{const lat=coordValue(f?.lat),lon=coordValue(f?.lon);return (lat!==null&&!Number.isFinite(lat))||(lon!==null&&!Number.isFinite(lon))||(Number.isFinite(lat)&&(lat<-90||lat>90))||(Number.isFinite(lon)&&(lon<-180||lon>180))};
+const store=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}};
+const loadStore=(k,d)=>{try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(d))}catch{return d}};
+const FAV_KEY="bg-reha-favorites",RECENT_KEY="bg-reha-recent-4.5",NOTES_KEY="bg-reha-notes-4.5";
+const favorites=new Set(loadStore(FAV_KEY,[]));
+let recent=loadStore(RECENT_KEY,[]);
+let localNotes=loadStore(NOTES_KEY,{});
+const START_CENTER=[49.38,8.72],START_ZOOM=9;
+const GROUP_COLORS={
+ "Medizin / Heilverfahren":"#9b3d3d","Neurologische Rehabilitation":"#6750a4","Berufliche Teilhabe / Arbeitsintegration":"#315a76",
+ "Technische Arbeitsplatzanpassung":"#54733c","Mobilität / Kfz / Spezialrad":"#a35d16","Pflege / Reha-Management":"#8067a9",
+ "Wohnen / soziale Teilhabe":"#168073","Hilfsmittel / Spezialversorgung":"#7a5a3a","Arbeitsmedizin":"#476f8e"
+};
+const MEDICAL_GROUPS=["Medizin / Heilverfahren","Neurologische Rehabilitation","Hilfsmittel / Spezialversorgung","Pflege / Reha-Management","Arbeitsmedizin"];
+const LTA_GROUPS=["Berufliche Teilhabe / Arbeitsintegration","Technische Arbeitsplatzanpassung","Mobilität / Kfz / Spezialrad"];
+const PARTICIPATION_GROUPS=["Wohnen / soziale Teilhabe"];
+const CASE_NEEDS={
+ "Neurologische Rehabilitation":{groups:["Neurologische Rehabilitation"],terms:["neurologie","phase","neurorehabilitation"]},
+ "Amputation / Prothetik":{groups:["Hilfsmittel / Spezialversorgung","Medizin / Heilverfahren"],terms:["amputation","prothetik","orthopädietechnik","armprothetik","beinprothetik"]},
+ "Hand / periphere Nerven":{groups:["Medizin / Heilverfahren"],terms:["handchirurgie","periphere nerven","mikrochirurgie","nervenrekonstruktion","obere extremität"]},
+ "Chronischer Schmerz":{groups:["Medizin / Heilverfahren"],terms:["schmerztherapie","chronischer schmerz","multimodal"]},
+ "Psychische Unfallfolgen":{groups:["Medizin / Heilverfahren"],terms:["psychotherapie","psychologie","trauma","psychische unfallfolgen"]},
+ "Pflege / Pflegegutachten":{groups:["Pflege / Reha-Management"],terms:["pflegeberatung","pflegegutachten","pflegefachberatung","sgb vii"]},
+ "Berufliche Neuorientierung / LTA":{groups:["Berufliche Teilhabe / Arbeitsintegration"],terms:["berufliche reha","lta","umschulung","qualifizierung","neuorientierung"]},
+ "Arbeitsvermittlung / Jobcoaching":{groups:["Berufliche Teilhabe / Arbeitsintegration"],terms:["arbeitsvermittlung","jobcoaching","jobakquise","integration"]},
+ "Technische Arbeitsplatzanpassung":{groups:["Technische Arbeitsplatzanpassung"],terms:["arbeitsplatzanpassung","ergonomie","maschinenanpassung","assistenzsystem","hebehilfe"]},
+ "Mobilität / Kfz":{groups:["Mobilität / Kfz / Spezialrad"],terms:["kfz","fahrzeuganpassung","fahrschule","mobilität","fahrprobe"]},
+ "Fahrrad- / Spezialradanpassung":{groups:["Mobilität / Kfz / Spezialrad"],terms:["fahrrad","spezialrad","dreirad","einhand","armamputation"]},
+ "Wohnen / Lifttechnik":{groups:["Wohnen / soziale Teilhabe"],terms:["treppenlift","plattformlift","hublift","senkrechtlift","homelift","lifttechnik"]},
+ "EUTB / soziale Teilhabe":{groups:["Wohnen / soziale Teilhabe"],terms:["eutb","teilhabeberatung","soziale teilhabe"]}
+};
+const SEARCH_SYNONYMS={
+ "armamputation":["armprothetik","obere extremität","einhand","prothetik"],"armamputiert":["armprothetik","obere extremität","einhand","prothetik"],
+ "beinamputation":["beinprothetik","prothetik","orthopädietechnik"],"rollstuhl":["barrierefrei","plattformlift","hublift","mobilität"],
+ "treppe":["treppenlift","plattformlift","wohnraumanpassung"],"treppenlift":["plattformlift","hublift","senkrechtlift","wohnraumanpassung"],
+ "schreiner":["holz","arbeitsplatzanpassung","maschinenanpassung","ergonomie"],"schreinerei":["holz","arbeitsplatzanpassung","maschinenanpassung","ergonomie"],
+ "tischler":["holz","arbeitsplatzanpassung","maschinenanpassung","ergonomie"],"pflegegrad":["pflegeberatung","pflegegutachten"],
+ "arbeit":["arbeitsvermittlung","berufliche reha","lta","jobcoaching"],"umschulung":["berufliche reha","qualifizierung","bfw"],
+ "fahrrad":["spezialrad","dreirad","e bike"],"auto":["kfz","fahrzeuganpassung","fahrschule"],"schmerz":["schmerztherapie","multimodal"],
+ "neuro":["neurologie","neuropsychologie","phase"],"wohnen":["wohnraumanpassung","lifttechnik","soziale teilhabe"],
+ "pflege":["pflegeberatung","pflegegutachten","pflegefachberatung"],"job":["arbeitsvermittlung","jobcoaching","integration"]
+};
+function hasLeaflet(){return typeof window.L!=="undefined"&&typeof window.L.map==="function"}
+function setupMap(id){const el=$(id);if(!hasLeaflet()){el.innerHTML='<div class="map-fallback"><div><b>Kartenmodul derzeit nicht verfügbar.</b><br>Verzeichnis, Suche, Fallfinder, Favoriten und Datenqualität funktionieren weiter. Für die Kartenansicht ist die Leaflet-Verbindung erforderlich.</div></div>';return null}const m=L.map(id,{zoomControl:true}).setView(START_CENTER,START_ZOOM);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(m);return m}
+function qualityLabel(f){return f.qualityStatus||f.dataQuality||(f.verified?"verifiziert":"zu prüfen")}
+function qualityTier(f){const q=norm(qualityLabel(f));if(q==="verifiziert")return "verifiziert";if(q.includes("teil"))return "teilverifiziert";if(q.includes("referenz"))return "referenziert";if(q.includes("quelle verifiziert")&&norm(f.geoStatus).includes("verifiziert"))return "teilverifiziert";return "zu prüfen"}
+function activationLabel(f){return f.activationStatus||"Aktiv"}
+function qualityBadge(f){const q=qualityLabel(f),t=qualityTier(f);const bg=t==="verifiziert"?"#2e7d32":t==="teilverifiziert"?"#b7791f":t==="referenziert"?"#476f8e":"#a02a2a";return `<span class="badge" style="background:${bg}">${esc(q)}</span>`}
+function activationBadge(f){const a=activationLabel(f),n=norm(a),cl=n.includes("pruf")||n.includes("histor")||n.includes("ausgeschlossen")?"warn":"ok";return `<span class="status-pill ${cl}">${esc(a)}</span>`}
+function regionBucket(f){const r=norm(f.region).trim(),c=norm(f.city).trim(),s=r+" "+c;if(r==="he")return "Rhein-Main / Südhessen / Odenwald";if(r==="bw")return "Baden-Württemberg Süd/Ost";if(r.includes("rheinland-pfalz nord"))return "Überregional / außerhalb Kernregion";const has=(arr)=>arr.some(k=>s.includes(norm(k)));if(has(["unterfranken","unterfränk","bayerischer untermain","aschaffenburg","würzburg","höchberg","randersacker","lohr","erlenbach","nordbayern","schweinfurt","veitshöchheim"]))return "Unterfranken / Bayerischer Untermain";if(has(["rhein-neckar","mannheim","heidelberg","weinheim","schwetzingen","wiesloch","neckargemünd","hirschhorn"]))return "Rhein-Neckar";if(has(["vorderpfalz","rheinhessen","westpfalz","südpfalz","pfalz","speyer","ludwigshafen","frankenthal","grünstadt","landau","neustadt","annweiler","kirrweiler","lambrecht","rheinland-pfalz"]))return "Pfalz / Rheinhessen";if(has(["karlsruhe","nordbaden","kraichgau","pforzheim","ettlingen","ispringen","nordschwarzwald","bretten"]))return "Karlsruhe / Nordbaden";if(has(["heilbronn","main-tauber","taubertal","neckar-odenwald","mosbach","schwäbisch hall","niederstetten","buchen","walldürn","wertheim","tauberbischofsheim","bad mergentheim"]))return "Heilbronn-Franken / Main-Tauber / Neckar-Odenwald";if(has(["rhein-main","südhessen","bergstraße","odenwald","darmstadt","bensheim","heppenheim","seeheim","neu-isenburg","wiesbaden","hessen","mittelhessen","osthessen"]))return "Rhein-Main / Südhessen / Odenwald";if(has(["baden-württemberg","region stuttgart","stuttgart","neckar-alb","württemberg","südwürttemberg","bodensee","südbaden","freiburg"]))return "Baden-Württemberg Süd/Ost";return "Überregional / außerhalb Kernregion"}
+function regionMatch(f,key){return !key||regionBucket(f)===key}
+function markerFor(f){if(!hasLeaflet()||!validCoord(f))return null;const g=(f.canonicalGroups||[])[0]||"Medizin / Heilverfahren",c=GROUP_COLORS[g]||"#557b8d";return L.circleMarker([Number(f.lat),Number(f.lon)],{radius:7,color:"#fff",weight:1.5,fillColor:c,fillOpacity:.92}).bindPopup(`<b>${esc(f.name)}</b><br>${esc(f.address||f.city)}<br><small>${esc((f.canonicalGroups||[]).join(" · "))}</small><br><button onclick='showDetailsById(${JSON.stringify(f.id)})'>Details anzeigen</button>`)}
+function fitLayer(map,layer){if(!map||!layer)return;const ls=layer.getLayers();if(!ls.length)return;if(ls.length===1){const p=ls[0].getLatLng();map.setView(p,13);return}const b=L.featureGroup(ls).getBounds();if(b.isValid())map.fitBounds(b.pad(.12),{maxZoom:13})}
 function allCategories(){return uniq(facilities.flatMap(f=>f.categories||[]))}
+function allGroups(){return uniq(facilities.flatMap(f=>f.canonicalGroups||[]))}
 function allFocus(){return uniq(facilities.flatMap(f=>[...(f.specialtyGroups||[]),...(f.focus||[])]))}
-function allRegions(){return uniq(facilities.map(f=>f.region))}
+function allRegions(){return uniq(facilities.map(regionBucket))}
 function optionList(items,first="Alle"){return `<option value="">${esc(first)}</option>`+items.map(x=>`<option>${esc(x)}</option>`).join("")}
-function fillSelectors(){
-  const cats=allCategories(),regions=allRegions(),focus=allFocus();
-  $("region").innerHTML=optionList(regions,"Alle Regionen");
-  $("qualityFilter").innerHTML='<option value="">Alle Datenqualitäten</option><option value="verifiziert">verifiziert</option><option value="teil">teilverifiziert / teilweise</option><option value="prüfen">zu prüfen</option>';
-  ["navCategory","routeCategory","bestCategory"].forEach(id=>$(id).innerHTML=optionList(cats,"Alle Versorgungsarten"));
-  ["navRegion","bestRegion"].forEach(id=>$(id).innerHTML=optionList(regions,"Alle Regionen"));
-  $("navFocus").innerHTML=optionList(focus,"Alle Fachgruppen / Schwerpunkte");
-  $("bestQuality").innerHTML='<option value="">Alle Qualitätsstufen</option><option value="verifiziert">nur verifiziert</option><option value="usable">verifiziert + teilverifiziert</option>';
-  $("catFilters").innerHTML=cats.map(c=>`<button class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
-}
-function groupValues(f){return [...(f.categories||[]),...(f.serviceGroups||[]),...(f.specialtyGroups||[])];}
-function isNeuroRehab(f){return groupValues(f).some(v=>norm(v)==="neurologische rehabilitation");}
-function hasNeuroPhase(f,p){const target=norm(`Phase ${p}`);return [...(f.keywords||[]),...(f.specialtyGroups||[]),f.carePath||""].some(v=>norm(v).includes(target));}
-function isNeuroYouth(f){return [...(f.keywords||[]),...(f.specialtyGroups||[])].some(v=>norm(v).includes("jugend & junge erwachsene")||norm(v).includes("neuropadagog"));}
-function isNeuroSpecialist(f){return !isNeuroRehab(f)&&groupValues(f).some(v=>["neurologie","neuropsychologie"].includes(norm(v)));}
-function groupMatch(f,key){if(key&&key.startsWith("__PHASE_"))return hasNeuroPhase(f,key.slice(-1));if(key==="__NEURO_YOUTH")return isNeuroYouth(f);const k=norm(key);return groupValues(f).some(v=>norm(v)===k);}
-let dashboardGroupFilter="";
-function renderKpis(){
-  const medical=[
-    ["SAV","SAV"],["VAV","VAV"],["EAP","EAP"],["BG-Klinik","BG-Kliniken"],["Stationäre Reha","Stationäre Reha"],
-    ["EFL / FCE","EFL / FCE"],["ABMR","ABMR"],["TOR","TOR"],["BGSW","BGSW"],["CRPS","CRPS"],
-    ["Schmerztherapie","Schmerztherapie"],["Psychotherapie DGUV","Psychotherapie DGUV"],["Neurologie","Neurologie"],["Neuropsychologie","Neuropsychologie"],
-    ["Orthopädische Schuhmacher","Orthopädische Schuhmacher"],["Arbeitsmedizin","Arbeitsmedizin"],["Handchirurgie","Handchirurgie"],["Orthopädietechnik / Prothetik","Orthopädietechnik / Prothetik"]
-  ];
-  const lta=[
-    ["Berufliche Reha","Berufliche Reha"],["Leistungen zur Teilhabe am Arbeitsleben (LTA)","LTA"],["Umschulung / Qualifizierung","Umschulung / Qualifizierung"],
-    ["Betriebliche Umschulung","Betriebliche Umschulung"],["BFW","BFW"],["BTZ","BTZ"],["bfz","bfz"],["FAW","FAW"],
-    ["IHK","IHK"],["Arbeitsvermittlung","Arbeitsvermittlung"],["Kfz-Hilfe / Mobilität","Kfz-Hilfe / Mobilität"],["Bildungsträger","Bildungsträger"],
-    ["Reha-Coaching / Neuorientierung","Reha-Coaching"]
-  ];
-  const neuro=[
-    ["__PHASE_A","Phase A"],["__PHASE_B","Phase B"],["__PHASE_C","Phase C"],["__PHASE_D","Phase D"],["__PHASE_E","Phase E"],
-    ["__PHASE_F","Phase F"],["__NEURO_YOUTH","Jugend / junge Erw."]
-  ];
-  const social=[["EUTB / Teilhabeberatung","EUTB / Teilhabeberatung"],["Soziale Teilhabe / Wohnen","Wohnen / Wohnungshilfe"]];
-  const specialCount=key=>key.startsWith("__PHASE_")?facilities.filter(f=>hasNeuroPhase(f,key.slice(-1))).length:key==="__NEURO_YOUTH"?facilities.filter(isNeuroYouth).length:null;
-  const card=([key,label])=>{const sn=specialCount(key);const n=sn===null?facilities.filter(f=>groupMatch(f,key)).length:sn;return `<div class="card kpi" data-kpi-group="${esc(key)}" title="Auf Karte anzeigen"><strong>${n}</strong><span>${esc(label)}</span><small>anklicken → Karte</small></div>`};
-  $("kpisMedical").innerHTML=medical.map(card).join("");
-  $("kpisNeuro").innerHTML=neuro.map(card).join("");
-  $("kpisLta").innerHTML=lta.map(card).join("");
-  $("kpisSocial").innerHTML=social.map(card).join("");
-  $("dashboardSummary").innerHTML=`<div class="card summary-box"><strong>${facilities.length}</strong><span>Einrichtungen gesamt</span></div><div class="card summary-box"><strong>${facilities.filter(validCoord).length}</strong><span>kartierbar</span></div><div class="card summary-box"><strong>${facilities.length-facilities.filter(validCoord).length}</strong><span>ohne nutzbare Koordinate</span></div>`;
-  document.querySelectorAll("[data-kpi-group]").forEach(x=>x.onclick=()=>{
-    const key=x.dataset.kpiGroup;
-    if(key.startsWith("__PHASE_")){showView("neurology");renderNeurology(key.slice(-1));return;}
-    if(key==="__NEURO_YOUTH"){showView("neurology");renderNeurology("YOUTH");return;}
-    dashboardGroupFilter=key;
-    $("search").value="";$("region").value="";$("qualityFilter").value="";
-    document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
-    showView("mapView");applyFilters();
-  });
-}
-function renderDashboard(){
-  dashLayer.clearLayers();facilities.filter(validCoord).forEach(f=>markerFor(f).addTo(dashLayer));fitLayer(dashboardMap,dashLayer);
-  renderBars("regionBars",countBy(facilities,f=>f.region),12);
-}
-
-let neuroFilter="ALL";
-function neuroListFor(key){
-  if(key==="SPECIALISTS")return facilities.filter(isNeuroSpecialist);
-  if(key==="YOUTH")return facilities.filter(isNeuroYouth);
-  if(["A","B","C","D","E","F"].includes(key))return facilities.filter(f=>isNeuroRehab(f)&&hasNeuroPhase(f,key));
-  return facilities.filter(isNeuroRehab);
-}
-function renderNeurology(key=neuroFilter){
-  neuroFilter=key;
-  const phases=["A","B","C","D","E"];
-  $("neuroPhases").innerHTML=phases.map(p=>`<button class="phase-card ${key===p?"active":""}" data-neuro="${p}"><strong>${p}</strong><span>${neuroListFor(p).length} Einrichtungen</span></button>`).join("")+`<button class="phase-card ${key==="ALL"?"active":""}" data-neuro="ALL"><strong>Alle</strong><span>${neuroListFor("ALL").length} Neuro-Reha</span></button>`;
-  document.querySelectorAll("[data-neuro]").forEach(b=>{b.classList.toggle("active",b.dataset.neuro===key);b.onclick=()=>renderNeurology(b.dataset.neuro)});
-  const list=neuroListFor(key);
-  $("neuroCount").textContent=`${list.length} Treffer · ${list.filter(validCoord).length} kartierbar`;
-  neuroLayer.clearLayers();list.filter(validCoord).forEach(f=>markerFor(f).addTo(neuroLayer));fitLayer(neuroMap,neuroLayer);
-  $("neuroResults").innerHTML=list.length?list.slice(0,100).map(f=>resultCard(f,`· ${(f.keywords||[]).filter(x=>/^Phase [A-F]$/.test(x)).join(" / ")}`)).join(""):'<div class="warning">Keine Einrichtungen in diesem Teilfilter.</div>';
-}
-
+function groupMatch(f,key){const k=norm(key);return [...(f.canonicalGroups||[]),...(f.categories||[]),...(f.serviceGroups||[])].some(v=>norm(v)===k)}
 function activeCats(){return [...document.querySelectorAll(".chip.on")].map(x=>x.dataset.cat)}
-function applyFilters(){
-  const q=norm($("search")?.value),reg=$("region")?.value||"",qf=$("qualityFilter")?.value||"",cats=activeCats();
-  filtered=facilities.filter(f=>{
-    const hay=norm([f.name,f.city,f.region,f.address,...(f.categories||[]),...(f.serviceGroups||[]),...(f.specialtyGroups||[]),...(f.focus||[]),...(f.keywords||[])].join(" "));
-    const catOk=!cats.length||cats.some(c=>(f.categories||[]).includes(c));
-    const groupOk=!dashboardGroupFilter||groupMatch(f,dashboardGroupFilter);
-    let qo=true;const ql=norm(qualityLabel(f));
-    if(qf==="verifiziert")qo=ql==="verifiziert"; else if(qf==="teil")qo=ql.includes("teil"); else if(qf==="prüfen")qo=ql.includes("prüf");
-    return (!q||hay.includes(q))&&(!reg||f.region===reg)&&catOk&&groupOk&&qo;
-  });
-  if(mainLayer){mainLayer.clearLayers();filtered.filter(validCoord).forEach(f=>markerFor(f).addTo(mainLayer));}
-  $("resultCount").textContent=`${filtered.length} Treffer · ${filtered.filter(validCoord).length} kartierbar${dashboardGroupFilter?` · Dashboardfilter: ${dashboardGroupFilter}`:""}`;
-  renderDirectory(filtered);
-}
-function renderDirectory(list=facilities){
-  $("clinicTableBody").innerHTML=list.map(f=>`<tr>
-    <td><button class="icon-btn ${favorites.has(f.id)?"starred":""}" onclick='toggleFav(${JSON.stringify(f.id)})'>★</button></td>
-    <td><a href="#" onclick='showDetailsById(${JSON.stringify(f.id)});return false'><b>${esc(f.name)}</b></a><div class="muted">${esc(f.address||"")}</div></td>
-    <td>${esc(f.city)}<div class="muted">${esc(f.region||"")}</div></td>
-    <td>${(f.serviceGroups||f.categories||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</td>
-    <td>${(f.specialtyGroups||[]).slice(0,8).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</td>
-    <td>${qualityBadge(f)}</td></tr>`).join("");
-}
-function qualityBadge(f){const q=qualityLabel(f),n=norm(q);const bg=n==="verifiziert"?"#2e7d32":n.includes("teil")?"#b7791f":"#a02a2a";return `<span class="badge" style="background:${bg}">${esc(q)}</span>`}
-function renderFavs(){const list=facilities.filter(f=>favorites.has(f.id));$("favList").innerHTML=list.length?list.map(f=>`<div class="result-card" onclick='showDetailsById(${JSON.stringify(f.id)})'><strong>${esc(f.name)}</strong><span class="result-meta">${esc(f.city)}</span></div>`).join(""):"Noch keine Favoriten gespeichert."}
-function showDetailsById(id){const f=facilities.find(x=>String(x.id)===String(id));if(f)showDetails(f)}
-function showDetails(f){
-  $("modalTitle").textContent=f.name;$("modalSubtitle").textContent=[f.address,f.region].filter(Boolean).join(" · ");
-  const link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`:"–";
-  $("modalBody").innerHTML=`
-    <div class="contact-grid">
-      <div><b>Telefon</b><br>${esc(f.phone||"–")}</div><div><b>E-Mail</b><br>${f.email?`<a href="mailto:${esc(f.email)}">${esc(f.email)}</a>`:"–"}</div>
-      <div><b>Website</b><br>${link(f.website,"Website öffnen")}</div><div><b>Quelle</b><br>${link((f.source||"").split(";")[0],"Primär-/Prüfquelle öffnen")}</div>
-      <div><b>Ansprechpartner</b><br>${esc(f.contact||"–")}</div><div><b>Funktion / Abteilung</b><br>${esc(f.department||"–")}</div>
-    </div>
-    <p><b>Versorgungsgruppen</b><br>${(f.serviceGroups||f.categories||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
-    <p><b>Fachgruppen</b><br>${(f.specialtyGroups||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
-    <p><b>Schwerpunkte / Schlagworte</b><br>${(f.keywords||f.focus||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>
-    ${isNeuroRehab(f)||isNeuroYouth(f)?`<p><b>Neurologische Zuordnung</b><br>${(f.keywords||[]).filter(x=>/^Phase [A-F]$/.test(x)||norm(x).includes("jugend")||norm(x).includes("neuropadagog")).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p>`:""}
-    <p><b>Versorgungspfad</b><br>${esc(f.carePath||"–")}</p><p><b>Fallbezogene Eignung</b><br>${esc(f.caseSuitability||"–")}</p>
-    <p><b>Hinweise</b><br>${esc(f.note||"–")}</p>
-    <div class="contact-grid"><div><b>Datenqualität</b><br>${qualityBadge(f)}</div><div><b>Datenstand / nächste Prüfung</b><br>${esc(f.dataDate||"–")} / ${esc(f.nextReview||"–")}</div>
-      <div><b>KIM-Adresse</b><br>${esc(f.kimAddress||"–")}</div><div><b>KIM-Status</b><br>${esc(f.kimStatus||"–")}</div></div>
-    <div class="toolbar"><button class="icon-btn ${favorites.has(f.id)?"starred":""}" onclick='toggleFav(${JSON.stringify(f.id)});showDetailsById(${JSON.stringify(f.id)})'>★ Favorit</button>${validCoord(f)?`<button class="secondary" onclick="showOnMap(${Number(f.lat)},${Number(f.lon)})">Auf Karte anzeigen</button>`:""}${ownerUnlocked?`<button class="primary" onclick='editRecord(${JSON.stringify(f.id)})'>✎ Datensatz bearbeiten</button>`:""}</div>`;
-  $("modal").classList.add("open");
-}
-function openMasterPanel(){
-  $("masterModal").classList.add("open");
-  if(!ownerUnlocked){
-    $("masterBody").innerHTML=`<div class="master-box"><b>🔒 Privater Master-Zugang</b><p class="private-note">Zum Freischalten wird die private Master-Schlüsseldatei benötigt. Sie gehört ausschließlich zum Herausgeber und darf nicht in das GitHub-Repository oder an andere Nutzer weitergegeben werden.</p><div class="toolbar"><button class="primary" onclick="document.getElementById('masterKeyInput').click()">Master-Schlüssel auswählen</button></div></div><div class="muted">Ohne Master-Schlüssel bleibt die Anwendung vollständig im Lesemodus. Auch ein lokal entsperrter Browser kann den veröffentlichten Zentralbestand nicht direkt überschreiben; dafür gelten zusätzlich die Schreibrechte des GitHub-Repositories.</div>`;
-    return;
-  }
-  const changed=Object.keys(masterOverrides).length;
-  $("masterBody").innerHTML=`<div class="success"><b>Mastermodus aktiv.</b> Lokale Datenpflege ist freigeschaltet. ${changed} Datensatz/Datensätze enthalten lokale Masteränderungen.</div>
-    <div class="master-box"><b>Master-Ausgabe</b><p class="muted">Die bearbeiteten Werte werden in diesem Browser gespeichert. Mit „Master data.json exportieren“ erzeugst du den vollständigen aktuellen Datenbestand. Erst das Hochladen/Committen dieser Datei durch einen berechtigten GitHub-Nutzer verändert den zentralen Master.</p><div class="toolbar"><button class="primary" onclick="exportMasterJson()">Master data.json exportieren</button><button class="secondary" onclick="exportMasterLog()">Änderungsprotokoll exportieren</button><button class="secondary" onclick="lockMaster()">Mastermodus sperren</button>${changed?'<button class="danger" onclick="resetMasterOverrides()">Lokale Änderungen verwerfen</button>':''}</div></div>
-    <div class="card panel"><h2>Letzte Änderungen</h2><div class="master-history">${masterLog.length?masterLog.slice().reverse().slice(0,30).map(x=>`<div><b>${esc(x.name||x.id)}</b><br>${esc(x.time)} · ${esc(x.summary||'Datensatz geändert')}</div>`).join(''):'Noch keine Änderungen.'}</div></div>`;
-}
-async function handleMasterKeyFile(file){
-  try{const txt=await file.text();const obj=JSON.parse(txt);const h=await sha256(obj.token||"");if(h!==MASTER_KEY_HASH)throw new Error("Master-Schlüssel ist für diese 4.3-Fassung nicht gültig.");ownerUnlocked=true;sessionStorage.setItem("bg-reha-master-unlocked","1");refreshOwnerUI();openMasterPanel()}catch(e){alert(e.message||"Master-Schlüssel konnte nicht gelesen werden.")}
-}
-function lockMaster(){ownerUnlocked=false;sessionStorage.removeItem("bg-reha-master-unlocked");refreshOwnerUI();$("masterModal").classList.remove("open")}
-function editRecord(id){if(!ownerUnlocked){openMasterPanel();return}const f=facilities.find(x=>String(x.id)===String(id));if(!f)return;const phases=["A","B","C","D","E","F"];$("modalTitle").textContent=`Datensatz bearbeiten · ${f.name}`;$("modalSubtitle").textContent=`ID ${f.id} · Änderungen gelten lokal bis zum Master-Export`;$("modalBody").innerHTML=`<div class="warning"><b>Master-Datenpflege:</b> Änderungen werden protokolliert. Geodaten nur eintragen, wenn die Koordinate belastbar adressgenau geprüft wurde.</div><form id="editForm" class="edit-grid" onsubmit="saveRecord(event,${JSON.stringify(f.id)})">
-${editInput("Name","name",f.name,true)}${editInput("Ort","city",f.city,true)}${editInput("Anschrift","address",f.address,true)}${editInput("Region","region",f.region)}${editInput("Telefon","phone",f.phone)}${editInput("Fax","fax",f.fax)}${editInput("E-Mail","email",f.email)}${editInput("Website","website",f.website)}${editInput("Ansprechpartner","contact",f.contact)}${editInput("Funktion / Abteilung","department",f.department)}${editInput("Datenqualität","dataQuality",f.dataQuality)}${editInput("Geo-Status","geoStatus",f.geoStatus)}${editInput("Breitengrad","lat",f.lat)}${editInput("Längengrad","lon",f.lon)}
-<div class="wide"><label>BAR-Phasen</label><div class="phase-checks">${phases.map(p=>`<label><input type="checkbox" name="phase_${p}" ${hasNeuroPhase(f,p)?'checked':''}> Phase ${p}</label>`).join('')}</div></div>
-${editArea("Versorgungsgruppen (mit ; trennen)","serviceGroups",(f.serviceGroups||f.categories||[]).join("; "))}${editArea("Fachgruppen (mit ; trennen)","specialtyGroups",(f.specialtyGroups||[]).join("; "))}${editArea("Schwerpunkte / Schlagworte (mit ; trennen)","keywords",(f.keywords||f.focus||[]).filter(x=>!/^Phase [A-F]$/.test(x)).join("; "))}${editArea("Versorgungspfad","carePath",f.carePath)}${editArea("Fallbezogene Eignung","caseSuitability",f.caseSuitability)}${editArea("Hinweise","note",f.note)}${editArea("Quelle(n)","source",f.source)}
-<div class="wide toolbar"><button class="primary" type="submit">Änderung übernehmen</button><button class="secondary" type="button" onclick="showDetailsById(${JSON.stringify(f.id)})">Abbrechen</button>${masterOverrides[String(f.id)]?`<button class="danger" type="button" onclick="restoreRecord(${JSON.stringify(f.id)})">Master-Original wiederherstellen</button>`:''}</div></form>`;}
-function editInput(label,name,value,wide=false){return `<div class="${wide?'wide':''}"><label>${esc(label)}</label><input name="${esc(name)}" type="text" value="${esc(value??'')}"></div>`}
-function editArea(label,name,value){return `<div class="wide"><label>${esc(label)}</label><textarea name="${esc(name)}">${esc(value??'')}</textarea></div>`}
-function saveRecord(e,id){e.preventDefault();if(!ownerUnlocked)return;const old=facilities.find(x=>String(x.id)===String(id));const fd=new FormData(e.target);const patch={};["name","city","address","region","phone","fax","email","website","contact","department","dataQuality","geoStatus","carePath","caseSuitability","note","source"].forEach(k=>patch[k]=String(fd.get(k)||"").trim());["lat","lon"].forEach(k=>{const v=String(fd.get(k)||"").trim();patch[k]=v===""?null:Number(v)});patch.serviceGroups=splitList(fd.get("serviceGroups"));patch.specialtyGroups=splitList(fd.get("specialtyGroups"));let kw=splitList(fd.get("keywords"));["A","B","C","D","E","F"].forEach(p=>{if(fd.get(`phase_${p}`))kw.push(`Phase ${p}`)});patch.keywords=uniq(kw);patch.version="4.3";patch.dataDate=new Date().toLocaleDateString("de-DE");masterOverrides[String(id)]={...(masterOverrides[String(id)]||{}),...patch};const changed=Object.keys(patch).filter(k=>JSON.stringify(old?.[k]??null)!==JSON.stringify(patch[k]??null));masterLog.push({time:nowIso(),id,name:patch.name||old?.name,summary:changed.length?`Geändert: ${changed.join(', ')}`:"Datensatz gespeichert"});persistMaster();facilities=applyMasterOverrides(baseFacilities);filtered=[...facilities];fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();refreshOwnerUI();showDetailsById(id)}
-function restoreRecord(id){if(!ownerUnlocked)return;if(!confirm("Lokale Änderungen dieses Datensatzes wirklich verwerfen?"))return;const original=baseFacilities.find(x=>String(x.id)===String(id));delete masterOverrides[String(id)];masterLog.push({time:nowIso(),id,name:original?.name,summary:"Lokale Änderungen verworfen; Master-Original wiederhergestellt"});persistMaster();facilities=applyMasterOverrides(baseFacilities);filtered=[...facilities];refreshOwnerUI();fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology();showDetailsById(id)}
-function exportMasterJson(){if(!ownerUnlocked)return;downloadBlob(JSON.stringify(facilities,null,2),"application/json;charset=utf-8",`BG-RehaManager_4.3_MASTER_${new Date().toISOString().slice(0,10)}.json`)}
-function exportMasterLog(){if(!ownerUnlocked)return;downloadBlob(JSON.stringify(masterLog,null,2),"application/json;charset=utf-8",`BG-RehaManager_4.3_AENDERUNGSPROTOKOLL_${new Date().toISOString().slice(0,10)}.json`)}
-function resetMasterOverrides(){if(!ownerUnlocked)return;if(!confirm("ALLE lokalen Masteränderungen verwerfen und auf den veröffentlichten Datenbestand zurücksetzen?"))return;masterOverrides={};masterLog.push({time:nowIso(),id:"*",name:"Gesamtbestand",summary:"Alle lokalen Masteränderungen verworfen"});persistMaster();facilities=[...baseFacilities];filtered=[...facilities];refreshOwnerUI();$("masterModal").classList.remove("open");fillSelectors();renderKpis();renderDashboard();applyFilters();renderDirectory();renderStats();renderQuality();renderFavs();renderNeurology()}
-
-function showOnMap(lat,lon){$("modal").classList.remove("open");showView("mapView");mainMap.setView([lat,lon],14)}
+function queryTerms(q){const raw=searchNorm(q).split(/\s+/).filter(x=>x.length>1),ex=[];raw.forEach(t=>{ex.push(t);(SEARCH_SYNONYMS[t]||[]).forEach(s=>ex.push(searchNorm(s)))});return uniq(ex)}
+function scoreSearch(f,q){const terms=queryTerms(q);if(!terms.length)return 1;const fields=[[f.name,10],[f.city,7],[f.region,5],[regionBucket(f),5],[f.address,5],[(f.canonicalGroups||[]).join(" "),8],[(f.categories||[]).join(" "),7],[(f.specialtyGroups||[]).join(" "),6],[(f.focus||[]).join(" "),5],[(f.keywords||[]).join(" "),4],[f.role,4],[f.bgPayerReference,3],[f.note,1]];let score=0,matchedOriginal=0;const nq=searchNorm(q),originals=nq.split(/\s+/).filter(x=>x.length>1);for(const t of terms){let best=0;for(const [v,w] of fields)if(searchNorm(v).includes(t))best=Math.max(best,w);score+=best;if(best&&originals.includes(t))matchedOriginal++}if(originals.length&&matchedOriginal===originals.length)score+=12;return score}
 function countBy(list,fn){const m={};list.forEach(x=>{const k=fn(x)||"Ohne Zuordnung";m[k]=(m[k]||0)+1});return m}
 function countMulti(list,fn){const m={};list.forEach(x=>(fn(x)||[]).forEach(k=>m[k]=(m[k]||0)+1));return m}
 function renderBars(id,obj,limit=18){const es=Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,limit),mx=Math.max(1,...es.map(x=>x[1]));$(id).innerHTML=es.map(([k,n])=>`<div class="bar-row"><span>${esc(k)}</span><div class="bar"><i style="width:${n/mx*100}%"></i></div><b>${n}</b></div>`).join("")}
-function renderStats(){renderBars("catStats",countMulti(facilities,f=>f.serviceGroups||f.categories),25);renderBars("focusStats",countMulti(facilities,f=>f.specialtyGroups||[]),25);renderBars("regionStats",countBy(facilities,f=>f.region),25)}
-function runNavigator(){
- const c=$("navCategory").value,fo=$("navFocus").value,r=$("navRegion").value;
- const list=facilities.filter(f=>(!c||(f.categories||[]).includes(c))&&(!fo||[...(f.specialtyGroups||[]),...(f.focus||[])].includes(fo))&&(!r||f.region===r));
- $("navCount").textContent=`${list.length} Treffer`;$("navResults").innerHTML=list.length?list.slice(0,100).map(resultCard).join(""):'<div class="warning">Keine Einrichtung gefunden.</div>';
-}
-function resultCard(f,extra=""){return `<div class="result-card" onclick='showDetailsById(${JSON.stringify(f.id)})'><strong>${esc(f.name)}</strong><div class="result-meta">${esc(f.address||f.city)} · ${qualityBadge(f)} ${extra}</div></div>`}
-function renderQuality(){
- const total=facilities.length,ver=facilities.filter(f=>norm(qualityLabel(f))==="verifiziert").length,partial=facilities.filter(f=>norm(qualityLabel(f)).includes("teil")).length,review=facilities.filter(f=>norm(qualityLabel(f)).includes("prüf")).length;
- const noContact=facilities.filter(f=>!f.phone&&!f.email&&!f.website).length,noCoords=facilities.filter(f=>!validCoord(f)).length,noSource=facilities.filter(f=>f.verified&&!f.source).length;
- $("qualityKpis").innerHTML=[[total,"Gesamt"],[ver,"Verifiziert"],[partial,"Teilverifiziert"],[review,"Zu prüfen"],[noContact,"Ohne Kontakt"],[noCoords,"Ohne Koordinaten"],[noSource,"Verifiziert ohne Quelle"],[facilities.filter(f=>f.kimAddress).length,"KIM-Adressen"]].map(([n,t])=>`<div class="qa-box"><strong>${n}</strong><span class="muted">${t}</span></div>`).join("");
- const list=facilities.filter(f=>norm(qualityLabel(f))!=="verifiziert"||(!f.phone&&!f.email&&!f.website));
- $("qualityList").innerHTML=list.length?list.map(resultCard).join(""):'<div class="success">Keine offenen Qualitätsfälle.</div>';
-}
-function exportCsv(){
- const cols=["id","name","address","city","region","phone","email","website","dataQuality"];let s=cols.join(";")+"\n";
- filtered.forEach(f=>s+=cols.map(k=>`"${String(f[k]??"").replaceAll('"','""')}"`).join(";")+"\n");
- const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+s],{type:"text/csv;charset=utf-8"}));a.download="BG_RehaManager_4_3_Treffer.csv";a.click();URL.revokeObjectURL(a.href);
-}
+function saveFav(){store(FAV_KEY,[...favorites]);renderFavs();renderDirectory(filtered)}
+function toggleFav(id){const key=String(id),hit=[...favorites].find(x=>String(x)===key);hit!==undefined?favorites.delete(hit):favorites.add(id);saveFav()}
+function isFav(id){return [...favorites].some(x=>String(x)===String(id))}
+function remember(id){recent=[String(id),...recent.filter(x=>String(x)!==String(id))].slice(0,12);store(RECENT_KEY,recent);renderRecent()}
+function saveNote(id){localNotes[String(id)]=$("localNoteText").value.trim();const ok=store(NOTES_KEY,localNotes);$("noteStatus").textContent=ok?"Lokal gespeichert.":"Lokales Speichern im Browser nicht möglich.";setTimeout(()=>{if($("noteStatus"))$("noteStatus").textContent=""},1800)}
+function deleteNote(id){delete localNotes[String(id)];store(NOTES_KEY,localNotes);$("localNoteText").value="";$("noteStatus").textContent="Lokale Notiz gelöscht."}
+function splitMulti(v){return String(v||"").split(/\s*;\s*/).map(x=>x.trim()).filter(Boolean)}
+function webHref(v){const x=String(v||"").trim();if(/^https?:\/\//i.test(x))return x;if(/^www\./i.test(x))return "https://"+x;return ""}
+function linkList(v,label){const items=splitMulti(v);if(!items.length)return "–";let n=0;return items.map(item=>{const u=webHref(item);if(!u)return esc(item);n++;return `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(items.length>1?label+" "+n:label)}</a>`}).join("<br>")}
+function emailLinks(v){const items=splitMulti(v);if(!items.length)return "–";return items.map(item=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(item)?`<a href="mailto:${esc(item)}">${esc(item)}</a>`:esc(item)).join("<br>")}
+function renderFavs(){const list=facilities.filter(f=>isFav(f.id));const html=list.length?list.map(resultCard).join(""):'<div class="empty">Noch keine Favoriten gespeichert.</div>';$("favList").innerHTML=html;$("favFullList").innerHTML=html}
+function renderRecent(){const list=recent.map(id=>facilities.find(f=>String(f.id)===String(id))).filter(Boolean);const html=list.length?list.map(resultCard).join(""):'<div class="empty">Noch keine Einträge geöffnet.</div>';$("recentList").innerHTML=html;$("recentFullList").innerHTML=html}
+async function loadData(){const status=$("status");let data;try{if(Array.isArray(window.EMBEDDED_DATA_45))data=window.EMBEDDED_DATA_45;else{const r=await fetch(DATA_URL,{cache:"no-store"});if(!r.ok)throw new Error("data.json HTTP "+r.status);data=await r.json()}if(!Array.isArray(data))throw new Error("Datenbestand ist kein Array");facilities=data.filter(f=>f&&f.name&&f.id!==undefined&&!norm(activationLabel(f)).startsWith("ausgeschlossen"));filtered=[...facilities]}catch(e){status.textContent="Datenbestand konnte nicht geladen werden";status.style.background="#fdeaea";status.style.color="#a02a2a";document.querySelector(".content").insertAdjacentHTML("afterbegin",`<div class="warning"><b>Datenfehler:</b> ${esc(e.message)}</div>`);return}const qa=runtimeQa();status.textContent=`4.5 · ${facilities.length} Datensätze · QA ${qa.errors.length?"FEHLER":"OK"}${hasLeaflet()?"":" · Karte offline"}`;status.className="status";if(qa.errors.length){status.style.background="#fdeaea";status.style.color="#a02a2a"}else if(!hasLeaflet()){status.style.background="#fff8e6";status.style.color="#755300"}try{initUI()}catch(e){document.querySelector(".content").insertAdjacentHTML("afterbegin",`<div class="warning"><b>UI-Fehler:</b> ${esc(e.message)}. Der Datenbestand selbst wurde geladen.</div>`);console.error(e)}}
+function fillSelectors(){const cats=allCategories(),groups=allGroups(),regions=allRegions(),focus=allFocus();$("region").innerHTML=optionList(regions,"Alle Großregionen");$("canonicalFilter").innerHTML=optionList(groups,"Alle Hauptgruppen");$("qualityFilter").innerHTML='<option value="">Alle Datenqualitäten</option><option value="verifiziert">verifiziert</option><option value="teilverifiziert">teilverifiziert</option><option value="referenziert">referenziert</option><option value="zu prüfen">zu prüfen</option>';$("navCategory").innerHTML=optionList(cats,"Alle Versorgungsarten");$("navFocus").innerHTML=optionList(focus,"Alle Fachgruppen / Schwerpunkte");$("navRegion").innerHTML=optionList(regions,"Alle Großregionen");$("routeCategory").innerHTML=optionList(groups,"Alle Hauptgruppen");$("bestCategory").innerHTML=optionList(groups,"Alle Hauptgruppen");$("bestRegion").innerHTML=optionList(regions,"Alle Großregionen");$("bestQuality").innerHTML='<option value="">Alle Qualitätsstufen</option><option value="verifiziert">nur verifiziert</option><option value="usable">verifiziert + teilverifiziert</option>';$("caseNeed").innerHTML=optionList(Object.keys(CASE_NEEDS),"Bedarf auswählen");$("caseRegion").innerHTML=optionList(regions,"Alle Großregionen");$("catFilters").innerHTML=cats.map(c=>`<button class="chip" type="button" data-cat="${esc(c)}">${esc(c)}</button>`).join("");if($("fineFilterCount"))$("fineFilterCount").textContent=`(${cats.length})`}
+function kpiCard(g){return `<div class="card kpi" data-kpi-group="${esc(g)}"><strong>${facilities.filter(f=>groupMatch(f,g)).length}</strong><span>${esc(g)}</span><small>anklicken → Karte</small></div>`}
+function renderKpis(){const groups=allGroups(),known=new Set([...MEDICAL_GROUPS,...LTA_GROUPS,...PARTICIPATION_GROUPS]),other=groups.filter(g=>!known.has(g));$("kpisMedical").innerHTML=MEDICAL_GROUPS.filter(g=>groups.includes(g)).map(kpiCard).join("");$("kpisLta").innerHTML=[...LTA_GROUPS,...other].filter(g=>groups.includes(g)).map(kpiCard).join("");$("kpisParticipation").innerHTML=PARTICIPATION_GROUPS.filter(g=>groups.includes(g)).map(kpiCard).join("");$("dashboardSummary").innerHTML=`<div class="card summary-box"><strong>${facilities.length}</strong><span>Datensätze gesamt</span></div><div class="card summary-box"><strong>${facilities.filter(validCoord).length}</strong><span>kartierbar</span></div><div class="card summary-box"><strong>${facilities.filter(f=>(f.masterIds||[]).length).length}</strong><span>mit 4.4.x-Masterbezug</span></div>`;document.querySelectorAll("[data-kpi-group]").forEach(x=>x.onclick=()=>{dashboardGroupFilter=x.dataset.kpiGroup;$("search").value="";$("region").value="";$("canonicalFilter").value=x.dataset.kpiGroup;$("qualityFilter").value="";document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));showView("mapView");applyFilters()})}
+function renderDashboard(){if(dashLayer){dashLayer.clearLayers();facilities.filter(validCoord).forEach(f=>{const m=markerFor(f);if(m)m.addTo(dashLayer)});dashboardMap.setView(START_CENTER,START_ZOOM)}renderBars("regionBars",countBy(facilities,regionBucket),12)}
+function applyFilters(){const q=$("search")?.value||"",reg=$("region")?.value||"",grp=$("canonicalFilter")?.value||"",qf=$("qualityFilter")?.value||"",cats=activeCats();filtered=facilities.map(f=>({f,score:scoreSearch(f,q)})).filter(({f,score})=>{const catOk=!cats.length||cats.some(c=>(f.categories||[]).includes(c));const groupOk=(!grp||groupMatch(f,grp))&&(!dashboardGroupFilter||groupMatch(f,dashboardGroupFilter));const qo=!qf||qualityTier(f)===qf;return(!q||score>0)&&regionMatch(f,reg)&&catOk&&groupOk&&qo}).sort((a,b)=>q?b.score-a.score:0).map(x=>x.f);if(mainLayer){mainLayer.clearLayers();filtered.filter(validCoord).forEach(f=>{const m=markerFor(f);if(m)m.addTo(mainLayer)});if(q||reg||grp||cats.length||dashboardGroupFilter)fitLayer(mainMap,mainLayer)}$("resultCount").textContent=`${filtered.length} Treffer · ${filtered.filter(validCoord).length} kartierbar`;renderDirectory(filtered)}
+function renderDirectory(list=facilities){$("clinicTableBody").innerHTML=list.slice(0,600).map(f=>`<tr><td><button class="icon-btn ${isFav(f.id)?"starred":""}" aria-label="Favorit umschalten" onclick='toggleFav(${JSON.stringify(f.id)})'>★</button></td><td><a href="#" onclick='showDetailsById(${JSON.stringify(f.id)});return false'><b>${esc(f.name)}</b></a><div class="muted">${esc(f.address||"")}</div></td><td>${esc(f.city)}<div class="muted">${esc(f.region||"")}</div><div class="muted">${esc(regionBucket(f))}</div></td><td>${(f.canonicalGroups||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</td><td>${(f.specialtyGroups||[]).slice(0,7).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</td><td>${qualityBadge(f)}<br>${activationBadge(f)}</td></tr>`).join("")}
+function resultCard(f,extra=""){return `<div class="result-card" onclick='showDetailsById(${JSON.stringify(f.id)})'><strong>${esc(f.name)}</strong><div class="result-meta">${esc(f.address||f.city)} · ${qualityBadge(f)} ${extra}</div><div class="reason">${esc((f.canonicalGroups||[]).join(" · "))} · ${esc(regionBucket(f))}</div></div>`}
+function showDetailsById(id){const f=facilities.find(x=>String(x.id)===String(id));if(f){remember(f.id);showDetails(f)}}
+function showDetails(f){$("modalTitle").textContent=f.name;$("modalSubtitle").textContent=[f.address,f.region].filter(Boolean).join(" · ");const subs=(f.subServices||[]).map(s=>`<div class="result-card"><strong>${esc(s.name)}</strong><div class="muted">${esc((s.focus||[]).slice(0,6).join(" · "))}</div>${s.phone?`<div>☎ ${esc(s.phone)}</div>`:""}${s.email?`<div>✉ ${emailLinks(s.email)}</div>`:""}</div>`).join("");$("modalBody").innerHTML=`<div class="status-row">${qualityBadge(f)}${activationBadge(f)}<span class="status-pill">${esc(f.pinType||"")}</span></div><div class="contact-grid"><div><b>Telefon</b><br>${esc(f.phone||"–")}</div><div><b>E-Mail</b><br>${emailLinks(f.email)}</div><div><b>Website</b><br>${linkList(f.website,"Website öffnen")}</div><div><b>Quelle</b><br>${linkList(f.source,"Prüfquelle öffnen")}</div><div><b>Ansprechpartner</b><br>${esc(f.contact||"–")}</div><div><b>Funktion / Rolle</b><br>${esc(f.role||f.department||"–")}</div></div><p><b>4.5-Hauptgruppen</b><br>${(f.canonicalGroups||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p><p><b>Leistungen / Kategorien</b><br>${uniq([...(f.categories||[]),...(f.specialtyGroups||[])]).slice(0,24).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p><p><b>Schwerpunkte / Schlagworte</b><br>${uniq([...(f.keywords||[]),...(f.focus||[])]).slice(0,40).map(x=>`<span class="tag">${esc(x)}</span>`).join("")||"–"}</p><p><b>BG-/Kostenträgerbezug</b><br>${esc(f.bgPayerReference||"–")}</p><p><b>Servicegebiet</b><br>${esc(f.serviceArea||"–")}</p><p><b>Großregion</b><br>${esc(regionBucket(f))}</p><p><b>Hinweise</b><br>${esc(f.note||"–")}</p>${subs?`<h3>Verknüpfte Leistungen am selben Standort</h3>${subs}`:""}<div class="contact-grid"><div><b>Prüfdatum</b><br>${esc(f.reviewDate||f.dataDate||"–")}</div><div><b>Geo-Status</b><br>${esc(f.geoStatus||"–")}</div><div><b>Master-ID(s)</b><br>${esc((f.masterIds||[]).join(", ")||"Bestand 4.3")}</div><div><b>Priorität</b><br>${esc(f.partnerStatus||"–")}</div></div><div class="notes-box"><b>Lokale Fallnotiz</b><small>Nur auf diesem Gerät gespeichert; nicht im zentralen Masterbestand.</small><textarea id="localNoteText" placeholder="Lokale Arbeitsnotiz …">${esc(localNotes[String(f.id)]||"")}</textarea><div class="toolbar"><button class="primary" onclick='saveNote(${JSON.stringify(f.id)})'>Notiz speichern</button><button class="secondary" onclick='deleteNote(${JSON.stringify(f.id)})'>Notiz löschen</button><span id="noteStatus" class="muted"></span></div></div><div class="toolbar"><button class="icon-btn ${isFav(f.id)?"starred":""}" onclick='toggleFav(${JSON.stringify(f.id)});showDetailsById(${JSON.stringify(f.id)})'>★ Favorit</button>${validCoord(f)?`<button class="secondary" onclick='showOnMap(${Number(f.lat)},${Number(f.lon)},${JSON.stringify(f.id)})'>Auf Karte anzeigen</button>`:""}</div>`;$("modal").classList.add("open")}
+function clearMapFilters(){dashboardGroupFilter="";if($("search"))$("search").value="";if($("region"))$("region").value="";if($("canonicalFilter"))$("canonicalFilter").value="";if($("qualityFilter"))$("qualityFilter").value="";document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"))}
+function showOnMap(lat,lon,id){$("modal").classList.remove("open");showView("mapView");clearMapFilters();applyFilters();if(mainMap)mainMap.setView([lat,lon],14)}
+function renderStats(){renderBars("catStats",countMulti(facilities,f=>f.canonicalGroups),20);renderBars("focusStats",countMulti(facilities,f=>f.specialtyGroups||[]),25);renderBars("regionStats",countBy(facilities,regionBucket),25)}
+function runNavigator(){const c=$("navCategory").value,fo=$("navFocus").value,r=$("navRegion").value;const list=facilities.filter(f=>(!c||(f.categories||[]).includes(c))&&(!fo||[...(f.specialtyGroups||[]),...(f.focus||[])].includes(fo))&&regionMatch(f,r));$("navCount").textContent=`${list.length} Treffer`;const shown=list.slice(0,150);$("navResults").innerHTML=list.length?`${list.length>shown.length?`<div class="result-limit">Es werden die ersten ${shown.length} von ${list.length} Treffern angezeigt.</div>`:""}${shown.map(resultCard).join("")}`:'<div class="warning">Keine Einrichtung gefunden.</div>'}
+function priorityPoints(p){return p==="A+"?25:p==="A"?18:p==="B"?10:p==="C"?3:0}
+function recordHay(f){return norm([...(f.categories||[]),...(f.specialtyGroups||[]),...(f.focus||[]),...(f.keywords||[]),f.note,f.bgPayerReference].join(" "))}
+function runCaseFinder(){const need=$("caseNeed").value,phase=$("casePhase").value,reg=$("caseRegion").value,txt=$("caseText").value||"";if(!need&&!phase&&!reg&&!txt.trim()){$("caseCount").textContent="";$("caseResults").innerHTML='<div class="warning">Bitte mindestens eine Fallkonstellation, Phase, Großregion oder ein Stichwort auswählen.</div>';return}const cfg=CASE_NEEDS[need]||{groups:[],terms:[]};let base=facilities.filter(f=>regionMatch(f,reg));if(need){if(need==="Neurologische Rehabilitation")base=base.filter(f=>cfg.groups.some(g=>groupMatch(f,g)));else base=base.filter(f=>cfg.terms.some(t=>recordHay(f).includes(norm(t))))}if(phase)base=base.filter(f=>recordHay(f).includes(norm(phase)));let list=base.map(f=>{let score=0,reasons=[];if(cfg.groups.some(g=>groupMatch(f,g))){score+=35;reasons.push("passende Hauptgruppe")}const hay=recordHay(f),hits=cfg.terms.filter(t=>hay.includes(norm(t)));score+=Math.min(30,hits.length*6);if(hits.length)reasons.push(hits.slice(0,4).join(", "));if(phase){score+=30;reasons.push(phase)}if(txt){const ss=scoreSearch(f,txt);score+=Math.min(35,ss);if(ss)reasons.push("Zusatzstichworte")}if(reg){score+=8;reasons.push("Großregion")}score+=priorityPoints(f.partnerStatus);if(qualityTier(f)==="verifiziert")score+=8;else if(qualityTier(f)==="teilverifiziert")score+=4;if(f.bgDirect)score+=6;return{f,score,reasons}}).filter(x=>x.score>20).sort((a,b)=>b.score-a.score||String(a.f.name).localeCompare(String(b.f.name),"de")).slice(0,30);$("caseCount").textContent=`${list.length} Treffer`;$("caseResults").innerHTML=list.length?list.map(x=>resultCard(x.f,`· <span class="score">${x.score} Punkte</span> · ${esc(x.reasons.join(" · "))}`)).join(""):'<div class="warning">Keine ausreichend passenden Treffer im aktuellen Bestand.</div>'}
+function runtimeQa(){const errors=[],warnings=[],ids=new Set();facilities.forEach(f=>{const id=String(f.id);if(ids.has(id))errors.push("Doppelte ID: "+id);ids.add(id);if(!f.name)errors.push("Name fehlt: "+id);if(invalidCoord(f))errors.push("Ungültige Koordinate: "+id);if(!(f.canonicalGroups||[]).length)errors.push("Keine 4.5-Hauptgruppe: "+id);if(!validCoord(f)&&f.pinType==="Physischer Kartenpunkt")errors.push("Physischer Kartenpunkt ohne nutzbare Koordinate: "+id);if(validCoord(f)&&norm(f.pinType).includes("geocode offen"))warnings.push("Koordinate vorhanden, Pin-Status noch offen: "+id)});["Wilma Astrid Fleig","Christine Gräbner","Christin Gräbner"].forEach(n=>{if(facilities.some(f=>norm(f.name).includes(norm(n))))errors.push("Ausschlussverletzung: "+n)});if(facilities.some(f=>norm(f.name).includes("storchenpark")&&(f.categories||[]).some(x=>norm(x)==="phase f")))errors.push("Storchenpark noch Phase F");facilities.filter(f=>norm(f.name).includes("kliniken schmieder")).forEach(f=>{if([...(f.categories||[]),...(f.focus||[])].some(x=>norm(x)==="phase f"))errors.push("Schmieder mit Phase F: "+f.id)});if(facilities.some(f=>(f.categories||[]).includes("MVZ")))errors.push("MVZ noch als eigene Kategorie vorhanden");if(facilities.some(f=>norm(f.name).includes("berufsforderungswerk frankfurt")&&norm(f.city).includes("kassel")))errors.push("BFW Frankfurt – Kassel darf nicht im Bestand stehen");[["CO44-001","CO44-002"],["T-035","T-036"],["T-042-KA","T-042-ST"],["T-042-KA","T-042-FR"]].forEach(pair=>{if(!pair.every(id=>facilities.some(f=>String(f.id)===id||(f.masterIds||[]).includes(id))))errors.push("Regression fehlt: "+pair.join("/"))});["PF44-003","PF44-004","PF44-005"].forEach(id=>{const hits=facilities.filter(f=>(f.subServices||[]).some(s=>s.masterId===id));if(hits.length!==1)errors.push("Subservice-Verknüpfung "+id+" = "+hits.length)});["BR44-001","MED44-001","MOB44-001","MOB44-002","LIFT44-001","LIFT44-002","LIFT44-003","LIFT44-004","LIFT44-005","RAD44-001","RAD44-010","T-029","T-030"].forEach(id=>{if(!facilities.some(f=>String(f.id)===id||(f.masterIds||[]).includes(id)))errors.push("Pflichtdatensatz fehlt: "+id)});if(!facilities.some(f=>norm(f.name).includes("neuropraxis wertheim")))errors.push("Pflichtdatensatz fehlt: Neuropraxis Wertheim");const geoOpen=facilities.filter(f=>!validCoord(f)&&norm(f.pinType).includes("geocode offen")).length;if(geoOpen)warnings.push(`${geoOpen} physische Kartenpunkte haben bewusst noch offene numerische Koordinaten und werden nicht kartiert.`);const ref=facilities.filter(f=>qualityTier(f)==="referenziert").length;if(ref)warnings.push(`${ref} Datensätze sind als referenziert gekennzeichnet und bleiben im Qualitätsbereich sichtbar.`);return{errors,warnings}}
+function renderQuality(){const qa=runtimeQa(),total=facilities.length,ver=facilities.filter(f=>qualityTier(f)==="verifiziert").length,partial=facilities.filter(f=>qualityTier(f)==="teilverifiziert").length,referenced=facilities.filter(f=>qualityTier(f)==="referenziert").length,review=facilities.filter(f=>qualityTier(f)==="zu prüfen").length,noCoords=facilities.filter(f=>!validCoord(f)&&norm(f.pinType).includes("geocode offen")).length;$("qualityKpis").innerHTML=[[total,"Gesamt"],[ver,"Verifiziert"],[partial,"Teilverifiziert"],[referenced,"Referenziert"],[review,"Zu prüfen"],[noCoords,"Geo offen"],[qa.errors.length,"QA-Fehler"],[facilities.filter(f=>(f.masterIds||[]).length).length,"4.4.x-Bezug"]].map(([n,t])=>`<div class="qa-box"><strong>${n}</strong><span class="muted">${t}</span></div>`).join("");const list=facilities.filter(f=>qualityTier(f)!=="verifiziert"||(!validCoord(f)&&norm(f.pinType).includes("geocode offen")));const messages=`<div class="qa-messages">${qa.errors.length?`<div class="warning"><b>QA-Fehler:</b> ${qa.errors.map(esc).join(" · ")}</div>`:'<div class="success">Automatische Regression: keine blockierenden Fehler.</div>'}${qa.warnings.map(w=>`<div class="qa-hint">${esc(w)}</div>`).join("")}</div>`;$("qualityList").innerHTML=messages+(list.length?`<div class="result-limit">${list.length} Datensätze mit Prüf-, Referenz- oder Geokoordinaten-Hinweis.</div>${list.map(resultCard).join("")}`:'<div class="success">Keine offenen Qualitätsfälle.</div>')}
+function exportCsv(){const cols=["id","name","address","city","region","canonicalGroups","categories","phone","email","website","qualityStatus","activationStatus","pinType","reviewDate"];let s=cols.join(";")+"\n";filtered.forEach(f=>s+=cols.map(k=>`"${String(Array.isArray(f[k])?f[k].join(" | "):(f[k]??"")).replaceAll('"','""')}"`).join(";")+"\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+s],{type:"text/csv;charset=utf-8"}));a.download="BG_RehaManager_4_5_Treffer.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
 function haversine(a,b,c,d){const R=6371,toRad=x=>x*Math.PI/180,dp=toRad(c-a),dl=toRad(d-b),q=Math.sin(dp/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(dl/2)**2;return 2*R*Math.asin(Math.sqrt(q))}
-async function geocode(q){const u="https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=de&q="+encodeURIComponent(q);const r=await fetch(u,{headers:{"Accept-Language":"de"}});const j=await r.json();if(!j.length)throw new Error("Startort nicht gefunden");return {lat:+j[0].lat,lon:+j[0].lon,label:j[0].display_name}}
-async function runRoute(){
- $("routeResults").innerHTML='<div class="loading">Standort und Fahrzeiten werden ermittelt …</div>';routeLayer.clearLayers();
- try{
-  const start=await geocode($("routeStart").value);L.marker([start.lat,start.lon]).bindPopup("Start: "+esc(start.label)).addTo(routeLayer);
-  const cat=$("routeCategory").value,maxMin=+$("routeMaxMinutes").value||Infinity,maxKm=+$("routeMaxKm").value||Infinity;
-  let candidates=facilities.filter(f=>validCoord(f)&&(!cat||(f.categories||[]).includes(cat))).map(f=>({...f,air:haversine(start.lat,start.lon,+f.lat,+f.lon)})).sort((a,b)=>a.air-b.air).slice(0,18);
-  const coords=[[start.lon,start.lat],...candidates.map(f=>[+f.lon,+f.lat])].map(x=>x.join(",")).join(";");
-  try{
-    const rr=await fetch(`https://router.project-osrm.org/table/v1/driving/${coords}?sources=0&annotations=duration,distance`);const j=await rr.json();
-    if(j.code==="Ok"){candidates=candidates.map((f,i)=>({...f,minutes:j.durations[0][i+1]/60,roadKm:j.distances[0][i+1]/1000}));}
-  }catch(e){}
-  candidates=candidates.filter(f=>(f.minutes??f.air/0.8)<=maxMin&&(f.roadKm??f.air)<=maxKm).sort((a,b)=>(a.minutes??a.air)-(b.minutes??b.air)).slice(0,12);
-  candidates.forEach(f=>markerFor(f).addTo(routeLayer));fitLayer(routeMap,routeLayer);
-  $("routeResults").innerHTML=candidates.length?candidates.map(f=>resultCard(f,`· ${f.roadKm?f.roadKm.toFixed(0)+" km Straße":f.air.toFixed(0)+" km Luftlinie"}${f.minutes?" · "+Math.round(f.minutes)+" Min.":""}`)).join(""):'<div class="warning">Keine passende Einrichtung innerhalb der gewählten Grenzen.</div>';
- }catch(e){$("routeResults").innerHTML=`<div class="warning">${esc(e.message)}</div>`}
-}
-function runBest(){
- const c=$("bestCategory").value,r=$("bestRegion").value,q=$("bestQuality").value;
- let list=facilities.filter(f=>(!c||(f.categories||[]).includes(c))&&(!r||f.region===r));
- list=list.filter(f=>q!=="verifiziert"||norm(qualityLabel(f))==="verifiziert").filter(f=>q!=="usable"||!norm(qualityLabel(f)).includes("prüf"));
- list=list.map(f=>{let score=0,reasons=[];if(norm(qualityLabel(f))==="verifiziert"){score+=35;reasons.push("verifiziert")}if(f.bgDirect){score+=20;reasons.push("BG-Direktkontakt")}if(f.fastAccess){score+=15;reasons.push("Schnellzugang")}if(f.phone||f.email){score+=10;reasons.push("Kontakt vorhanden")}if(validCoord(f)){score+=10;reasons.push("kartierbar")}if(f.source){score+=10;reasons.push("Quelle vorhanden")}return {...f,score,reasons}}).sort((a,b)=>b.score-a.score).slice(0,15);
- $("bestResults").innerHTML=list.length?list.map(f=>resultCard(f,`· Score ${f.score}/100 · ${f.reasons.join(", ")}`)).join(""):'<div class="warning">Keine passenden Einrichtungen.</div>';
-}
-function showView(id){
- document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));
- document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
- const titles={dashboard:"Dashboard",mapView:"Interaktive Karte",directory:"Einrichtungsverzeichnis",neurology:"Neurologische Rehabilitation",navigator:"Reha-Navigator",reachability:"Standort & Fahrzeit",bestMatch:"Beste Einrichtung",statistics:"Statistik",quality:"Datenqualität",about:"Über den BG-RehaManager"};
- $("pageTitle").textContent=titles[id]||"BG-RehaManager";
- setTimeout(()=>{if(id==="mapView")mainMap.invalidateSize();if(id==="dashboard")dashboardMap.invalidateSize();if(id==="reachability")routeMap.invalidateSize();if(id==="neurology")neuroMap.invalidateSize()},80);
-}
-function bindEvents(){
- document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.view));
- $("search").oninput=()=>{dashboardGroupFilter="";applyFilters()};$("region").onchange=()=>{dashboardGroupFilter="";applyFilters()};$("qualityFilter").onchange=()=>{dashboardGroupFilter="";applyFilters()};
- document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{dashboardGroupFilter="";c.classList.toggle("on");applyFilters()});
- $("fitMap").onclick=()=>fitLayer(mainMap,mainLayer);$("exportCsv").onclick=exportCsv;$("runNavigator").onclick=runNavigator;$("runRoute").onclick=runRoute;$("runBest").onclick=runBest;
- $("modalClose").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};
- $("masterAccessBtn").onclick=openMasterPanel;$("masterClose").onclick=()=>$("masterModal").classList.remove("open");$("masterModal").onclick=e=>{if(e.target===$("masterModal"))$("masterModal").classList.remove("open")};$("masterKeyInput").onchange=e=>{const f=e.target.files&&e.target.files[0];if(f)handleMasterKeyFile(f);e.target.value=""};
-}
-if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}))}
-window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;window.editRecord=editRecord;window.saveRecord=saveRecord;window.restoreRecord=restoreRecord;window.openMasterPanel=openMasterPanel;window.exportMasterJson=exportMasterJson;window.exportMasterLog=exportMasterLog;window.lockMaster=lockMaster;window.resetMasterOverrides=resetMasterOverrides;
-refreshOwnerUI();loadData();
+async function fetchWithTimeout(url,options={},timeoutMs=5000){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);try{return await fetch(url,{...options,signal:controller.signal})}finally{clearTimeout(timer)}}
+function parseDirectCoord(q){const s=String(q||"").trim();let parts=null;if(s.includes(";"))parts=s.split(";");else{const m=s.match(/^\s*(-?\d{1,2}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)\s*$/);if(m)parts=[m[1],m[2]]}if(!parts||parts.length!==2)return null;const lat=Number(String(parts[0]).replace(",",".")),lon=Number(String(parts[1]).replace(",","."));if(!Number.isFinite(lat)||!Number.isFinite(lon)||lat<-90||lat>90||lon<-180||lon>180)return null;return{lat,lon,label:"Direkte Koordinate"}}
+function localStart(q){const direct=parseDirectCoord(q);if(direct)return direct;const text=searchNorm(q),zip=(String(q).match(/\b\d{5}\b/)||[])[0];let hits=facilities.filter(validCoord).filter(f=>{const city=searchNorm(f.city),addr=searchNorm(f.address);if(zip&&String(f.address||"").includes(zip))return true;if(text&&city===text)return true;if(text&&text.length>=4&&addr.includes(text))return true;return false});if(!hits.length&&text){const toks=text.split(/\s+/).filter(Boolean);hits=facilities.filter(validCoord).filter(f=>{const h=searchNorm(`${f.city} ${f.address}`);return toks.length&&toks.every(t=>h.includes(t))})}if(!hits.length)return null;const lat=hits.reduce((a,f)=>a+Number(f.lat),0)/hits.length,lon=hits.reduce((a,f)=>a+Number(f.lon),0)/hits.length;return{lat,lon,label:`Lokaler Datenbestand: ${q}`}}
+async function geocode(q){const u="https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=de&q="+encodeURIComponent(q);const r=await fetchWithTimeout(u,{headers:{"Accept-Language":"de"}},6000);if(!r.ok)throw new Error("Geocoding-Dienst nicht erreichbar (HTTP "+r.status+")");const j=await r.json();if(!j.length)throw new Error("Startort nicht gefunden");return{lat:+j[0].lat,lon:+j[0].lon,label:j[0].display_name}}
+async function resolveStart(q){if(!String(q||"").trim())throw new Error("Bitte Startort, PLZ, Anschrift oder Koordinate eingeben.");return localStart(q)||await geocode(q)}
+async function runRoute(){$("routeResults").innerHTML='<div class="loading">Standort und Fahrzeiten werden ermittelt …</div>';if(routeLayer)routeLayer.clearLayers();try{const start=await resolveStart($("routeStart").value);if(routeLayer&&hasLeaflet())L.marker([start.lat,start.lon]).bindPopup("Start: "+esc(start.label)).addTo(routeLayer);const grp=$("routeCategory").value,maxMin=+$("routeMaxMinutes").value||Infinity,maxKm=+$("routeMaxKm").value||Infinity;let candidates=facilities.filter(f=>validCoord(f)&&(!grp||groupMatch(f,grp))).map(f=>({...f,air:haversine(start.lat,start.lon,+f.lat,+f.lon)})).sort((a,b)=>a.air-b.air).slice(0,18);if(!candidates.length){$("routeResults").innerHTML='<div class="warning">Keine kartierbaren Einrichtungen in der gewählten Hauptgruppe.</div>';return}const coords=[[start.lon,start.lat],...candidates.map(f=>[+f.lon,+f.lat])].map(x=>x.join(",")).join(";");try{const rr=await fetchWithTimeout(`https://router.project-osrm.org/table/v1/driving/${coords}?sources=0&annotations=duration,distance`,{},4500);if(rr.ok){const j=await rr.json();if(j.code==="Ok"&&Array.isArray(j.durations?.[0])&&Array.isArray(j.distances?.[0]))candidates=candidates.map((f,i)=>{const dur=j.durations[0][i+1],dist=j.distances[0][i+1];return{...f,minutes:Number.isFinite(dur)?dur/60:undefined,roadKm:Number.isFinite(dist)?dist/1000:undefined}})}}catch{}candidates=candidates.filter(f=>(Number.isFinite(f.minutes)?f.minutes:f.air/0.8)<=maxMin&&(Number.isFinite(f.roadKm)?f.roadKm:f.air)<=maxKm).sort((a,b)=>(Number.isFinite(a.minutes)?a.minutes:a.air/0.8)-(Number.isFinite(b.minutes)?b.minutes:b.air/0.8)).slice(0,12);if(routeLayer)candidates.forEach(f=>{const m=markerFor(f);if(m)m.addTo(routeLayer)});fitLayer(routeMap,routeLayer);$("routeResults").innerHTML=`<div class="result-limit">Start: ${esc(start.label)}</div>`+(candidates.length?candidates.map(f=>{const dist=Number.isFinite(f.roadKm)?`${f.roadKm.toFixed(0)} km Straße`:`${f.air.toFixed(0)} km Luftlinie`;const min=Number.isFinite(f.minutes)?` · ${Math.round(f.minutes)} Min.`:"";return resultCard(f,`· ${dist}${min}`)}).join(""):'<div class="warning">Keine passende Einrichtung innerhalb der gewählten Grenzen.</div>')}catch(e){$("routeResults").innerHTML=`<div class="warning">${esc(e.message)}</div>`}}
+function runBest(){const g=$("bestCategory").value,r=$("bestRegion").value,q=$("bestQuality").value;let list=facilities.filter(f=>(!g||groupMatch(f,g))&&regionMatch(f,r));list=list.filter(f=>q!=="verifiziert"||qualityTier(f)==="verifiziert").filter(f=>q!=="usable"||["verifiziert","teilverifiziert"].includes(qualityTier(f)));list=list.map(f=>{let score=priorityPoints(f.partnerStatus),reasons=[];if(qualityTier(f)==="verifiziert"){score+=25;reasons.push("verifiziert")}else if(qualityTier(f)==="teilverifiziert"){score+=12;reasons.push("teilverifiziert")}if(f.bgDirect){score+=15;reasons.push("BG-/DGUV-Bezug")}if(f.fastAccess){score+=10;reasons.push("Schnellzugang")}if(f.phone||f.email){score+=10;reasons.push("Kontakt vorhanden")}if(validCoord(f)){score+=10;reasons.push("kartierbar")}if(f.source){score+=10;reasons.push("Quelle vorhanden")}return{...f,_score:score,_reasons:reasons}}).sort((a,b)=>b._score-a._score||String(a.name).localeCompare(String(b.name),"de")).slice(0,20);$("bestResults").innerHTML=list.length?list.map(f=>resultCard(f,`· Score ${f._score} · ${esc(f._reasons.join(", "))}`)).join(""):'<div class="warning">Keine passenden Einrichtungen.</div>'}
+function showView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===id));const titles={dashboard:"Dashboard",mapView:"Interaktive Karte",directory:"Einrichtungsverzeichnis",fallfinder:"Fallfinder",navigator:"Reha-Navigator",reachability:"Standort & Fahrzeit",bestMatch:"Beste Einrichtung",favoritesView:"Favoriten & zuletzt verwendet",statistics:"Statistik",quality:"Datenqualität",info:"Info / Zugang"};$("pageTitle").textContent=titles[id]||"BG-RehaManager";setTimeout(()=>{if(id==="mapView"&&mainMap)mainMap.invalidateSize();if(id==="dashboard"&&dashboardMap)dashboardMap.invalidateSize();if(id==="reachability"&&routeMap)routeMap.invalidateSize()},80)}
+function bindEvents(){document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.view));$("search").oninput=()=>{dashboardGroupFilter="";applyFilters()};["region","canonicalFilter","qualityFilter"].forEach(id=>$(id).onchange=()=>{dashboardGroupFilter="";applyFilters()});document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{dashboardGroupFilter="";c.classList.toggle("on");applyFilters()});$("fitMap").onclick=()=>fitLayer(mainMap,mainLayer);$("exportCsv").onclick=exportCsv;$("runNavigator").onclick=runNavigator;$("runRoute").onclick=runRoute;$("runBest").onclick=runBest;$("runCaseFinder").onclick=runCaseFinder;$("clearRecent").onclick=()=>{recent=[];store(RECENT_KEY,recent);renderRecent()};$("modalClose").onclick=()=>$("modal").classList.remove("open");$("modal").onclick=e=>{if(e.target===$("modal"))$("modal").classList.remove("open")};document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("modal").classList.contains("open"))$("modal").classList.remove("open")})}
+function initUI(){mainMap=setupMap("mainMap");dashboardMap=setupMap("dashboardMap");routeMap=setupMap("routeMap");mainLayer=mainMap?L.layerGroup().addTo(mainMap):null;dashLayer=dashboardMap?L.layerGroup().addTo(dashboardMap):null;routeLayer=routeMap?L.layerGroup().addTo(routeMap):null;fillSelectors();renderKpis();renderDashboard();applyFilters();renderStats();renderQuality();renderFavs();renderRecent();bindEvents()}
+window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;window.saveNote=saveNote;window.deleteNote=deleteNote;
+if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+loadData();
 </script>
 </body>
 </html>

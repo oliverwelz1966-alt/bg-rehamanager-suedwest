@@ -1,8 +1,9 @@
 {
   "name": "BG-RehaManager Südwest",
   "short_name": "BG-Reha Südwest",
-  "description": "Regionaler Einsatzatlas für Rehabilitation und Teilhabe – Version 4.3",
+  "description": "Regionaler Reha- und Versorgungsnavigator Südwest – Version 4.5",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#eef2f7",
   "theme_color": "#123247",
