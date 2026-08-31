@@ -1,4 +1,4 @@
-const CACHE_NAME = "bg-rehamanager-suedwest-v4-3-masterpflege-20260824";
+const CACHE_NAME = 'bg-rehamanager-v4.5-20260831';
 const APP_SHELL = [
   "./",
   "./index.html",
