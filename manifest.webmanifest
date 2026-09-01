@@ -1,7 +1,7 @@
 {
   "name": "BG-RehaManager Südwest",
   "short_name": "BG-Reha Südwest",
-  "description": "Regionaler Reha- und Versorgungsnavigator Südwest – Version 4.5",
+  "description": "Regionaler Reha- und Versorgungsnavigator Südwest – Version 4.5.1",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
