@@ -8471,7 +8471,7 @@
     "city": "Walldorf",
     "region": "Rhein-Neckar",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.2996868,
     "lon": 8.6488152,
@@ -8496,10 +8496,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8533,20 +8531,21 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
     "id": 125,
-    "name": "Arbeitsmedizin Speyer – Dr. med. Stephanie Grabs",
+    "name": "Arbeitsmedizin Speyer – Dr. Stephanie Krabs",
     "city": "Speyer",
-    "region": "Vorderpfalz",
+    "region": "Vorderpfalz / Rhein-Neckar",
     "categories": [
+      "Sonstige",
       "Arbeitsmedizin"
     ],
-    "lat": 49.3217624,
-    "lon": 8.4402816,
-    "note": "Arbeitsmedizinische Betreuung gemäß DGUV Vorschrift 2; Betriebs- und Verkehrsmedizin, Strahlenschutz und Reisemedizin. Name, Hausanschrift, Hauskoordinate und Großregion am 01.09.2026 geprüft.",
+    "lat": null,
+    "lon": null,
+    "note": "Arbeitsmedizinische Betreuung gemäß DGUV Vorschrift 2; Kontaktdaten auf Website über Kontaktfunktion, vor konkreter Zuweisung ergänzend prüfen.; Geodaten 20.08.2026 vorläufig entfernt: identische Sammel-/Stadtmittelpunktkoordinate bei mehreren unterschiedlichen Anschriften; adressgenaue Nachgeocodierung erforderlich.; Hausadresse mehrfach geprüft und als Referenzadresse freigegeben; kein künstlicher Straßen-/Ortsmittelpunkt.; Verbindliche Korrektur: Stephanie Grabs (nicht Krabs); Eselsdamm 46 (nicht Edelsgraben 46).; Arbeitsmedizinische Betreuung; DGUV Vorschrift 2; Betriebs-/Verkehrsmedizin",
     "focus": [
       "Arbeitsmedizin",
       "DGUV Vorschrift 2",
@@ -8562,15 +8561,15 @@
     "fax": "",
     "email": "info@arbeitsmedizin-speyer.de",
     "website": "https://www.arbeitsmedizin-speyer.de/",
-    "address": "Eselsdamm 46, 67346 Speyer",
+    "address": "Eselsdamm 46 67346 Speyer",
     "contact": "Dr. med. Stephanie Grabs",
     "department": "Arbeitsmedizinische Praxis",
-    "source": "https://bsafb.de/betriebsaerzte/dr-med-stephanie-grabs/; https://www.aek-pfalz.de/assets/downloads/Li_betriebsarzt.pdf; https://www.arbeitsmedizin-speyer.de/",
-    "dataQuality": "verifiziert",
+    "source": "https://arbeitsmedizin-speyer.de/; https://www.arbeitsmedizin-speyer.de/",
+    "dataQuality": "teilverifiziert",
     "bgDirect": false,
     "fastAccess": false,
-    "verified": true,
-    "version": "4.5.1",
+    "verified": false,
+    "version": "4.5",
     "serviceGroups": [
       "Arbeitsmedizin"
     ],
@@ -8597,37 +8596,37 @@
     "partnerStatus": "B",
     "carePath": "Muskuloskelettal / berufliche Wiedereingliederung",
     "caseSuitability": "fachlich geeignet; Priorität B; DGUV-Vorschrift-2-Bezug; kein direkter BG-Spezialstatus ableiten",
-    "dataDate": "2026-09-01",
+    "dataDate": "12.08.2026",
     "nextReview": "12.02.2027",
     "kimAddress": "",
     "kimAssignment": "",
     "kimStatus": "zu recherchieren / im TI-VZD prüfen",
     "kimCheckedAt": "",
     "kimSource": "Nur aus eindeutigem öffentlichen Nachweis oder TI-Verzeichnisdienst übernehmen.",
-    "geoStatus": "Adresse und numerische Hauskoordinate geprüft",
-    "geoSource": "OpenStreetMap/Nominatim; BsAfB e.V.; Bezirksärztekammer Pfalz",
-    "geoCheckedAt": "2026-09-01",
-    "geoScore": 118,
-    "geoDisplayName": "46, Eselsdamm, Kernstadt-Nord, Speyer, Rheinland-Pfalz, 67346, Deutschland",
-    "geoFinalReview": "2026-09-01: Hauspunkt und Regionszuordnung geprüft; keine Ersatz- oder Stadtmittelpunktkoordinate.",
-    "geoRelease": "freigegeben",
+    "geoStatus": "Name und Hausadresse korrigiert; numerische Hauskoordinate bewusst offen",
+    "geoSource": "Aktuelle Praxis-/Berufsverbandsangabe",
+    "geoCheckedAt": "2026-08-30",
+    "geoScore": 0,
+    "geoDisplayName": "Edelsgraben 46 67346 Speyer",
+    "geoFinalReview": "2026-08-21: Einzelprüfung durchgeführt; keine künstliche Haus-/Stadtmittelpunktkoordinate gesetzt.",
+    "geoRelease": "offen",
     "canonicalGroups": [
       "Arbeitsmedizin"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
-    "pinType": "Physischer Kartenpunkt",
+    "pinType": "Physischer Kartenpunkt – Geocode offen",
     "masterIds": [
       "AM44-001"
     ],
     "subServices": [],
-    "recentReview": "2026-09-01",
+    "recentReview": "2026-08-30",
     "source4_4MainArea": "Arbeitsmedizin",
-    "qualityStatus": "verifiziert",
+    "qualityStatus": "teilverifiziert",
     "bgPayerReference": "DGUV-Vorschrift-2-Bezug; kein direkter BG-Spezialstatus ableiten",
     "serviceArea": "Speyer / Vorderpfalz / Rhein-Neckar",
     "role": "Arbeitsmedizinische Praxis",
     "masterDecision": "Bestand aktualisieren",
-    "reviewDate": "2026-09-01"
+    "reviewDate": "2026-08-30"
   },
   {
     "id": 126,
@@ -8635,7 +8634,7 @@
     "city": "Ludwigshafen am Rhein",
     "region": "Vorderpfalz",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.4633188,
     "lon": 8.4162227,
@@ -8659,10 +8658,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8696,7 +8693,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -8705,7 +8702,7 @@
     "city": "Würzburg",
     "region": "Unterfranken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.80171,
     "lon": 9.95666,
@@ -8730,10 +8727,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8762,6 +8757,7 @@
     "geoFinalReview": "Offizielle UKW-Website bestätigt Josef-Schneider-Straße 2, Haus D4, 97080 Würzburg. Punktkoordinate nur übernehmen, wenn Hausnummer technisch eindeutig bestätigt ist.",
     "geoRelease": "offen",
     "canonicalGroups": [
+      "Technische Arbeitsplatzanpassung",
       "Arbeitsmedizin"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
@@ -8769,7 +8765,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -8778,7 +8774,7 @@
     "city": "Würzburg",
     "region": "Unterfranken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.7389817,
     "lon": 9.9598313,
@@ -8805,10 +8801,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8837,6 +8831,7 @@
     "geoScore": 118,
     "geoDisplayName": "2, Moskauer Ring, Heuchelhof, Würzburg, Bayern, 97084, Deutschland",
     "canonicalGroups": [
+      "Technische Arbeitsplatzanpassung",
       "Arbeitsmedizin"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
@@ -8844,7 +8839,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -8853,7 +8848,7 @@
     "city": "Würzburg",
     "region": "Unterfranken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.7992948,
     "lon": 9.9466687,
@@ -8876,10 +8871,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8912,7 +8905,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -8921,7 +8914,7 @@
     "city": "Würzburg",
     "region": "Unterfranken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.8088641,
     "lon": 9.9091129,
@@ -8945,10 +8938,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -8982,7 +8973,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -8991,7 +8982,7 @@
     "city": "Würzburg",
     "region": "Unterfranken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.7929871,
     "lon": 9.9238503,
@@ -9014,10 +9005,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9049,7 +9038,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9058,7 +9047,7 @@
     "city": "Karlsruhe",
     "region": "Karlsruhe",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.0007215,
     "lon": 8.4241987,
@@ -9085,10 +9074,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9124,7 +9111,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9133,7 +9120,7 @@
     "city": "Heilbronn",
     "region": "Heilbronn-Franken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.1433686,
     "lon": 9.2219496,
@@ -9160,10 +9147,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9199,7 +9184,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9208,7 +9193,7 @@
     "city": "Aschaffenburg",
     "region": "Bayerischer Untermain",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.9829601,
     "lon": 9.1494597,
@@ -9235,10 +9220,8 @@
     "bgDirect": true,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9274,7 +9257,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9283,7 +9266,7 @@
     "city": "Frankfurt am Main",
     "region": "Rhein-Main",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 50.0962538,
     "lon": 8.6613513,
@@ -9307,10 +9290,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9339,6 +9320,7 @@
     "geoFinalReview": "2026-08-21: Einzelprüfung durchgeführt; keine künstliche Haus-/Stadtmittelpunktkoordinate gesetzt.",
     "geoRelease": "offen",
     "canonicalGroups": [
+      "Technische Arbeitsplatzanpassung",
       "Arbeitsmedizin"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
@@ -9346,7 +9328,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "16.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9355,7 +9337,7 @@
     "city": "Frankfurt am Main",
     "region": "Rhein-Main",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 50.1156124,
     "lon": 8.68051,
@@ -9376,10 +9358,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9410,7 +9390,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "16.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9419,7 +9399,7 @@
     "city": "Frankfurt am Main",
     "region": "Rhein-Main",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 50.1377155,
     "lon": 8.7447586,
@@ -9440,10 +9420,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9474,7 +9452,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9483,7 +9461,7 @@
     "city": "Tauberbischofsheim",
     "region": "Main-Tauber",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.6310287,
     "lon": 9.6683947,
@@ -9507,10 +9485,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9536,6 +9512,7 @@
     "geoScore": 95,
     "geoDisplayName": "31a, Kapellenstraße, Tauberbischofsheim-Stadt, Tauberbischofsheim, VVG der Stadt Tauberbischofsheim, Main-Tauber-Kreis, Baden-Württemberg, 97941, Deutschland",
     "canonicalGroups": [
+      "Technische Arbeitsplatzanpassung",
       "Arbeitsmedizin"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
@@ -9543,7 +9520,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "16.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "verifiziert"
   },
   {
@@ -9552,7 +9529,7 @@
     "city": "Heilbronn",
     "region": "Heilbronn-Franken",
     "categories": [
-      "Arbeitsmedizin"
+      "Sonstige"
     ],
     "lat": 49.1709978,
     "lon": 9.2177571,
@@ -9575,10 +9552,8 @@
     "bgDirect": false,
     "fastAccess": false,
     "verified": true,
-    "version": "4.5.1",
-    "serviceGroups": [
-      "Arbeitsmedizin"
-    ],
+    "version": "4.5",
+    "serviceGroups": [],
     "specialtyGroups": [
       "Arbeitsmedizin"
     ],
@@ -9611,7 +9586,7 @@
     "masterIds": [],
     "subServices": [],
     "recentReview": "12.08.2026",
-    "source4_4MainArea": "Arbeitsmedizin",
+    "source4_4MainArea": "",
     "qualityStatus": "teilverifiziert"
   },
   {
@@ -15839,8 +15814,7 @@
     "serviceGroups": [
       "Soziale Teilhabe / Beratung",
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "Teilhabeberatung",
@@ -15874,7 +15848,7 @@
     "geoScore": 95,
     "geoDisplayName": "40/1, Alte Eppelheimer Straße, Bergheim, Heidelberg, Baden-Württemberg, 69115, Deutschland",
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26264,8 +26238,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26291,7 +26264,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 380,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26333,8 +26306,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26360,7 +26332,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 381,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26402,8 +26374,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26429,7 +26400,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 382,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26471,8 +26442,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26498,7 +26468,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 383,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26541,8 +26511,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26569,7 +26538,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 384,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26611,8 +26580,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26638,7 +26606,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 385,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26680,8 +26648,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26707,7 +26674,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 386,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26749,8 +26716,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26776,7 +26742,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 387,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26819,8 +26785,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26847,7 +26812,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 388,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26891,8 +26856,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26920,7 +26884,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 389,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -26963,8 +26927,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -26991,7 +26954,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 390,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27034,8 +26997,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27062,7 +27024,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 391,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27105,8 +27067,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27133,7 +27094,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 392,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27176,8 +27137,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27204,7 +27164,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 393,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27247,8 +27207,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27275,7 +27234,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 394,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27318,8 +27277,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27346,7 +27304,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 395,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27388,8 +27346,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27415,7 +27372,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 396,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27457,8 +27414,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27484,7 +27440,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 397,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27526,8 +27482,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27553,7 +27508,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 398,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27595,8 +27550,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27622,7 +27576,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 399,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27665,8 +27619,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27693,7 +27646,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 400,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27736,8 +27689,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27764,7 +27716,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 401,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27806,8 +27758,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27833,7 +27784,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 402,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27876,8 +27827,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27904,7 +27854,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 403,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -27946,8 +27896,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -27973,7 +27922,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 404,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28015,8 +27964,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28042,7 +27990,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 405,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28084,8 +28032,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28111,7 +28058,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 406,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28153,8 +28100,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28180,7 +28126,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 407,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28222,8 +28168,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28249,7 +28194,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 408,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28290,8 +28235,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28316,7 +28260,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 409,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28358,8 +28302,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28385,7 +28328,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 410,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28427,8 +28370,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28454,7 +28396,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 411,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28497,8 +28439,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28525,7 +28466,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 412,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28569,8 +28510,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28598,7 +28538,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 413,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28640,8 +28580,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28667,7 +28606,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 414,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28709,8 +28648,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28736,7 +28674,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 415,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28778,8 +28716,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28805,7 +28742,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 416,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28847,8 +28784,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28874,7 +28810,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 417,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28916,8 +28852,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -28943,7 +28878,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 418,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -28985,8 +28920,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29012,7 +28946,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 419,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29055,8 +28989,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29083,7 +29016,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 420,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29125,8 +29058,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29152,7 +29084,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 421,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29195,8 +29127,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29223,7 +29154,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 422,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29266,8 +29197,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29294,7 +29224,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 423,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29336,8 +29266,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29363,7 +29292,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 424,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29405,8 +29334,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29432,7 +29360,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 425,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29474,8 +29402,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29501,7 +29428,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 426,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29544,8 +29471,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29572,7 +29498,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 427,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29614,8 +29540,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29641,7 +29566,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 428,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29683,8 +29608,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29710,7 +29634,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 429,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29752,8 +29676,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29779,7 +29702,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 430,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29821,8 +29744,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29848,7 +29770,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 431,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -29890,8 +29812,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29919,7 +29840,7 @@
     "geoScore": 0,
     "geoDisplayName": "Gutenbergstraße 7a 76761 Rülzheim",
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt – Geocode offen",
@@ -29961,8 +29882,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -29988,7 +29908,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 433,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -30030,8 +29950,7 @@
     "version": "4.5",
     "serviceGroups": [
       "Beratung / Teilhabe",
-      "EUTB",
-      "EUTB / Teilhabeberatung"
+      "EUTB"
     ],
     "specialtyGroups": [
       "EUTB / unabhängige Teilhabeberatung"
@@ -30057,7 +29976,7 @@
     "geoCheckedAt": "2026-08-25",
     "id": 434,
     "canonicalGroups": [
-      "EUTB / Teilhabeberatung"
+      "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv – Bestandsdatensatz",
     "pinType": "Physischer Kartenpunkt",
@@ -38985,9 +38904,9 @@
     "categories": [
       "Fahrrad-/Spezialrad"
     ],
-    "lat": null,
-    "lon": null,
-    "note": "A+ für Handbike/Adaptivebike und individuelle Reha-Technik. | Final Gate: kein Schätzpunkt gesetzt; Hausgeocode bleibt kontrolliert offen.; Adaptiv- und Kompakthandbikes; Rollstuhl-Zug-/Vorsatzgeräte; individuell konfigurierte Reha-Technik; funktionseingeschränkten-gerechte Pedelec-Optionen; Sondergriffe/-stützen.",
+    "lat": 48.231145,
+    "lon": 8.780831,
+    "note": "A+ für Handbike/Adaptivebike und individuelle Reha-Technik. | Hauspunkt am 01.09.2026 über OpenStreetMap/Nominatim verifiziert.; Adaptiv- und Kompakthandbikes; Rollstuhl-Zug-/Vorsatzgeräte; individuell konfigurierte Reha-Technik; funktionseingeschränkten-gerechte Pedelec-Optionen; Sondergriffe/-stützen.",
     "focus": [
       "Handbike",
       "Adaptivbike",
@@ -39010,10 +38929,10 @@
     "contact": "",
     "department": "Reha-Technik-Hersteller",
     "source": "https://www.proactiv-gmbh.de/; https://www.proactiv-gmbh.de/kontakt",
-    "dataQuality": "teilverifiziert",
+    "dataQuality": "verifiziert",
     "bgDirect": false,
     "fastAccess": false,
-    "verified": false,
+    "verified": true,
     "version": "4.5",
     "serviceGroups": [
       "Mobilität / Kfz / Spezialrad",
@@ -39053,16 +38972,16 @@
     "kimStatus": "nicht priorisiert",
     "kimCheckedAt": "",
     "kimSource": "",
-    "geoStatus": "Hausadresse/aktiver Standort geprüft; belastbare numerische Hauskoordinate weiterhin offen.",
-    "geoSource": "https://www.proactiv-gmbh.de/kontakt",
-    "geoCheckedAt": "2026-08-31",
-    "geoScore": null,
+    "geoStatus": "A - Hausadresse und numerischer Hauspunkt verifiziert",
+    "geoSource": "OpenStreetMap/Nominatim – PRO ACTIV, Im Hofstätt 11; offizielle Kontaktseite https://www.proactiv-gmbh.de/kontakt",
+    "geoCheckedAt": "2026-09-01",
+    "geoScore": 118,
     "geoDisplayName": "Im Hofstätt 11, 72359 Dotternhausen, Deutschland",
     "canonicalGroups": [
       "Mobilität / Kfz / Spezialrad"
     ],
     "activationStatus": "Aktiv",
-    "pinType": "Physischer Kartenpunkt – Geocode offen",
+    "pinType": "Physischer Kartenpunkt",
     "masterIds": [
       "RAD44-009"
     ],
@@ -39074,7 +38993,7 @@
     "masterDecision": "Aufnehmen",
     "reviewDate": "2026-08-31",
     "recentReview": "2026-08-31",
-    "qualityStatus": "teilverifiziert"
+    "qualityStatus": "verifiziert"
   },
   {
     "id": "RAD44-010",
@@ -39469,9 +39388,9 @@
     "categories": [
       "Soziale Teilhabe / Wohnen"
     ],
-    "lat": null,
-    "lon": null,
-    "note": "A+ Rhein-Main-Vollanbieter mit Planung, Montage und Service aus einer Hand. | Final Gate: kein Schätzpunkt gesetzt; Hausgeocode bleibt kontrolliert offen.; Kostenfreie Vor-Ort-Beratung; individuelle Planung/Zeichnungen; Förderhinweise; Abstimmung mit Gewerken; Aufzüge, Homelifte, Plattform-/Treppenlifte und Hubbühnen; Montage und Service durch werkgeschultes Personal.",
+    "lat": 50.067119,
+    "lon": 8.384774,
+    "note": "A+ Rhein-Main-Vollanbieter mit Planung, Montage und Service aus einer Hand. | Hauspunkt am 01.09.2026 über OpenStreetMap/Nominatim verifiziert.; Kostenfreie Vor-Ort-Beratung; individuelle Planung/Zeichnungen; Förderhinweise; Abstimmung mit Gewerken; Aufzüge, Homelifte, Plattform-/Treppenlifte und Hubbühnen; Montage und Service durch werkgeschultes Personal.",
     "focus": [
       "Aufzug",
       "Homelift",
@@ -39495,10 +39414,10 @@
     "contact": "",
     "department": "Lift-/Aufzugsfachbetrieb / Planung, Montage & Service",
     "source": "https://www.cama.de/; https://www.cama.de/impressum/",
-    "dataQuality": "teilverifiziert",
+    "dataQuality": "verifiziert",
     "bgDirect": false,
     "fastAccess": false,
-    "verified": false,
+    "verified": true,
     "version": "4.5",
     "serviceGroups": [
       "Wohnen / soziale Teilhabe",
@@ -39539,16 +39458,16 @@
     "kimStatus": "nicht priorisiert",
     "kimCheckedAt": "",
     "kimSource": "",
-    "geoStatus": "Hausadresse/aktiver Standort geprüft; belastbare numerische Hauskoordinate weiterhin offen.",
-    "geoSource": "https://www.cama.de/impressum/",
-    "geoCheckedAt": "2026-08-31",
-    "geoScore": null,
+    "geoStatus": "A - Hausadresse und numerischer Hauspunkt verifiziert",
+    "geoSource": "OpenStreetMap/Nominatim – Max-Planck-Straße 5; offizielles Impressum https://www.cama.de/impressum/",
+    "geoCheckedAt": "2026-09-01",
+    "geoScore": 118,
     "geoDisplayName": "Max-Planck-Straße 5, 65719 Hofheim-Wallau, Deutschland",
     "canonicalGroups": [
       "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv",
-    "pinType": "Physischer Kartenpunkt – Geocode offen",
+    "pinType": "Physischer Kartenpunkt",
     "masterIds": [
       "LIFT44-004"
     ],
@@ -39560,7 +39479,7 @@
     "masterDecision": "Aufnehmen",
     "reviewDate": "2026-08-31",
     "recentReview": "2026-08-31",
-    "qualityStatus": "teilverifiziert"
+    "qualityStatus": "verifiziert"
   },
   {
     "id": "LIFT44-005",
@@ -39570,9 +39489,9 @@
     "categories": [
       "Soziale Teilhabe / Wohnen"
     ],
-    "lat": null,
-    "lon": null,
-    "note": "A wegen größerer Distanz, aber gezielt relevant für Würzburg/Unterfranken; Montage, Wartung und Reparatur selbst. | Final Gate: kein Schätzpunkt gesetzt; Hausgeocode bleibt kontrolliert offen.; Beratung vor Ort; Lieferung und Eigenmontage; Wartung, Reparatur und Demontage; Treppen-/Sitzlifte, Hublifte, Rollstuhlhebebühnen, Plattform-/Vertikal- und Senkrechtlifte.",
+    "lat": 49.464944,
+    "lon": 10.992572,
+    "note": "A wegen größerer Distanz, aber gezielt relevant für Würzburg/Unterfranken; Montage, Wartung und Reparatur selbst. | Hauspunkt am 01.09.2026 über OpenStreetMap/Nominatim verifiziert.; Beratung vor Ort; Lieferung und Eigenmontage; Wartung, Reparatur und Demontage; Treppen-/Sitzlifte, Hublifte, Rollstuhlhebebühnen, Plattform-/Vertikal- und Senkrechtlifte.",
     "focus": [
       "Treppenlift",
       "Sitzlift",
@@ -39594,10 +39513,10 @@
     "contact": "Peter Czieschowitz",
     "department": "Liftfachbetrieb / Montage, Wartung & Reparatur",
     "source": "https://lifttechnik-franken.de/; https://lifttechnik-franken.de/treppenlift-fuerth/",
-    "dataQuality": "teilverifiziert",
+    "dataQuality": "verifiziert",
     "bgDirect": false,
     "fastAccess": false,
-    "verified": false,
+    "verified": true,
     "version": "4.5",
     "serviceGroups": [
       "Wohnen / soziale Teilhabe",
@@ -39636,16 +39555,16 @@
     "kimStatus": "nicht priorisiert",
     "kimCheckedAt": "",
     "kimSource": "",
-    "geoStatus": "Hausadresse/aktiver Standort geprüft; belastbare numerische Hauskoordinate weiterhin offen.",
-    "geoSource": "https://lifttechnik-franken.de/treppenlift-fuerth/",
-    "geoCheckedAt": "2026-08-31",
-    "geoScore": null,
+    "geoStatus": "A - Hausadresse und numerischer Hauspunkt verifiziert",
+    "geoSource": "OpenStreetMap/Nominatim – Karlstraße 36; offizielle Kontaktseite https://lifttechnik-franken.de/treppenlift-fuerth/",
+    "geoCheckedAt": "2026-09-01",
+    "geoScore": 118,
     "geoDisplayName": "Karlstraße 36, 90763 Fürth, Deutschland",
     "canonicalGroups": [
       "Wohnen / soziale Teilhabe"
     ],
     "activationStatus": "Aktiv",
-    "pinType": "Physischer Kartenpunkt – Geocode offen",
+    "pinType": "Physischer Kartenpunkt",
     "masterIds": [
       "LIFT44-005"
     ],
@@ -39657,7 +39576,7 @@
     "masterDecision": "Aufnehmen",
     "reviewDate": "2026-08-31",
     "recentReview": "2026-08-31",
-    "qualityStatus": "teilverifiziert"
+    "qualityStatus": "verifiziert"
   },
   {
     "id": "BGSW44-001",
