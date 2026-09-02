@@ -1,4 +1,4 @@
-const CACHE_NAME = "bg-rehamanager-suedwest-v4-5-1-20260902-r3-statistik-touch";
+const CACHE_NAME = "bg-rehamanager-suedwest-v4-5-1-20260902-r4-final";
 const APP_SHELL = [
   "./",
   "./index.html",
