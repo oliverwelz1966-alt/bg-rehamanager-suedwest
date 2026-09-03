@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>BG-RehaManager Südwest 4.5.1</title>
-<meta name="theme-color" content="#123247">
+<meta name="theme-color" content="#145a72">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BG-Reha Südwest">
 <link rel="manifest" href="./manifest.webmanifest">
@@ -78,13 +78,68 @@ textarea{font:inherit;width:100%;min-height:110px;border:1px solid var(--line);b
 .dashboard-summary{gap:10px;margin-bottom:15px}.summary-box{padding:11px 14px}.summary-box strong{font-size:24px;line-height:1.05}
 @media(max-width:1050px){.dashboard-tiles .kpi{min-height:92px}.dashboard-group{margin-bottom:14px}}
 
+
+/* 4.5.1 FINAL R5 – visual polish / compact proportions */
+:root{--accent:#10738d;--accent2:#16465d;--shadow:0 7px 22px rgba(25,48,67,.075)}
+.app{grid-template-columns:248px 1fr}
+.sidebar{background:linear-gradient(165deg,#102b3e 0%,#12465d 55%,#12667a 100%);padding:18px 15px}
+.brand-wrap{display:flex;align-items:center;gap:11px;margin-bottom:8px}
+.brand-logo{width:52px;height:52px;object-fit:cover;border-radius:13px;box-shadow:0 5px 16px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22);flex:0 0 52px}
+.brand{font-size:19px;line-height:1.05;margin:0;letter-spacing:-.15px}.brand span{font-size:21px}
+.version{margin-bottom:17px;color:#c5d7e1}
+.nav button{padding:9px 9px;margin:3px 0;border:1px solid transparent;transition:background .14s ease,border-color .14s ease,transform .14s ease}
+.nav button.active{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.08);box-shadow:inset 3px 0 0 rgba(110,219,229,.85)}
+.nav button:hover{background:rgba(255,255,255,.1)}
+.sidebar-note{color:#c3d4df;border-top-color:rgba(255,255,255,.16);margin-top:17px;padding-top:12px}
+.content{padding:20px 22px}
+.card{border-color:#d5dee8;border-radius:12px;box-shadow:var(--shadow)}
+.dashboard-group{margin-bottom:12px}.dashboard-group-head{margin:0 0 6px}.dashboard-group-head h2{font-size:17px}.dashboard-group-head span{font-size:11px}
+.kpis.dashboard-tiles{gap:8px;margin-bottom:9px}
+.dashboard-tiles .kpi{min-height:76px;padding:8px 12px;justify-content:center;border-radius:11px;transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease,background .12s ease}
+.dashboard-tiles .kpi:hover{transform:translateY(-1px);border-color:#b6cbd6;background:#fbfdfe;box-shadow:0 8px 22px rgba(25,48,67,.1)}
+.dashboard-tiles .kpi:active{transform:translateY(0);background:#f0f8fa}
+.dashboard-tiles .kpi strong{font-size:24px;line-height:1}
+.dashboard-tiles .kpi span{font-size:11.5px;line-height:1.12;margin-top:3px}
+.dashboard-tiles .kpi small{font-size:9.5px;line-height:1.05;margin-top:3px}
+.dashboard-summary{gap:9px;margin-bottom:13px}.summary-box{padding:9px 13px;min-height:66px}.summary-box strong{font-size:22px}.summary-box span{font-size:11px}
+.dashboard-note{font-size:10.5px;margin:-3px 0 12px}
+.dashboard-map-grid{grid-template-columns:minmax(0,1.78fr) minmax(280px,.82fr);gap:12px}
+.dashboard-map-card{padding:13px}.dashboard-map-card h2{margin-bottom:8px}
+#dashboardMap{height:650px}
+#mainMap{height:690px}
+#routeMap{height:630px}
+.panel{padding:14px}
+.status{border-color:#a9ddc0;background:#edf9f1}
+@media(max-width:1050px){
+  .app{grid-template-columns:1fr}
+  .sidebar{padding:13px 18px 14px}
+  .brand-wrap{margin-bottom:5px}.brand-logo{width:46px;height:46px;flex-basis:46px;border-radius:12px}.brand{font-size:18px}.brand span{font-size:20px}.version{margin-bottom:10px}
+  .nav{gap:2px}.nav button{padding:8px 9px;margin:2px 0}
+  .sidebar-note{margin-top:11px;padding-top:9px}
+  .content{padding:18px 20px}
+  .dashboard-tiles .kpi{min-height:72px;padding:7px 11px}
+  .dashboard-tiles .kpi strong{font-size:23px}
+  #dashboardMap{height:620px}#mainMap{height:650px}#routeMap{height:590px}
+}
+@media(min-width:780px) and (max-width:1050px){.dashboard-map-grid{grid-template-columns:minmax(0,1.55fr) minmax(270px,.75fr)}}
+@media(max-width:779px){.dashboard-map-grid{grid-template-columns:1fr}}
+@media(max-width:650px){
+  .sidebar{padding:12px 14px}.brand-logo{width:42px;height:42px;flex-basis:42px}.brand{font-size:17px}.brand span{font-size:19px}
+  .content{padding:12px}.dashboard-group{margin-bottom:10px}.dashboard-group-head h2{font-size:16px}
+  .dashboard-tiles .kpi{min-height:68px;padding:7px 10px}.dashboard-tiles .kpi strong{font-size:22px}.dashboard-tiles .kpi span{font-size:11px}.dashboard-tiles .kpi small{font-size:9px}
+  #dashboardMap,#mainMap,#routeMap{height:520px}
+}
+
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar">
-  <div class="brand">BG-RehaManager<br>Südwest</div>
-  <div class="version">Webanwendung · Version 4.5.1 · Master 4.5.1 · Stand 02.09.2026</div>
+  <div class="brand-wrap">
+    <img class="brand-logo" src="./icon-192.png" alt="BG-RehaManager Südwest">
+    <div class="brand">BG-RehaManager<br><span>Südwest</span></div>
+  </div>
+  <div class="version">Webanwendung · Version 4.5.1 · Master 4.5.1 · Stand 03.09.2026</div>
   <nav class="nav">
     <button class="active" data-view="dashboard">▦ Dashboard</button>
     <button data-view="mapView">⌖ Interaktive Karte</button>
@@ -126,8 +181,8 @@ textarea{font:inherit;width:100%;min-height:110px;border:1px solid var(--line);b
       <div id="kpisParticipation" class="grid kpis dashboard-tiles"></div>
     </div>
     <div class="dashboard-note">Die Kacheln zeigen fachliche Zuordnungen. Eine Einrichtung kann mehreren Gruppen angehören; deshalb werden die Kachelzahlen nicht addiert. Maßgeblich für den Gesamtbestand ist die Zahl „Datensätze gesamt“.</div>
-    <div class="grid two-col">
-      <div class="card panel"><h2>Gesamtübersicht</h2><div id="dashboardMap"></div></div>
+    <div class="grid two-col dashboard-map-grid">
+      <div class="card panel dashboard-map-card"><h2>Gesamtübersicht</h2><div id="dashboardMap"></div></div>
       <div class="grid">
         <div class="card panel"><h2>Einrichtungen nach Großregion</h2><div id="regionBars" class="stat-bars"></div></div>
         <div class="card panel"><h2>Meine Favoriten</h2><div id="favList" class="muted"></div></div><div class="card panel"><h2>Zuletzt verwendet</h2><div id="recentList" class="muted"></div></div>
@@ -256,7 +311,7 @@ textarea{font:inherit;width:100%;min-height:110px;border:1px solid var(--line);b
 <script>
 "use strict";
 const APP_VERSION="4.5.1";
-const RELEASE_ID="4.5.1-final-r4-20260902";
+const RELEASE_ID="4.5.1-final-r5-20260903";
 const DATA_URL="./data.json";
 let facilities=[],filtered=[],mainMap,dashboardMap,routeMap,mainLayer,dashLayer,routeLayer;
 let dashboardGroupFilter="",dashboardFacetFilter="",dashboardSegmentFilter="",statisticsGroupFilter="",statisticsFocusFilter="";

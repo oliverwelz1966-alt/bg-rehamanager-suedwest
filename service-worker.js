@@ -1,8 +1,11 @@
-const CACHE_NAME = "bg-rehamanager-suedwest-v4-5-1-20260902-r4-final";
+const CACHE_NAME = "bg-rehamanager-suedwest-v4-5-1-20260903-r5-visual";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./manifest.webmanifest"
+  "./manifest.webmanifest",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./apple-touch-icon.png"
 ];
 
 self.addEventListener("install", event => {
