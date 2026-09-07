@@ -1,4 +1,4 @@
-const CACHE_NAME = "bg-rehamanager-suedwest-v4-6-r19-20260906";
+const CACHE_NAME = "bg-rehamanager-suedwest-v4-6-r21-20260907";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -23,10 +23,11 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  // R19-Daten immer möglichst aktuell vom Server laden; nur offline Cache verwenden.
+  // R21-Daten immer möglichst aktuell vom Server laden; nur offline Cache verwenden.
   if (url.pathname.endsWith("/data.json")) {
     event.respondWith(
       fetch(event.request, { cache: "no-store" })
@@ -40,13 +41,27 @@ self.addEventListener("fetch", event => {
     return;
   }
 
+  // index.html / Navigation: Network-first, damit UI-Änderungen nach einem Upload sofort greifen.
+  if (event.request.mode === "navigate" || url.pathname.endsWith("/index.html") || url.pathname.endsWith("/")) {
+    event.respondWith(
+      fetch(event.request, { cache: "no-store" })
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(cached => cached || caches.match("./index.html")))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then(cached =>
       cached || fetch(event.request).then(response => {
         const copy = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         return response;
-      }).catch(() => caches.match("./index.html"))
+      })
     )
   );
 });

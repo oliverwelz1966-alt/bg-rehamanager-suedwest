@@ -217,7 +217,7 @@ input[type=search],input[type=text],select,textarea{border-color:#d6e1e8;box-sha
     <img class="brand-logo" src="./icon-192.png" alt="BG-RehaManager Südwest">
     <div class="brand">BG-RehaManager<br><span>Südwest</span></div>
   </div>
-  <div class="version">Webanwendung · Version 4.6 · Master 4.6 · Stand 05.09.2026</div>
+  <div class="version">Webanwendung · Version 4.6 · Master 4.6 · Stand 07.09.2026</div>
   <nav class="nav">
     <button class="active" data-view="dashboard">▦ Dashboard</button>
     <button data-view="mapView">⌖ Interaktive Karte</button>
@@ -251,7 +251,7 @@ input[type=search],input[type=text],select,textarea{border-color:#d6e1e8;box-sha
       <div id="kpisSpecialMedical" class="grid kpis dashboard-tiles"></div>
     </div>
     <div class="dashboard-group group-work">
-      <div class="dashboard-group-head"><h2>Berufliche Teilhabe / Arbeitsintegration</h2><span>LTA, Umschulung, Qualifizierung, Vermittlung, Mobilität und Arbeitsplatzanpassung</span></div>
+      <div class="dashboard-group-head"><h2>Berufliche Teilhabe / Arbeitsintegration</h2><span>LTA, Umschulung, Qualifizierung, Deutsch/Berufssprache, Vermittlung, Mobilität und Arbeitsplatzanpassung</span></div>
       <div id="kpisLta" class="grid kpis dashboard-tiles"></div>
     </div>
     <div class="dashboard-group group-social">
@@ -389,8 +389,8 @@ input[type=search],input[type=text],select,textarea{border-color:#d6e1e8;box-sha
 <script>
 "use strict";
 const APP_VERSION="4.6";
-const RELEASE_ID="4.6-master-final-20260905";
-const DATA_URL="./data.json";
+const RELEASE_ID="4.6-r21-deutsch-berufssprache-20260907";
+const DATA_URL="./data.json?v=4.6-r21-20260907";
 let facilities=[],filtered=[],mainMap,dashboardMap,routeMap,mainLayer,dashLayer,routeLayer;
 let dashboardGroupFilter="",dashboardFacetFilter="",dashboardSegmentFilter="",statisticsGroupFilter="",statisticsFocusFilter="";
 const $=id=>document.getElementById(id);
@@ -427,14 +427,14 @@ const SEGMENT_FACETS={
  "Medizinische Reha & Heilverfahren":["SAV","VAV","EAP","BG-Klinik","BGSW","Stationäre Reha","Ambulante Reha","EFL / FCE","ABMR","TOR","CRPS","Schmerztherapie","Psychotherapie DGUV","Pflegeberatung / Pflegegutachten","Reha-Management"],
  "Neurologie & Neuropsychologie":["Neurologie","Neuropsychologie","Phase A","Phase B","Phase C","Phase D","Phase E","Phase F"],
  "Spezialisierte medizinische Versorgung":["Arbeitsmedizin","Handchirurgie","Orthopädietechnik / Prothetik","Orthopädische Schuhmacher"],
- "Berufliche Teilhabe / Arbeitsintegration":["Berufliche Reha","Leistungen zur Teilhabe am Arbeitsleben (LTA)","Umschulung / Qualifizierung","Betriebliche Umschulung","BFW","BTZ","bfz","FAW","IHK","Arbeitsvermittlung","Private Arbeitsvermittlung","IFD","Bildungsträger","Reha-Coaching / Neuorientierung","Technische Arbeitsplatzanpassung","Kfz-Hilfe / Mobilität","Fahrrad-/Spezialrad"],
+ "Berufliche Teilhabe / Arbeitsintegration":["Berufliche Reha","Leistungen zur Teilhabe am Arbeitsleben (LTA)","Umschulung / Qualifizierung","Betriebliche Umschulung","BFW","BTZ","bfz","FAW","IHK","Arbeitsvermittlung","Private Arbeitsvermittlung","IFD","Bildungsträger","Deutsch & Berufssprache","A1/A2","B1","B2","Berufssprachkurs (BSK)","B2 mit Brückenelement","Job-BSK / arbeitsplatzbezogene Sprachförderung","Einzelcoaching","Präsenz","Online","Reha-Coaching / Neuorientierung","Technische Arbeitsplatzanpassung","Kfz-Hilfe / Mobilität","Fahrrad-/Spezialrad"],
  "Soziale Teilhabe / Mobilität / Wohnen & Beratung":["Soziale Teilhabe / Wohnen","Beratung / EUTB","Pflegeberatung / Pflegegutachten","Reha-Management","Kfz-Hilfe / Mobilität","Fahrrad-/Spezialrad"]
 };
 const PRACTICAL_MEASURES=[
  "SAV","VAV","EAP","BG-Klinik","BGSW","Stationäre Reha","Ambulante Reha","ABMR","TOR","EFL / FCE",
  "Psychotherapie / Psychotherapeut","Schmerztherapie","Arbeitsmedizin","Handchirurgie","Orthopädietechnik / Prothetik","Orthopädische Schuhmacher",
  "Neurologie – Phasen A–F","Phase A","Phase B","Phase C","Phase D","Phase E","Phase F","Neurologen","Neuropsychologie",
- "Pflegeberatung / Pflegegutachten","Reha-Management","Leistungen zur Teilhabe am Arbeitsleben (LTA)","BFW / BTZ","Umschulung / Qualifizierung","IFD",
+ "Pflegeberatung / Pflegegutachten","Reha-Management","Leistungen zur Teilhabe am Arbeitsleben (LTA)","BFW / BTZ","Umschulung / Qualifizierung","IFD","Deutsch & Berufssprache",
  "Arbeitsvermittlung","Private Arbeitsvermittlung","Reha-Coaching / Neuorientierung","Technische Arbeitsplatzanpassung","Kfz-Hilfe / Mobilität","Fahrrad-/Spezialrad",
  "Hilfsmittel / Spezialversorgung","Beratung / EUTB","Wohnen / soziale Teilhabe"
 ];
@@ -444,13 +444,14 @@ const MEASURE_ALIASES={
  "Neurologen":["Neurologie"],
  "BFW / BTZ":["BFW","BTZ"],
  "Hilfsmittel / Spezialversorgung":["Hilfsmittel / Spezialversorgung","Orthopädietechnik / Prothetik"],
+ "Deutsch & Berufssprache":["Deutsch & Berufssprache","Berufssprachkurs (BSK)","B2 mit Brückenelement","Job-BSK / arbeitsplatzbezogene Sprachförderung","Berufssprache","Berufsdeutsch"],
  "Wohnen / soziale Teilhabe":["Soziale Teilhabe / Wohnen","Wohnen / soziale Teilhabe"]
 };
 const DASHBOARD_SECTIONS=[
  ["kpisMedical","Medizinische Reha & Heilverfahren",["SAV","VAV","EAP","BG-Klinik","BGSW","Stationäre Reha","Ambulante Reha","EFL / FCE","ABMR","TOR","CRPS","Schmerztherapie","Psychotherapie DGUV"]],
  ["kpisNeurology","Neurologie & Neuropsychologie",SEGMENT_FACETS["Neurologie & Neuropsychologie"]],
  ["kpisSpecialMedical","Spezialisierte medizinische Versorgung",SEGMENT_FACETS["Spezialisierte medizinische Versorgung"]],
- ["kpisLta","Berufliche Teilhabe / Arbeitsintegration",SEGMENT_FACETS["Berufliche Teilhabe / Arbeitsintegration"]],
+ ["kpisLta","Berufliche Teilhabe / Arbeitsintegration",["Berufliche Reha","Leistungen zur Teilhabe am Arbeitsleben (LTA)","Umschulung / Qualifizierung","Betriebliche Umschulung","BFW","BTZ","bfz","FAW","IHK","Arbeitsvermittlung","Private Arbeitsvermittlung","IFD","Bildungsträger","Deutsch & Berufssprache","Reha-Coaching / Neuorientierung","Technische Arbeitsplatzanpassung","Kfz-Hilfe / Mobilität","Fahrrad-/Spezialrad"]],
  ["kpisParticipation","Soziale Teilhabe / Mobilität / Wohnen & Beratung",SEGMENT_FACETS["Soziale Teilhabe / Mobilität / Wohnen & Beratung"]]
 ];
 const CASE_NEEDS={
@@ -466,7 +467,8 @@ const CASE_NEEDS={
  "Mobilität / Kfz":{groups:["Mobilität / Kfz / Spezialrad"],terms:["kfz","fahrzeuganpassung","fahrschule","mobilität","fahrprobe"]},
  "Fahrrad- / Spezialradanpassung":{groups:["Mobilität / Kfz / Spezialrad"],terms:["fahrrad","spezialrad","dreirad","einhand","armamputation"]},
  "Wohnen / Lifttechnik":{groups:["Wohnen / soziale Teilhabe"],terms:["treppenlift","plattformlift","hublift","senkrechtlift","homelift","lifttechnik"]},
- "EUTB / soziale Teilhabe":{groups:["Wohnen / soziale Teilhabe"],terms:["eutb","teilhabeberatung","soziale teilhabe"]}
+ "EUTB / soziale Teilhabe":{groups:["Wohnen / soziale Teilhabe"],terms:["eutb","teilhabeberatung","soziale teilhabe"]},
+ "Deutsch & Berufssprache":{groups:["Berufliche Teilhabe / Arbeitsintegration"],terms:["deutsch","berufssprache","berufsdeutsch","sprachkurs","berufssprachkurs","b1","b2","bsk","job-bsk","arbeitsplatzbezogene sprachförderung","migrant","migration"]}
 };
 const SEARCH_SYNONYMS={
  "armamputation":["armprothetik","obere extremität","einhand","prothetik"],"armamputiert":["armprothetik","obere extremität","einhand","prothetik"],
@@ -477,7 +479,12 @@ const SEARCH_SYNONYMS={
  "arbeit":["arbeitsvermittlung","berufliche reha","lta","jobcoaching"],"umschulung":["berufliche reha","qualifizierung","bfw"],
  "fahrrad":["spezialrad","dreirad","e bike"],"auto":["kfz","fahrzeuganpassung","fahrschule"],"schmerz":["schmerztherapie","multimodal"],
  "neuro":["neurologie","neuropsychologie","phase"],"wohnen":["wohnraumanpassung","lifttechnik","soziale teilhabe"],
- "pflege":["pflegeberatung","pflegegutachten","pflegefachberatung"],"job":["arbeitsvermittlung","jobcoaching","integration"]
+ "pflege":["pflegeberatung","pflegegutachten","pflegefachberatung"],"job":["arbeitsvermittlung","jobcoaching","integration","job bsk","berufssprache"],
+ "deutsch":["berufssprache","berufsdeutsch","sprachkurs","b1","b2","bsk"],"berufssprache":["deutsch","berufsdeutsch","sprachkurs","berufssprachkurs","bsk"],
+ "berufsdeutsch":["deutsch","berufssprache","sprachkurs","bsk"],"sprachkurs":["deutsch","berufssprache","b1","b2","bsk"],
+ "migrant":["deutsch","berufssprache","sprachkurs","b1","b2"],"migration":["deutsch","berufssprache","sprachkurs","b1","b2"],
+ "b1":["deutsch","berufssprache","sprachkurs"],"b2":["deutsch","berufssprache","sprachkurs","bsk"],"bsk":["berufssprachkurs","berufssprache","deutsch"],
+ "berufssprachkurs":["bsk","berufssprache","deutsch"],"arbeitsplatzbezogene":["job bsk","berufssprache","deutsch"]
 };
 function hasLeaflet(){return typeof window.L!=="undefined"&&typeof window.L.map==="function"}
 function setupMap(id){const el=$(id);if(!hasLeaflet()){el.innerHTML='<div class="map-fallback"><div><b>Kartenmodul derzeit nicht verfügbar.</b><br>Verzeichnis, Suche, Fallfinder, Favoriten und Datenqualität funktionieren weiter. Für die Kartenansicht ist die Leaflet-Verbindung erforderlich.</div></div>';return null}const m=L.map(id,{zoomControl:true}).setView(START_CENTER,START_ZOOM);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(m);return m}
@@ -552,6 +559,7 @@ function kpiIcon(label,segment){
   if(t.includes("orthopad")||t.includes("prothetik")||t.includes("schuh"))return svg('<path d="M7 4v7.2c0 1.2-.5 2.4-1.4 3.2L4 16c-1.1 1-.4 2.8 1.1 2.8H18a2 2 0 0 0 2-2v-.4a2 2 0 0 0-1.7-2l-4.2-.6a5.5 5.5 0 0 1-4.6-4.1L8 4H7Z"/>');
   if(t.includes("technik")||t.includes("arbeitsplatz"))return svg('<path d="m14.7 6.3 3-3a3.5 3.5 0 0 1-4.5 4.5l-6.9 6.9a2 2 0 0 0 2.8 2.8l6.9-6.9a3.5 3.5 0 0 1 4.5-4.5l-3 3"/><path d="m5 19-2 2"/>');
   if(t.includes("umschulung")||t.includes("qualifizierung")||t.includes("bfw")||t.includes("btz")||t==="ihk"||t.includes("bildung"))return svg('<path d="m3 8 9-4 9 4-9 4-9-4Z"/><path d="M6 10.3V15c2.7 2.3 9.3 2.3 12 0v-4.7M21 8v6"/>');
+  if(t.includes("deutsch")||t.includes("sprache"))return svg('<path d="M5 5.5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-8l-4.5 3v-3H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z"/><path d="M8 10h8M8 13h5"/>');
   if(t.includes("arbeitsvermittlung")||t.includes("beruf")||t.includes("lta")||t.includes("coaching"))return svg('<rect x="4" y="7" width="16" height="12" rx="2"/><path d="M9 7V5h6v2M4 12h16M10 12v2h4v-2"/>');
   if(t.includes("phase")||t.includes("neuro"))return svg('<path d="M8.3 5.1A3.2 3.2 0 0 0 5 8.2v.4A3.5 3.5 0 0 0 4 15a3 3 0 0 0 4.8 3.5A3.2 3.2 0 0 0 12 21V4a3 3 0 0 0-3.7 1.1ZM15.7 5.1A3.2 3.2 0 0 1 19 8.2v.4A3.5 3.5 0 0 1 20 15a3 3 0 0 1-4.8 3.5A3.2 3.2 0 0 1 12 21"/><path d="M8 9.5c2 0 2 2 4 2s2-2 4-2M8 15c2 0 2 2 4 2s2-2 4-2"/>');
   if(t.includes("psych")||t.includes("schmerz")||t.includes("crps"))return svg('<path d="M4 13h3l2-5 3 10 2.2-6H20"/><path d="M12 21s-8-4.8-8-11a4.4 4.4 0 0 1 8-2.6A4.4 4.4 0 0 1 20 10c0 6.2-8 11-8 11Z"/>');
