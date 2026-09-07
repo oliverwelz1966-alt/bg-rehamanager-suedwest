@@ -1,4 +1,4 @@
-const CACHE_NAME = "bg-rehamanager-suedwest-v4-6-r24-20260907";
+const CACHE_NAME = "bg-rehamanager-suedwest-v4-6-r26-smartsearch2-20260907";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -27,7 +27,7 @@ self.addEventListener("fetch", event => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  // R24-Daten immer möglichst aktuell vom Server laden; nur offline Cache verwenden.
+  // R26-Daten immer möglichst aktuell vom Server laden; nur offline Cache verwenden.
   if (url.pathname.endsWith("/data.json")) {
     event.respondWith(
       fetch(event.request, { cache: "no-store" })
