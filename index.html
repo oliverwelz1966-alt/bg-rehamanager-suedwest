@@ -356,12 +356,27 @@ input[type=search],input[type=text],select,textarea{border-color:#d6e1e8;box-sha
 
   <section id="fallfinder" class="view">
     <div class="grid navigator">
-      <div class="card panel"><h2>Fallfinder 4.6</h2>
+      <div class="card panel"><h2>Fallfinder 4.7</h2>
         <div class="local-only">Der Fallfinder ist eine strukturierte Orientierungshilfe im vorhandenen Datenbestand. Er ersetzt keine medizinische oder leistungsrechtliche Einzelfallentscheidung.</div>
         <label>Bedarf / Fallkonstellation</label><select id="caseNeed"></select>
         <label>Neurologische Phase (optional)</label><select id="casePhase"><option value="">keine Phasenfestlegung</option><option>Phase A</option><option>Phase B</option><option>Phase C</option><option>Phase D</option><option>Phase E</option><option>Phase F</option></select>
         <label>Großregion (optional)</label><select id="caseRegion"></select>
-        <label>Zusätzliche Stichworte</label><input id="caseText" type="search" placeholder="z. B. Armamputation, Schreinerei, Pflegegutachten, Rollstuhl …">
+        <label>Zusätzliche Stichworte</label><input id="caseText" type="search" placeholder="z. B. Armamputation, Schreinerei, Pflegegutachten, Rollstuhl …"><label>ICF-Bereich (optional)</label>
+<select id="caseIcfDomain">
+  <option value="">Alle ICF-Bereiche</option>
+  <option value="b">b – Körperfunktionen</option>
+  <option value="s">s – Körperstrukturen</option>
+  <option value="d">d – Aktivitäten und Partizipation</option>
+  <option value="e">e – Umweltfaktoren</option>
+</select>
+
+<label>ICF-Code oder Begriff (optional)</label>
+<input id="caseIcfText" type="search"
+       placeholder="z. B. d450 Gehen, b280 Schmerz">
+
+<div class="local-only">
+  ICF-basierte Orientierungshilfe – ergänzt die fallbezogene Suche und ersetzt keine individuelle medizinische oder sozialmedizinische Bewertung.
+</div>
         <div class="toolbar"><button id="runCaseFinder" class="primary">Passende Einrichtungen finden</button></div>
       </div>
       <div class="card panel"><div class="topbar"><h2>Empfohlene Treffer</h2><span id="caseCount" class="muted"></span></div><div id="caseResults" class="muted">Bitte Fallkonstellation auswählen.</div></div>
