@@ -220,6 +220,121 @@ input[type=search],input[type=text],select,textarea{border-color:#d6e1e8;box-sha
 @media(max-width:650px){.voice-command-row{grid-template-columns:minmax(0,1fr) 40px}.voice-command-row .primary{grid-column:1/-1;margin-top:1px}.topbar-actions{width:100%;justify-content:flex-end}.voice-fab{width:42px;min-width:42px;height:40px;padding:0}.voice-fab .voice-fab-label{display:none}.voice-global-status{right:14px;top:66px;max-width:calc(100vw - 28px)}}
 .smart-search-panel{display:none;margin:9px 0 12px;padding:12px 13px;border:1px solid #b9d4de;border-radius:11px;background:linear-gradient(135deg,#f2fbfc,#f8fafc)}.smart-search-panel.show{display:block}.smart-search-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.smart-search-title{font-weight:800;color:#183f50;font-size:13px}.smart-search-meta{font-size:10.5px;color:#657b87;line-height:1.35;margin-top:3px}.smart-search-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}.smart-tag{font-size:9.5px;padding:4px 7px;border-radius:999px;background:#e6f2f5;color:#275468;border:1px solid #c6dde4}.smart-results{display:grid;gap:6px;margin-top:10px}.smart-result{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;border:1px solid #d9e5e9;background:white;border-radius:9px;padding:8px 10px;cursor:pointer}.smart-result:hover{border-color:#9fc4d0}.smart-result strong{font-size:11.5px}.smart-result small{display:block;color:#6a7d88;font-size:9.5px;margin-top:2px}.smart-score{font-size:10px;font-weight:800;color:#0f6279;white-space:nowrap}.smart-more{margin-top:9px;display:flex;gap:7px;flex-wrap:wrap}.smart-clarify{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.smart-clarify button{border:1px solid #b9d4de;background:#fff;color:#214d61;border-radius:8px;padding:7px 9px;cursor:pointer;font-size:10.5px}
 
+ /* 4.7 – Admin-Modus */
+.admin-only{display:none!important}
+body.admin-mode .admin-only{display:block!important}
+body.admin-mode .admin-inline{display:inline-flex!important}
+
+.admin-toggle{
+  border:1px solid #b9d4de;
+  background:#fff;
+  color:#214d61;
+  border-radius:9px;
+  padding:8px 10px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:700;
+}
+
+.admin-toggle:hover{
+  background:#f2f8fa;
+  border-color:#8fb8c5;
+}
+
+.admin-toggle.active{
+  background:#fff4d6;
+  color:#755300;
+  border-color:#e2bf62;
+}
+
+.admin-edit{
+  display:none;
+  margin-top:8px;
+  padding:9px 11px;
+  border:1px dashed #d2a949;
+  border-radius:9px;
+  background:#fffaf0;
+}
+
+body.admin-mode .admin-edit{
+  display:block;
+} 
+ /* ===== Admin-Modus 4.7 ===== */
+
+.admin-panel{
+  display:none;
+  padding:16px;
+  margin-top:16px;
+  border:1px solid #d7dde5;
+  border-radius:14px;
+  background:#fff;
+}
+
+.admin-panel.active{
+  display:block;
+}
+
+.admin-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.admin-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+
+.admin-field{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.admin-field label{
+  font-size:13px;
+  font-weight:700;
+}
+
+.admin-field input,
+.admin-field select,
+.admin-field textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:10px;
+  border:1px solid #cbd3dc;
+  border-radius:8px;
+  font:inherit;
+  background:#fff;
+  color:#111;
+}
+
+.admin-field textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.admin-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.admin-status{
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:8px;
+  background:#f3f6f9;
+  font-size:14px;
+}
+
+.admin-hidden{
+  display:none !important;
+} 
 </style>
 </head>
 <body>
