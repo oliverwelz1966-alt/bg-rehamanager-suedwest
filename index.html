@@ -357,7 +357,7 @@ body.admin-mode .admin-edit{
     <button data-view="statistics">▥ Statistik</button>
     <button data-view="quality">✓ Datenqualität</button>
     <button data-view="info">ⓘ Info / Zugang</button>
-  <button data-view="admin">⚙ Admin-Modus</button>
+    <button data-view="admin">⚙ Admin-Modus</button>
   </nav>
   <div class="sidebar-note">4.6 nutzt einen fachlich abgeschlossenen, normalisierten Datenbestand mit segmentabhängigen Feinfiltern und intelligenter Sprachführung. Favoriten, zuletzt verwendete Einrichtungen und Fallnotizen werden ausschließlich lokal auf diesem Gerät gespeichert. 4.4.x bleibt unveränderter Referenzstand.</div>
 </aside>
@@ -542,7 +542,77 @@ body.admin-mode .admin-edit{
       <p class="muted">Version 4.6 ändert die bestehende Zugangssicherung nicht; sie erweitert die Anwendung hinter dem bestehenden Zugang.</p>
     </div>
   </section>
+  <section id="admin" class="view">
+    <div class="card panel">
+      <h2>⚙ Admin-Modus</h2>
+      <p class="muted">
+        Pflege und Bearbeitung des Datenbestands. Änderungen erfolgen nur im Admin-Modus.
+      </p>
 
+      <div class="admin-toolbar">
+        <button id="adminToggle" class="admin-toggle" type="button">
+          Admin-Modus aktivieren
+        </button>
+        <span id="adminModeStatus" class="muted">Admin-Modus ist ausgeschaltet.</span>
+      </div>
+
+      <div id="adminPanel" class="admin-panel">
+        <h2>Einrichtung bearbeiten</h2>
+
+        <div class="admin-field">
+          <label for="adminFacility">Datensatz auswählen</label>
+          <select id="adminFacility">
+            <option value="">Bitte Einrichtung auswählen …</option>
+          </select>
+        </div>
+
+        <div class="admin-grid" style="margin-top:16px">
+          <div class="admin-field">
+            <label for="adminName">Name</label>
+            <input id="adminName" type="text">
+          </div>
+
+          <div class="admin-field">
+            <label for="adminAddress">Adresse</label>
+            <input id="adminAddress" type="text">
+          </div>
+
+          <div class="admin-field">
+            <label for="adminPhone">Telefon</label>
+            <input id="adminPhone" type="text">
+          </div>
+
+          <div class="admin-field">
+            <label for="adminEmail">E-Mail</label>
+            <input id="adminEmail" type="text">
+          </div>
+
+          <div class="admin-field">
+            <label for="adminContact">Ansprechpartner</label>
+            <input id="adminContact" type="text">
+          </div>
+        </div>
+
+        <div class="admin-field" style="margin-top:12px">
+          <label for="adminNote">Hinweise</label>
+          <textarea id="adminNote"></textarea>
+        </div>
+
+        <div class="admin-actions">
+          <button id="adminSave" class="primary" type="button">
+            Änderungen übernehmen
+          </button>
+          <button id="adminReset" class="secondary" type="button">
+            Verwerfen
+          </button>
+        </div>
+
+        <div id="adminStatus" class="admin-status">
+          Noch keine Einrichtung ausgewählt.
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 </div>
 
@@ -850,6 +920,31 @@ function bindEvents(){document.querySelectorAll(".nav button").forEach(b=>b.oncl
 function initUI(){dashboardMap=setupMap("dashboardMap");dashLayer=dashboardMap?L.layerGroup().addTo(dashboardMap):null;fillSelectors();renderKpis();renderDashboard();applyFilters();renderStats();renderQuality();renderFavs();renderRecent();bindEvents();settleMap(dashboardMap,false,dashLayer)}
 window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;window.saveNote=saveNote;window.deleteNote=deleteNote;
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+   function applyAdminMode(){
+  document.body.classList.toggle("admin-mode",adminMode);
+
+  const panel=$("adminPanel");
+  if(panel)panel.classList.toggle("active",adminMode);
+
+  const status=$("adminStatus");
+  if(status){
+    status.textContent=adminMode
+      ?"Admin-Modus ist aktiv."
+      :"Admin-Modus ist ausgeschaltet.";
+  }
+}
+
+function toggleAdminMode(){
+  adminMode=!adminMode;
+  store(ADMIN_MODE_KEY,adminMode);
+  applyAdminMode();
+}
+
+window.toggleAdminMode=toggleAdminMode;
+
+document.addEventListener("DOMContentLoaded",()=>{
+  applyAdminMode();
+});                    
 loadData();
 </script>
 </body>
