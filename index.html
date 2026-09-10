@@ -458,6 +458,8 @@ const FAV_KEY="bg-reha-favorites",RECENT_KEY="bg-reha-recent-4.5",NOTES_KEY="bg-
 const favorites=new Set(loadStore(FAV_KEY,[]));
 let recent=loadStore(RECENT_KEY,[]);
 let localNotes=loadStore(NOTES_KEY,{});
+  const ADMIN_MODE_KEY="bg-reha-admin-mode";
+let adminMode=loadStore(ADMIN_MODE_KEY,false)===true;
 const START_CENTER=[49.38,8.72],START_ZOOM=9;
 const GROUP_COLORS={
  "Medizin / Heilverfahren":"#9b3d3d","Neurologische Rehabilitation":"#6750a4","Berufliche Teilhabe / Arbeitsintegration":"#315a76",
