@@ -943,8 +943,13 @@ function toggleAdminMode(){
 window.toggleAdminMode=toggleAdminMode;
 
 document.addEventListener("DOMContentLoaded",()=>{
+  const adminToggle=$("adminToggle");
+  if(adminToggle) adminToggle.onclick=toggleAdminMode;
   applyAdminMode();
-});                    
+});
+
+
+  
 loadData();
 </script>
 </body>
