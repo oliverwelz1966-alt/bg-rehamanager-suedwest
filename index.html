@@ -920,33 +920,52 @@ function bindEvents(){document.querySelectorAll(".nav button").forEach(b=>b.oncl
 function initUI(){dashboardMap=setupMap("dashboardMap");dashLayer=dashboardMap?L.layerGroup().addTo(dashboardMap):null;fillSelectors();renderKpis();renderDashboard();applyFilters();renderStats();renderQuality();renderFavs();renderRecent();bindEvents();settleMap(dashboardMap,false,dashLayer)}
 window.showDetailsById=showDetailsById;window.toggleFav=toggleFav;window.showOnMap=showOnMap;window.saveNote=saveNote;window.deleteNote=deleteNote;
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
-   function applyAdminMode(){
-  document.body.classList.toggle("admin-mode",adminMode);
+function applyAdminMode(){
+  document.body.classList.toggle("admin-mode", !!adminMode);
 
-  const panel=$("adminPanel");
-  if(panel)panel.classList.toggle("active",adminMode);
-
-  const status=$("adminStatus");
-  if(status){
-    status.textContent=adminMode
-      ?"Admin-Modus ist aktiv."
-      :"Admin-Modus ist ausgeschaltet.";
+  const panel = document.getElementById("adminPanel");
+  if(panel){
+    panel.classList.toggle("active", !!adminMode);
   }
-}
 
-function toggleAdminMode(){
-  adminMode=!adminMode;
-  store(ADMIN_MODE_KEY,adminMode);
+  const status = document.getElementById("adminStatus");
+  if(status){
+    status.textContent = adminMode
+      ? "Admin-Modus ist aktiv."
+      : "Admin-Modus ist ausgeschaltet.";
+  }
+
+  const adminToggle = document.getElementById("adminToggle");
+  if(adminToggle){
+    adminToggle.setAttribute("aria-pressed", String(!!adminMode));
+  }
+
+function toggleAdminMode(event){
+  if(event) event.preventDefault();
+
+  adminMode = !adminMode;
+  store(ADMIN_MODE_KEY, adminMode);
   applyAdminMode();
 }
 
-window.toggleAdminMode=toggleAdminMode;
+window.toggleAdminMode = toggleAdminMode;
 
-document.addEventListener("DOMContentLoaded",()=>{
-  const adminToggle=$("adminToggle");
-  if(adminToggle) adminToggle.onclick=toggleAdminMode;
+function initAdminMode(){
+  const adminToggle = document.getElementById("adminToggle");
+
+  if(adminToggle){
+    adminToggle.onclick = toggleAdminMode;
+  }
+
   applyAdminMode();
-});
+}
+
+if(document.readyState === "loading"){
+  document.addEventListener("DOMContentLoaded", initAdminMode, {once:true});
+}else{
+  initAdminMode();
+}
+  
 
 
   
