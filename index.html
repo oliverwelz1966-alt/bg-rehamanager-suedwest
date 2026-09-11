@@ -965,10 +965,276 @@ if(document.readyState === "loading"){
 }else{
   initAdminMode();
 }
-  
+const ADMIN_EDIT_KEY = "bg-reha-admin-edits-v4.7";
 
+function initAdminFacilityEditor(){
 
-  
+  const select = document.getElementById("adminFacility");
+  if(!select) return;
+
+  const status = document.getElementById("adminStatus");
+
+  // Bereits lokal gespeicherte Änderungen wieder anwenden
+  const savedEdits = loadStore(ADMIN_EDIT_KEY, {});
+
+  facilities.forEach(f => {
+    const edit = savedEdits[String(f.id)];
+    if(edit) Object.assign(f, edit);
+  });
+
+  // Suchfeld automatisch oberhalb der Einrichtungsauswahl anlegen
+  let search = document.getElementById("adminFacilitySearch");
+
+  if(!search){
+    search = document.createElement("input");
+    search.id = "adminFacilitySearch";
+    search.type = "search";
+    search.placeholder = "Einrichtung, Ort oder Adresse suchen …";
+    search.autocomplete = "off";
+    search.style.marginBottom = "8px";
+
+    select.parentNode.insertBefore(search, select);
+  }
+
+  function getValue(f, keys){
+    for(const key of keys){
+      if(f[key] !== undefined && f[key] !== null){
+        return String(f[key]);
+      }
+    }
+    return "";
+  }
+
+  function setValue(f, keys, value, fallback){
+    const existing = keys.find(key =>
+      Object.prototype.hasOwnProperty.call(f, key)
+    );
+
+    f[existing || fallback] = value;
+  }
+
+  function fillSelect(query = ""){
+
+    const oldValue = select.value;
+
+    const q = String(query)
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    const list = facilities
+      .filter(f => {
+
+        const text = [
+          f.name,
+          f.city,
+          f.address,
+          f.zip,
+          f.postcode
+        ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
+        return !q || text.includes(q);
+      })
+      .sort((a,b) =>
+        String(a.name || "").localeCompare(
+          String(b.name || ""),
+          "de"
+        )
+      );
+
+    select.innerHTML = "";
+
+    const first = document.createElement("option");
+    first.value = "";
+    first.textContent =
+      list.length
+        ? `Bitte Einrichtung auswählen … (${list.length})`
+        : "Keine Einrichtung gefunden";
+
+    select.appendChild(first);
+
+    list.forEach(f => {
+
+      const option = document.createElement("option");
+
+      option.value = String(f.id);
+
+      const city = f.city ? ` · ${f.city}` : "";
+
+      option.textContent =
+        `${f.name || "Ohne Namen"}${city}`;
+
+      select.appendChild(option);
+    });
+
+    if(
+      oldValue &&
+      [...select.options].some(o => o.value === oldValue)
+    ){
+      select.value = oldValue;
+    }
+  }
+
+  function selectedFacility(){
+
+    return facilities.find(
+      f => String(f.id) === String(select.value)
+    );
+  }
+
+  function showFacility(){
+
+    const f = selectedFacility();
+
+    if(!f){
+
+      document.getElementById("adminName").value = "";
+      document.getElementById("adminAddress").value = "";
+      document.getElementById("adminPhone").value = "";
+      document.getElementById("adminEmail").value = "";
+      document.getElementById("adminContact").value = "";
+      document.getElementById("adminNote").value = "";
+
+      if(status){
+        status.textContent =
+          "Noch keine Einrichtung ausgewählt.";
+      }
+
+      return;
+    }
+
+    document.getElementById("adminName").value =
+      getValue(f, ["name"]);
+
+    document.getElementById("adminAddress").value =
+      getValue(f, ["address", "adresse"]);
+
+    document.getElementById("adminPhone").value =
+      getValue(f, ["phone", "telephone", "tel", "telefon"]);
+
+    document.getElementById("adminEmail").value =
+      getValue(f, ["email", "mail"]);
+
+    document.getElementById("adminContact").value =
+      getValue(
+        f,
+        ["contact", "contactPerson", "ansprechpartner"]
+      );
+
+    document.getElementById("adminNote").value =
+      getValue(
+        f,
+        ["note", "notes", "hint", "hinweise"]
+      );
+
+    if(status){
+      status.textContent =
+        `Ausgewählt: ${f.name || "Einrichtung"}`;
+    }
+  }
+
+  search.oninput = function(){
+    fillSelect(search.value);
+  };
+
+  select.onchange = showFacility;
+
+  const resetButton =
+    document.getElementById("adminReset");
+
+  if(resetButton){
+    resetButton.onclick = showFacility;
+  }
+
+  const saveButton =
+    document.getElementById("adminSave");
+
+  if(saveButton){
+
+    saveButton.onclick = function(){
+
+      const f = selectedFacility();
+
+      if(!f){
+
+        if(status){
+          status.textContent =
+            "Bitte zuerst eine Einrichtung auswählen.";
+        }
+
+        return;
+      }
+
+      f.name =
+        document.getElementById("adminName").value.trim();
+
+      setValue(
+        f,
+        ["address", "adresse"],
+        document.getElementById("adminAddress").value.trim(),
+        "address"
+      );
+
+      setValue(
+        f,
+        ["phone", "telephone", "tel", "telefon"],
+        document.getElementById("adminPhone").value.trim(),
+        "phone"
+      );
+
+      setValue(
+        f,
+        ["email", "mail"],
+        document.getElementById("adminEmail").value.trim(),
+        "email"
+      );
+
+      setValue(
+        f,
+        ["contact", "contactPerson", "ansprechpartner"],
+        document.getElementById("adminContact").value.trim(),
+        "contact"
+      );
+
+      setValue(
+        f,
+        ["note", "notes", "hint", "hinweise"],
+        document.getElementById("adminNote").value.trim(),
+        "notes"
+      );
+
+      savedEdits[String(f.id)] = {...f};
+
+      store(ADMIN_EDIT_KEY, savedEdits);
+
+      fillSelect(search.value);
+      select.value = String(f.id);
+
+      if(status){
+        status.textContent =
+          "Änderungen wurden lokal gespeichert.";
+      }
+    };
+  }
+  fillSelect();
+}
+
+// Warten, bis loadData() die Einrichtungen geladen hat
+function waitForAdminFacilities(){
+  if(Array.isArray(facilities) && facilities.length){
+    initAdminFacilityEditor();
+  }else{
+    setTimeout(waitForAdminFacilities, 150);
+  }
+}
+
+waitForAdminFacilities();
+
 loadData();
 </script>
 </body>
