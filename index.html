@@ -1143,6 +1143,24 @@ function initAdminFacilityEditor(){
   };
 
   select.onchange = showFacility;
+  function flashAdminButton(button, message){
+
+  if(!button) return;
+
+  const originalText =
+    button.dataset.originalText || button.textContent;
+
+  button.dataset.originalText = originalText;
+  button.textContent = message;
+  button.classList.add("admin-button-feedback");
+  button.disabled = true;
+
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.classList.remove("admin-button-feedback");
+    button.disabled = false;
+  }, 1000);
+}
 
   const resetButton =
     document.getElementById("adminReset");
@@ -1217,7 +1235,7 @@ function initAdminFacilityEditor(){
 
       if(status){
         status.textContent =
-          "Änderungen wurden lokal gespeichert.";
+       "Änderungen wurden lokal gespeichert.";
       }
     };
   }
