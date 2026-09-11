@@ -1166,8 +1166,21 @@ function initAdminFacilityEditor(){
     document.getElementById("adminReset");
 
   if(resetButton){
-    resetButton.onclick = showFacility;
-  }
+  resetButton.onclick = function(){
+
+    showFacility();
+
+    if(status){
+      status.textContent =
+        "Nicht gespeicherte Änderungen wurden verworfen.";
+    }
+
+    flashAdminButton(
+      resetButton,
+      "Verworfen ✓"
+    );
+  };
+}
 
   const saveButton =
     document.getElementById("adminSave");
